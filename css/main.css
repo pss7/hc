@@ -295,7 +295,10 @@ background: linear-gradient(
 #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn:hover{background-color: var(--gray-100);}
 #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn.active{background-color: var(--primary-500); border: 1px solid var(--gray-100); color: var(--white); font-weight: var(--bold); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
 #itemListWrap .itemListTabContentBox{flex: 1; flex-shrink: 1; padding-bottom: var(--spacing-m); min-height: 0; height: 100%; overflow-y: auto;}
-#itemListWrap .itemListTabContentBox .itemListTabContentList{display: grid; grid-template-columns: repeat(3,1fr); gap: var(--spacing-lm) var(--spacing-ms);} 
+#itemListWrap .itemListTabContentBox .itemListTabContentList{position: relative; display: grid; grid-template-columns: repeat(3,1fr); gap: var(--spacing-lm) var(--spacing-ms);} 
+#itemListWrap .itemListTabContentBox .itemListTabContentList::after{content: ''; opacity: 0; position: absolute; left: 0; right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 40%,rgba(255,255,255,1) 100%); z-index: 9; transition: all .3s; pointer-events: none;}
+#itemListWrap .itemListTabContentBox .itemListTabContentList.hasScroll::after{opacity: 1;}
+#itemListWrap .itemListTabContentBox .itemListTabContentList.scrollEnd::after{opacity: 0;}
 #itemListWrap .itemListTabContentBox .itemListTabContentList li .itemListBtn{display: block; width: 100%;}
 #itemListWrap .itemListTabContentBox .itemListTabContentList li .itemListBtn:hover .itemListImgBox img{transform: scale(1.03);}
 #itemListWrap .itemListTabContentBox .itemListTabContentList li .itemListBtn:hover .itemListImgBox{background-color: var(--white); border-color: var(--gray-900);}
@@ -412,7 +415,7 @@ background: linear-gradient(
 /* 품목 규격 선택 모달 */ 
 #itemSpecSelectWrap{ display: flex; flex-direction: column; max-width: 532px; width: calc(100% - 20px); max-height: 540px; height: calc(100vh - 80px); padding: var(--spacing-m); position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 999; background-color: var(--white); border-radius: var(--radius-m); border: 1px solid var(--gray-600);  box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22); opacity: 0; visibility: hidden; transition: all 1s;}
 #itemSpecSelectWrap.active{opacity: 1; visibility: visible;}
- #itemSpecSelectWrap .itemSpecSelectTopBox{margin-bottom: var(--spacing-m); display: flex; align-items: center; gap: 0 var(--spacing-s);}
+ #itemSpecSelectWrap .itemSpecSelectTopBox{padding-right: var(--spacing-l); margin-bottom: var(--spacing-m); display: flex; align-items: center; gap: 0 var(--spacing-s);}
  #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectImgBox{flex-shrink: 0; width: 64px; height: 64px; border-radius: var(--radius-m); background-color: var(--guide-50);}
 #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectImgBox img{height: 100%; object-fit: cover;}
 #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectTextBox .itemSpecSelectText{color: var(--gray-900); font-weight: var(--semi-bold); font-size: var(--font-size-xxxl); line-height: 1.4;} 
@@ -424,12 +427,33 @@ background: linear-gradient(
 #itemSpecSelectWrap .itemSpecListBox .itemSpecRadioBox .itemSpecPriceBox span::before{content: ''; width: 18px; height: 18px; background: url(../images/main/price_icon.svg)no-repeat center;}
 #itemSpecSelectWrap .itemSpecQuantityBox{margin:auto 0 var(--spacing-s); display: flex; align-items: center; justify-content: space-between;}
 #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityText{color: #2F3D4A; font-weight: var(--semi-bold); font-size: var(--font-size-s);}
-#itemSpecSelectWrap .itemSpecQuantityBox .itemSelectCountBox{display: flex; align-items: center; gap: 0 var(--spacing-s);}
-#itemSpecSelectWrap .itemSpecQuantityBox .itemSelectCountBox .itemSelectCountText{color: var(--gray-600); font-weight: var(--bold); font-size: var(--H5);}
+#itemSpecSelectWrap .itemSpecQuantityBox .itemSelectCountBox{display: flex; align-items: center;}
+#itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox .itemSelectCountText{color: var(--gray-600); font-weight: var(--bold); font-size: var(--H5);}
+#itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox{display: flex; align-items: center; gap:0 var(--spacing-s); }
 #itemSpecSelectWrap .btn{width: 100%;}
-#itemSpecSelectWrap .itemSpecModalCloseBtn{display: flex; flex-direction: column; align-items: center;  position: absolute; top:24px; right:24px; color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-m);}
+#itemSpecSelectWrap .itemSpecModalCloseBtn{display: flex; flex-direction: column; align-items: center;  position: absolute; top:24px; right:24px;}
+#itemSpecSelectWrap .itemSpecModalCloseBtn span{color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-m);}
 #itemSpecSelectWrap .itemSpecModalCloseBtn::before{content: ''; width: 36px; height: 36px; background: url(../images/main/close_icon01.svg)no-repeat center; border-radius: var(--radius-2xs); border: 1px solid transparent; transition: all .3s;}
 #itemSpecSelectWrap .itemSpecModalCloseBtn:hover::before{background-color: var(--guide-50); border-color:var(--guide-100);}
+
+@media (max-width: 1024px){
+
+  #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox .itemSelectCountText,
+  #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectTextBox .itemSpecSelectText{font-size: var(--font-size-xl);}
+
+}
+
+@media (max-width: 480px){
+
+  #itemSpecSelectWrap{padding: var(--spacing-l) var(--spacing-s) var(--spacing-s);}
+  #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox{gap: 0 var(--spacing-xs);}
+  #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox .itemSelectCountText,
+  #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectTextBox .itemSpecSelectText{font-size: var(--font-size-m);}
+  #itemSpecSelectWrap .itemSpecSelectTopBox{flex-direction: column; gap: var(--spacing-xs) 0; padding: 0; text-align: center;}
+  #itemSpecSelectWrap .itemSpecModalCloseBtn span{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
+  #itemSpecSelectWrap .itemSpecModalCloseBtn{top: 10px; right:10px;}
+
+}
     
 /* 공통 - 체크박스 */
 input[type="radio"] + label,
