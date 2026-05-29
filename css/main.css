@@ -279,7 +279,7 @@ background: linear-gradient(
 
 /* 품목 모달 목록 */
 #itemListWrap{display: flex; max-width: 1350px; width: calc(100% - 20px); max-height: 906px;
-  height: calc(100vh - 80px); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: var(--radius-l); z-index: 999; overflow: hidden; }
+  height: calc(100vh - 79px); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: var(--radius-l); z-index: 999; overflow: hidden; }
 #itemListWrap .itemListBox{flex: 1; display: flex; flex-direction: column; height: 100%; padding: var(--spacing-lm) var(--spacing-lm) 0; background-color: var(--white);}
 #itemListWrap .itemListLayoutBox{display: flex; align-items: flex-start; min-height: 0;}
 #itemListWrap .itemListSearchTopBox{margin-bottom: var(--spacing-lm ); position: relative;}
@@ -294,11 +294,12 @@ background: linear-gradient(
 #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn{padding: var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); border-radius: var(--radius-s); transition: all .3s;}
 #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn:hover{background-color: var(--gray-100);}
 #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn.active{background-color: var(--primary-500); border: 1px solid var(--gray-100); color: var(--white); font-weight: var(--bold); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
-#itemListWrap .itemListTabContentBox{flex: 1; flex-shrink: 1; padding-bottom: var(--spacing-m); min-height: 0; height: 100%; overflow-y: auto;}
-#itemListWrap .itemListTabContentBox .itemListTabContentList{position: relative; display: grid; grid-template-columns: repeat(3,1fr); gap: var(--spacing-lm) var(--spacing-ms);} 
-#itemListWrap .itemListTabContentBox .itemListTabContentList::after{content: ''; opacity: 0; position: absolute; left: 0; right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 40%,rgba(255,255,255,1) 100%); z-index: 9; transition: all .3s; pointer-events: none;}
-#itemListWrap .itemListTabContentBox .itemListTabContentList.hasScroll::after{opacity: 1;}
-#itemListWrap .itemListTabContentBox .itemListTabContentList.scrollEnd::after{opacity: 0;}
+#itemListWrap .itemListTabContentBox{position: relative; flex: 1; height: 100%;}
+#itemListWrap .itemListTabContentBox .itemListTabContentListBox{height: 100%; overflow-x: hidden; overflow-y: auto; padding-bottom: var(--spacing-m);}
+#itemListWrap .itemListTabContentBox .itemListTabContentList{display: grid; grid-template-columns: repeat(3,1fr); gap: var(--spacing-lm) var(--spacing-ms);} 
+#itemListWrap .itemListTabContentBox .itemListTabContentListBox::after{content: ''; opacity: 0; position: absolute; left: 0; right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 40%,rgba(255,255,255,1) 100%); z-index: 9; transition: all .3s; pointer-events: none;}
+#itemListWrap .itemListTabContentBox .itemListTabContentListBox.hasScroll::after{opacity: 1;}
+#itemListWrap .itemListTabContentBox .itemListTabContentListBox.scrollEnd::after{opacity: 0;}
 #itemListWrap .itemListTabContentBox .itemListTabContentList li .itemListBtn{display: block; width: 100%;}
 #itemListWrap .itemListTabContentBox .itemListTabContentList li .itemListBtn:hover .itemListImgBox img{transform: scale(1.03);}
 #itemListWrap .itemListTabContentBox .itemListTabContentList li .itemListBtn:hover .itemListImgBox{background-color: var(--white); border-color: var(--gray-900);}

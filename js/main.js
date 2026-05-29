@@ -10,7 +10,7 @@ $(function () {
   });
 
   //스크롤 그라데이션 
-  $('.itemListTabContentList').each(function () {
+  $('.itemListTabContentListBox').each(function () {
     const $w = $(this);
 
     $w.scroll(function () {
