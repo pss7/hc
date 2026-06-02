@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-#wrap{overflow-x: hidden;}
 #main{position: relative; display: flex; align-items: center; padding: var(--spacing-lm) var(--spacing-ms);}
 
 @media (max-width: 1280px){
@@ -432,10 +431,7 @@ background: linear-gradient(
 #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox .itemSelectCountText{color: var(--gray-600); font-weight: var(--bold); font-size: var(--H5);}
 #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox{display: flex; align-items: center; gap:0 var(--spacing-s); }
 #itemSpecSelectWrap .btn{width: 100%;}
-#itemSpecSelectWrap .itemSpecModalCloseBtn{display: flex; flex-direction: column; align-items: center;  position: absolute; top:24px; right:24px;}
-#itemSpecSelectWrap .itemSpecModalCloseBtn span{color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-m);}
-#itemSpecSelectWrap .itemSpecModalCloseBtn::before{content: ''; width: 36px; height: 36px; background: url(../images/main/close_icon01.svg)no-repeat center; border-radius: var(--radius-2xs); border: 1px solid transparent; transition: all .3s;}
-#itemSpecSelectWrap .itemSpecModalCloseBtn:hover::before{background-color: var(--guide-50); border-color:var(--guide-100);}
+#itemSpecSelectWrap .itemSpecModalCloseBtn{position: absolute; top:24px; right:24px;}
 
 @media (max-width: 1024px){
 
@@ -451,7 +447,6 @@ background: linear-gradient(
   #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox .itemSelectCountText,
   #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectTextBox .itemSpecSelectText{font-size: var(--font-size-m);}
   #itemSpecSelectWrap .itemSpecSelectTopBox{flex-direction: column; gap: var(--spacing-xs) 0; padding: 0; text-align: center;}
-  #itemSpecSelectWrap .itemSpecModalCloseBtn span{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
   #itemSpecSelectWrap .itemSpecModalCloseBtn{top: 10px; right:10px;}
 
 }

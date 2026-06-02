@@ -448,18 +448,361 @@
 
         <aside id="chatbot" aria-label="챗봇">
 
-            <div class="chatbotInfoText">
-                <p>
-                    도움이 필요하신가요?
-                </p>
-                <button type="button" class="chatbotCloseBtn" aria-label="챗봇 안내 닫기"></button>
-            </div>
+            <div class="chatbotBox">
+                <div class="chatbotInfoText">
+                    <p>
+                        도움이 필요하신가요?
+                    </p>
+                    <button type="button" class="chatbotCloseBtn" aria-label="챗봇 안내 닫기"></button>
+                </div>
 
-            <button type="button" class="chatbotBtn" aria-label="비우미 챗봇 열기">
-                <span>
-                    비우미
-                </span>
-            </button>
+                <button type="button" class="chatbotBtn" aria-label="비우미 챗봇 열기" aria-controls="chatbotContent"
+                    aria-expanded="false">
+                    <span>
+                        비우미
+                    </span>
+                </button>
+            </div>
+            <!-- //chatbotBox -->
+
+            <div class="chatbotContentWrap" id="chatbotContent">
+
+                <div class="chatbotSideBox chatbotSideLeftBox">
+
+                    <button type="button" class="chatbotSideBtn chatbotReturnBtn" aria-label="챗봇 처음으로 돌아가기">
+                        <span class="chatbotSideBtnText">처음</span>
+                    </button>
+
+                    <button type="button" class="chatbotSideBtn chatbotResizeBtn" aria-label="챗봇 크게 보기">
+                        <span class="chatbotSideBtnText">크게</span>
+                    </button>
+
+                </div>
+                <!-- //chatbotSideBox -->
+
+                <div class="chatbotContentBox" role="dialog" aria-modal="false">
+
+                    <header class="chatbotHeader">
+                        <div class="chatbotTitleBox">
+                            <span class="chatbotTitle">비우미</span>
+                        </div>
+
+                        <button type="button" class="chatbotContCloseBtn closeBtn" aria-label="챗봇 닫기">
+                            <span>
+                                닫기
+                            </span>
+                        </button>
+                    </header>
+                    <!-- //chatbotHeader -->
+
+                    <div class="chatbotBody">
+                        <div class="chatbotMessageList">
+
+                            <!--  답변대기
+                        <div class="chatbotMessage chatbotMessageBot chatbotMessageWaiting">
+                            <div class="chatbotMessageCont">
+
+                                <span class="chatbotWaitingDots" aria-hidden="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+
+                                <p class="chatbotWaitingText">
+                                    답변을 생각하고 있어요
+                                </p>
+
+                                <span class="chatbotWaitingTime">
+                                    3초
+                                </span>
+
+                            </div>
+                        </div>
+                       //chatbotMessageWaiting -->
+
+                            <!-- 
+                        chatbotMessageBot > 챗봇 답변
+                        chatbotMessageUser > 질문
+                       -->
+                            <div class="chatbotMessage chatbotMessageBot">
+                                <div class="chatbotMessageCont">
+                                    <p>
+                                        안녕하세요!
+                                        무엇을 도와드릴까요?
+                                    </p>
+
+                                    <div class="chatbotOptionBox">
+                                        <strong class="chatbotOptionTitle">추천 질문</strong>
+                                        <div class="chatbotOptionList">
+                                            <button type="button" class="chatbotOptionBtn">수수료가 얼마인지 알고 싶어요</button>
+                                            <button type="button" class="chatbotOptionBtn chatbotOptionBtnEtc">오류가
+                                                발생했어요</button>
+                                        </div>
+                                    </div>
+                                    <!-- //chatbotOptionBox -->
+
+                                </div>
+                                <!-- //chatbotMessageCont -->
+
+                            </div>
+                            <!-- //chatbotMessage -->
+
+                            <!-- 선택신청, 사진신청 -->
+                            <div class="chatbotApplyBox">
+                                <button type="button" class="chatbotApplyBtn">
+                                    <span class="chatbotApplyTitle chatbotSelectApplyTitle">선택 신청</span>
+                                    <span class="chatbotApplyText">품목을 직접<br>선택합니다</span>
+                                </button>
+
+                                <button type="button" class="chatbotApplyBtn">
+                                    <span class="chatbotApplyTitle chatbotPhotoApplyTitle">사진 신청</span>
+                                    <span class="chatbotApplyText">사진으로 품목을<br>검색합니다</span>
+                                </button>
+                            </div>
+                            <!-- //chatbotApplyBox -->
+
+                            <div class="chatbotMessage chatbotMessageUser">
+                                <div class="chatbotMessageCont">
+
+                                    <div class="chatbotUploadImgBox">
+                                        <img src="../images/common/photo01.png" alt="">
+                                    </div>
+
+                                    <p>사진첨부</p>
+
+                                </div>
+                                <!-- //chatbotMessageCont -->
+
+                            </div>
+                            <!-- //chatbotMessage -->
+
+                            <div class="chatbotMessage chatbotMessageBot">
+                                <div class="chatbotMessageCont">
+                                    <p>
+                                        이용에 불편을 드려 죄송합니다.
+                                        어떤 문제가 발생하셨나요?
+                                    </p>
+
+                                    <div class="chatbotOptionBox">
+                                        <strong class="chatbotOptionTitle">품목 선택</strong>
+                                        <div class="chatbotOptionList">
+                                            <button type="button" class="chatbotOptionBtn">쌀통</button>
+                                            <button type="button" class="chatbotOptionBtn">밥솥</button>
+                                            <button type="button" class="chatbotOptionBtn">식기건조기/식기세척기</button>
+                                            <button type="button" class="chatbotOptionBtn chatbotOptionBtnEtc">다른 문제가
+                                                발생했어요</button>
+                                        </div>
+                                    </div>
+                                    <!-- //chatbotOptionBox -->
+
+                                </div>
+                                <!-- //chatbotMessageCont -->
+
+                            </div>
+                            <!-- //chatbotMessage -->
+
+                            <div class="chatbotMessage chatbotMessageUser">
+                                <div class="chatbotMessageCont">
+                                    <p>쌀통</p>
+                                </div>
+                            </div>
+                            <!-- //chatbotMessage -->
+
+                            <div class="chatbotMessage chatbotMessageBot">
+                                <div class="chatbotMessageCont">
+
+                                    <p>
+                                        쌀통에 대한 규격을 선택해주세요
+                                    </p>
+
+                                    <div class="chatbotUploadImgBox">
+                                        <img src="../images/common/photo02.png" alt="">
+                                    </div>
+
+                                    <!-- chatbotOptionPriceText클래스 적용 시 금액 아이콘 -->
+                                    <div class="chatbotOptionBox">
+                                        <strong class="chatbotOptionTitle">쌀통</strong>
+                                        <div class="chatbotOptionList">
+                                            <button type="button" class="chatbotOptionBtn">
+                                                80㎏ 이상
+                                                <span class="chatbotOptionText chatbotOptionPriceText">
+                                                    5,000원
+                                                </span>
+                                            </button>
+                                            <button type="button" class="chatbotOptionBtn">
+                                                80㎏ 미만
+                                                <span class="chatbotOptionText chatbotOptionPriceText">
+                                                    4,000원
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!--
+                                <div class="chatbotOptionBox">
+                                    <div class="chatbotOptionList">
+                                        <button type="button" class="chatbotOptionBtn">
+                                            쌀통 외 1건
+                                            <span class="chatbotOptionText">
+                                                20260513-1726
+                                            </span>
+                                        </button>
+                                        <button type="button" class="chatbotOptionBtn">
+                                            에어컨
+                                            <span class="chatbotOptionText">
+                                                20260513-1726
+                                            </span>
+                                        </button>
+                                        <button type="button" class="chatbotOptionBtn">
+                                            식기건조기/식기세척기 외 6건
+                                            <span class="chatbotOptionText">
+                                                20260513-1726
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                 //chatbotOptionBox -->
+
+                                </div>
+                                <!-- //chatbotMessageCont -->
+
+                            </div>
+                            <!-- //chatbotMessage -->
+
+                            <div class="chatbotMessage chatbotMessageUser">
+                                <div class="chatbotMessageCont">
+                                    <p>80kg 이상</p>
+                                </div>
+                            </div>
+                            <!-- //chatbotMessage -->
+
+                            <div class="chatbotMessage chatbotMessageBot">
+
+                                <div class="chatbotMessageCont">
+
+                                    <p>
+                                        쌀통에 대한 규격을 선택해주세요
+                                    </p>
+
+                                </div>
+                                <!-- //chatbotMessageCont -->
+
+                            </div>
+                            <!-- //chatbotMessage -->
+
+                        </div>
+                        <!-- //chatbotMessageList -->
+
+                        <div class="chatbotInfoBox">
+                            <dl class="chatbotInfoList">
+                                <div class="chatbotInfoItem">
+                                    <dt class="chatbotInfoLabel">품목</dt>
+                                    <dd class="chatbotInfoValue">쌀통</dd>
+                                </div>
+
+                                <div class="chatbotInfoItem">
+                                    <dt class="chatbotInfoLabel">규격</dt>
+                                    <dd class="chatbotInfoValue">80kg 이상</dd>
+                                </div>
+
+                                <div class="chatbotInfoItem">
+                                    <dt class="chatbotInfoLabel">금액</dt>
+                                    <dd class="chatbotInfoValue">4,000원</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- //chatbotInfoBox -->
+
+                        <p class="infoText">
+                            현재 회원님의 정보가
+                            브라우저에 임시저장되어 있습니다.
+                            해당 정보를 이용해도 될까요?
+                        </p>
+                        <!-- //infoText -->
+
+                        <div class="btnBox">
+                            <button type="button" class="btn btnPositive">
+                                <div class="slideText">
+                                    <span class="slideTextItem slideTextPrimary">해당 품목 배출하기</span>
+                                    <span class="slideTextItem slideTextClone" aria-hidden="true">해당 품목 배출하기</span>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- //btnBox -->
+
+                        <div class="chatbotBtnBox">
+                            <button type="button" class="chatbotButton">
+                                담고 추가 선택하기
+                            </button>
+                            <button type="button" class="chatbotButton">
+                                처음으로
+                            </button>
+                        </div>
+                        <!-- //chatbotBtnBox -->
+
+                        <!-- Secondary 색상 버튼 */
+                    <div class="btnBox">
+                        <button type="button" class="btn btnSecondary">
+                            <div class="slideText">
+                                <span class="slideTextItem slideTextPrimary">이 정보로 문의하기</span>
+                                <span class="slideTextItem slideTextClone" aria-hidden="true">이 정보로 문의하기</span>
+                            </div>
+                        </button>
+                    </div>
+                     //btnBox -->
+
+                        <!-- dots 리스트 
+                    <ul class="infoList">
+                        <li>
+                            순차적으로 문의를 확인하고 있습니다.
+                        </li>
+                        <li>
+                            문의 지연 시 아래 번호로 연락주세요.
+                        </li>
+                    </ul>
+                     //infoList -->
+
+                    </div>
+                    <!-- //chatbotBody-->
+
+                    <footer class="chatbotFooter">
+                        <div class="chatbotFormBox">
+                            <div class="chatbotFileBox">
+                                <input id="chatbotFile" type="file" class="blind">
+                                <label for="chatbotFile" class="chatbotFileBtn">
+                                    <span>
+                                        사진 업로드
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="chatbotInputBox">
+                                <input id="chatbotInput" type="text" class="chatbotInput" placeholder="질문을 입력해 주세요.">
+                                <label for="chatbotInput" class="blind">질문 입력</label>
+                                <button type="button" class="chatbotSendBtn" aria-label="전송"></button>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- //chatbotFooter -->
+
+                </div>
+                <!-- //chatbotContentBox -->
+
+                <div class="chatbotSideBox chatbotSideRightBox">
+
+                    <button type="button" class="chatbotSideBtn chatbotReturnBtn" aria-label="챗봇 처음으로 돌아가기">
+                        <span class="chatbotSideBtnText">처음</span>
+                    </button>
+
+                    <button type="button" class="chatbotSideBtn chatbotResizeBtn" aria-label="챗봇 작게 보기">
+                        <span class="chatbotSideBtnText">작게</span>
+                    </button>
+
+                </div>
+                <!-- //chatbotSideBox -->
+
+            </div>
+            <!-- //chatbotContentWrap -->
 
         </aside>
         <!-- //chatbot -->

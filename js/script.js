@@ -14,8 +14,24 @@ $(function () {
   });
 
   /* 챗봇 */
-  $('.chatbotCloseBtn').click(function () {
+  $('#chatbot .chatbotCloseBtn').click(function () {
     $('#chatbot .chatbotInfoText').fadeOut();
+  });
+
+  $('#chatbot .chatbotBtn').click(function () {
+    $('#chatbot').removeClass('close').addClass('active');
+    $(this).attr('aria-expanded', 'true');
+  });
+
+  $('#chatbot .chatbotContCloseBtn').click(function () {
+    $('#chatbot').addClass('close');
+    $('#chatbot').removeClass('active large');
+
+    $('#chatbot .chatbotBtn').attr('aria-expanded', 'false');
+  });
+
+  $('#chatbot .chatbotResizeBtn').click(function () {
+    $('#chatbot').toggleClass('large');
   });
 
   /* 팝업 */
