@@ -6,14 +6,16 @@ html, body{height: 100%;}
 #wrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: linear-gradient(180deg, #ECF0F3 0%, #ECF5FF 50%, #ECF0F3 100%); z-index: -2;}
 main{flex: 1;}
 .blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
-.mobileMenuOverlay,
+.mobileMenuBg,
+.bg,
 .overlay{display: none; position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99;}
-.mobileMenuOverlay.active,
+.mobileMenuBg.active,
+.bg.active,
 .overlay.active{display: block;}
 
 @media (min-width: 1281px){
 
-  .mobileMenuOverlay{display: none!important;}
+  .mobileMenuBg{display: none!important;}
 
 }
 
@@ -88,7 +90,7 @@ transition: all .8s;}
 #popupWrap{display: flex; align-items: center; justify-content: center; padding: var(--radius-m); position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99;}
 #popupWrap .popupBox{max-width: 508px; width: 100%;}
 #popupWrap .popupBtnBox{display: flex; border-radius: 0 0 var(--radius-m) var(--radius-m); overflow: hidden;}
-#popupWrap .popupBtnBox .popupBtn{height: 56px; flex:1; background-color: var(--white); font-weight: var(--medium); color: var(--gray-600); border-right: 1px solid var(--gray-100); text-align: center;}
+#popupWrap .popupBtnBox .popupBtn{padding: 0 var(--spacing-2xs); height: 56px; flex:1; background-color: var(--white); font-weight: var(--medium); color: var(--gray-600); border-right: 1px solid var(--gray-100); text-align: center;}
 #popupWrap .popupBtnBox .popupBtn:last-child{border-right:0;}
 #popupWrap .slickWrap{position: relative;}
 #popupWrap .arrowBtn{position: absolute; top: 50%; transform: translateY(-50%);}

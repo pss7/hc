@@ -4,13 +4,13 @@ $(function () {
   $('.mobileBtn').click(function () {
     $('#mobileMenuWrap').addClass('active');
     $('body').addClass('mobileNonScroll');
-    $('.mobileMenuOverlay').addClass('active');
+    $('.mobileMenuBg').addClass('active');
   });
 
   $('.mobileCloseBtn').click(function () {
     $('#mobileMenuWrap').removeClass('active');
     $('body').removeClass('mobileNonScroll');
-    $('.mobileMenuOverlay').removeClass('active');
+    $('.mobileMenuBg').removeClass('active');
   });
 
   /* 챗봇 */
