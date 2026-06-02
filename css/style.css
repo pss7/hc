@@ -2,14 +2,26 @@
 
 /* 공통 */
 html, body{height: 100%;}
-body.isOverlay .overlay{display: block;}
-body.mobileNonScroll{overflow: hidden;}
 #wrap{min-height: 100vh; position: relative; display: flex; flex-direction: column;}
 #wrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: linear-gradient(180deg, #ECF0F3 0%, #ECF5FF 50%, #ECF0F3 100%); z-index: -2;}
 main{flex: 1;}
 .blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
+.mobileMenuOverlay,
 .overlay{display: none; position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99;}
+.mobileMenuOverlay.active,
 .overlay.active{display: block;}
+
+@media (min-width: 1281px){
+
+  .mobileMenuOverlay{display: none!important;}
+
+}
+
+@media (max-width: 1280px){
+
+  body.mobileNonScroll{overflow: hidden;}
+
+}
 
 /* 공통 - 버튼 */
 .btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
