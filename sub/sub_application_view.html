@@ -223,6 +223,25 @@
                                             결제정보
                                         </h3>
 
+                                        <div class="formpayMentStatusBox">
+                                            <!-- 
+                                                        클래스적용
+                                                        미결제 > unpaid
+                                                        취소요청 > cancel
+                                                        수거요청 > pickup
+                                                    -->
+
+                                            <span class="itemSelectStatusBadge unpaid">
+                                                미결제
+                                            </span>
+
+                                            <p class="formpayMentStatusText">
+                                                2026년 06월 02일 23:59 까지 입금해주세요
+                                            </p>
+
+                                        </div>
+                                        <!-- //formpayMentStatusBox -->
+
                                         <div class="formDetailInfoBox">
                                             <dl class="formDetailInfoItem">
                                                 <dt class="formDetailInfoLabel">결제수단</dt>
@@ -238,7 +257,8 @@
                                                 <dt class="formDetailInfoLabel">계좌번호</dt>
                                                 <dd class="formDetailInfoValue">
                                                     <div class="formDetailInfoCopyBox">
-                                                        <span class="formDetailInfoText">79004858353010</span>
+                                                        <span
+                                                            class="formDetailInfoText formAccountNumber">79004858353010</span>
                                                         <button type="button" class="formDetailInfoCopyBtn">복사</button>
                                                     </div>
                                                 </dd>

@@ -32,6 +32,16 @@ $(function () {
     $(this).addClass('active');
   });
 
+  //복사
+  $('.formDetailInfoCopyBtn').click(function (e) {
+    e.preventDefault();
+
+    navigator.clipboard.writeText(
+      $(this).prev('.formAccountNumber').text()
+    );
+
+    alert('복사되었습니다.');
+  });
 
 
 });

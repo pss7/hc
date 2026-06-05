@@ -271,6 +271,9 @@
 /* 신청하기 상세 */
 .formSection .formApplicationItemBox .infoText,
 .formSection .formpayMentInfoBox .infoText{margin: 0}
+.formSection .formpayMentInfoBox .formpayMentStatusBox{margin-bottom: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-xs) var(--spacing-s);}
+.formSection .formpayMentInfoBox .formpayMentStatusBox .itemSelectStatusBadge{flex-shrink: 0;}
+.formSection .formpayMentInfoBox .formpayMentStatusBox .formpayMentStatusText{color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1);} 
 .formSection .formDetailInfoBox{margin-bottom: var(--spacing-m);}
 .formSection .formDetailInfoBox .formDetailInfoItem{margin-bottom: var(--spacing-s
   ); display: flex; align-items: center; gap: 0 var(--spacing-xs)}
@@ -278,16 +281,12 @@
 .formSection .formDetailInfoBox .formDetailInfoLabel{flex-shrink: 0; padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--guide-500); color: var(--white); font-weight: var(--medium ); border-radius: var(--radius-xs); line-height: 1.2;}
 .formSection .formDetailInfoBox .formDetailInfoValue{color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-l);}
 .formSection .formDetailInfoBox .formDetailInfoValue .formDetailInfoName{margin-right: var(--spacing-2xs); font-weight: var(--semi-bold);}
-.formSection .formDetailInfoBox .formDetailInfoCopyBox{display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.formSection .formDetailInfoBox .formDetailInfoCopyBox{display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
 .formSection .formDetailInfoBox .formDetailInfoCopyBox .formDetailInfoText{text-decoration: underline;}
 .formSection .formDetailInfoBox .formDetailInfoCopyBox .formDetailInfoCopyBtn{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--guide-500); font-weight: var(--bold); font-size: var(--body-2); border-radius: var(--radius-xs); border: 1px solid var(--guide-500); line-height: 1.1;}
-.formSection .formDetailInfoBox .formDetailInfoDateBox{display: flex; align-items: center; flex-wrap: wrap; gap: 0 var(--spacing-xs);}
+.formSection .formDetailInfoBox .formDetailInfoDateBox{display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
 .formSection .formDetailInfoBox .formDetailInfoDateBox .formDetailInfoBadge{color: var(--primary-500); font-weight: var(--medium); font-size: var(--font-size-l);}
 .formSection .formApplicationItemBox .itemSelectList{margin: var(--spacing-m) 0;}
-.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBadge{padding: var(--spacing-2xs) var(--spacing-xs); font-size: var(--body-2); font-weight: var(--semi-bold); border-radius: 0 0 0 var(--radius-xs); line-height: 1.1;}
-.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBadge.unpaid{background-color: var(--secondary-50); border: 1px solid var(--secondary-100); color: var(--secondary-700);}
-.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBadge.cancel{background-color: var(--danger-50); border: 1px solid var(--danger-100); color: var(--danger-700);}
-.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBadge.pickup{background-color: var(--primary-50); border: 1px solid var(--primary-100); color: var(--primary-700);}
 .formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBox{display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-xs) 0;}
 .formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptInfo{min-width: 138px; min-height: 29px; padding: var(--radius-2xs); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-xs); border: 1px solid var(--guide-500); border-radius: var(--radius-xs);}
 .formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptLabel{font-weight: var(--bold); font-size: var(--body-2); color: var(--guide-300);}
@@ -306,6 +305,10 @@
 .formSection .formApplicationItemBox .formPickupScheduleTime::before{background: url(../images/sub/time_icon.svg)no-repeat center / contain;}
 .formSection .formApplicationItemBox .formPickupScheduleText{display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-600);  font-weight: var(--semi-bold); font-size: var(--Subtitle-1);}
 .formSection .formApplicationItemBox .formPickupScheduleText::before{content: ''; width: 20px; height: 20px;}
+.itemSelectStatusBadge{padding: var(--spacing-2xs) var(--spacing-xs); font-size: var(--body-2); font-weight: var(--semi-bold); border-radius: 0 0 0 var(--radius-xs); line-height: 1.1;}
+.itemSelectStatusBadge.unpaid{background-color: var(--secondary-50); border: 1px solid var(--secondary-100); color: var(--secondary-700);}
+.itemSelectStatusBadge.cancel{background-color: var(--danger-50); border: 1px solid var(--danger-100); color: var(--danger-700);}
+.itemSelectStatusBadge.pickup{background-color: var(--primary-50); border: 1px solid var(--primary-100); color: var(--primary-700);}
 
 @media (max-width: 768px){
 
@@ -315,14 +318,19 @@
   .formSection .formApplicationItemBox .itemSelectTotalPrice{font-size: var(--font-size-xl);}
   .formSection .formApplicationItemBox .formPickupScheduleText{font-size: var(--font-size-m);}
 
+  .formSection .formpayMentInfoBox .formpayMentStatusBox .formpayMentStatusText{font-size: var(--font-size-m);}
+
 }
 
 @media (max-width: 480px){
 
+  .formSection .formpayMentInfoBox .formpayMentStatusBox{flex-direction: column;}
   .formSection .formApplicationItemBox .itemSelectList{margin: var(--spacing-m) 0 0;}
   .formSection .formApplicationItemBox .itemSelectList li .itemSelectInfoBox{justify-content: center;}
   .formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBox{align-items: center;}
   .formSection .formDetailInfoBox .formDetailInfoItem{margin-bottom: var(--spacing-ms); flex-direction: column; gap: var(--spacing-xs) 0;}
   .formSection .formApplicationItemBox .itemSelectTotalPrice{font-size: var(--font-size-l);}
+  .formSection .formApplicationItemBox .itemSelectTotalBox{flex-direction: column; gap: var(--spacing-s) 0;}
+  .formSection .formApplicationItemBox .formPickupScheduleInfo{width: 100%; flex-direction: column; align-items:center; gap: var(--spacing-s);}
   
 }
