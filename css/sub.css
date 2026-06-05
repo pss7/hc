@@ -102,6 +102,7 @@
 .formSection .formSectionTitle .formSectionNumber{flex-shrink: 0; display: flex; align-items: center; justify-content: center; min-width: 32px; height: 25px; padding: var(--spacing-2xs); color: var(--primary-500); font-weight: var(--bold); font-size: var(--body-2); background-color: var(--primary-50); border-radius: var(--radius-xs); border: 1px solid var(--primary-500);}
 .formSection .formItemBox{margin-bottom: var(--spacing-m );}
 .formSection .itemSelectList li{padding: var(--spacing-s) 0; margin-bottom: 0;}
+.formSection .itemSelectList li:last-child{border-bottom: 0;}
 .formSection .itemSelectList li .itemSelectImgBox{width: 80px; height: 80px;}
 .formSection .itemSelectList li .itemSelectDelBtn{right: 0;}
 .formSection .formBtn{width: 100%; gap: 0 var(--spacing-xs); background-color: var(--primary-900); border-radius: var(--radius-s); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
@@ -265,4 +266,63 @@
 
   .formSection .formSectionTopBox{flex-direction: column; align-items: flex-start; gap: var(--spacing-ms) 0;}
 
+}
+
+/* 신청하기 상세 */
+.formSection .formApplicationItemBox .infoText,
+.formSection .formpayMentInfoBox .infoText{margin: 0}
+.formSection .formDetailInfoBox{margin-bottom: var(--spacing-m);}
+.formSection .formDetailInfoBox .formDetailInfoItem{margin-bottom: var(--spacing-s
+  ); display: flex; align-items: center; gap: 0 var(--spacing-xs)}
+.formSection .formDetailInfoBox .formDetailInfoItem:last-child{margin-bottom: 0;}
+.formSection .formDetailInfoBox .formDetailInfoLabel{flex-shrink: 0; padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--guide-500); color: var(--white); font-weight: var(--medium ); border-radius: var(--radius-xs); line-height: 1.2;}
+.formSection .formDetailInfoBox .formDetailInfoValue{color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-l);}
+.formSection .formDetailInfoBox .formDetailInfoValue .formDetailInfoName{margin-right: var(--spacing-2xs); font-weight: var(--semi-bold);}
+.formSection .formDetailInfoBox .formDetailInfoCopyBox{display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.formSection .formDetailInfoBox .formDetailInfoCopyBox .formDetailInfoText{text-decoration: underline;}
+.formSection .formDetailInfoBox .formDetailInfoCopyBox .formDetailInfoCopyBtn{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--guide-500); font-weight: var(--bold); font-size: var(--body-2); border-radius: var(--radius-xs); border: 1px solid var(--guide-500); line-height: 1.1;}
+.formSection .formDetailInfoBox .formDetailInfoDateBox{display: flex; align-items: center; flex-wrap: wrap; gap: 0 var(--spacing-xs);}
+.formSection .formDetailInfoBox .formDetailInfoDateBox .formDetailInfoBadge{color: var(--primary-500); font-weight: var(--medium); font-size: var(--font-size-l);}
+.formSection .formApplicationItemBox .itemSelectList{margin: var(--spacing-m) 0;}
+.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBadge{padding: var(--spacing-2xs) var(--spacing-xs); font-size: var(--body-2); font-weight: var(--semi-bold); border-radius: 0 0 0 var(--radius-xs); line-height: 1.1;}
+.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBadge.unpaid{background-color: var(--secondary-50); border: 1px solid var(--secondary-100); color: var(--secondary-700);}
+.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBadge.cancel{background-color: var(--danger-50); border: 1px solid var(--danger-100); color: var(--danger-700);}
+.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBadge.pickup{background-color: var(--primary-50); border: 1px solid var(--primary-100); color: var(--primary-700);}
+.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBox{display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-xs) 0;}
+.formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptInfo{min-width: 138px; min-height: 29px; padding: var(--radius-2xs); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-xs); border: 1px solid var(--guide-500); border-radius: var(--radius-xs);}
+.formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptLabel{font-weight: var(--bold); font-size: var(--body-2); color: var(--guide-300);}
+.formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptValue{color: var(--guide-900); font-size: var(--Subtitle-1); font-weight: var(--medium);} 
+.formSection .formApplicationItemBox .itemSelectTotalBox{display: flex; justify-content: space-between; align-items: center; padding-top: var(--spacing-m); border-top: 2px solid var(--guide-500);}
+.formSection .formApplicationItemBox .itemSelectTotalInfo{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.formSection .formApplicationItemBox .itemSelectTotalLabel{color: var(#2F3D4A); font-weight: var(--semi-bold);}
+.formSection .formApplicationItemBox .itemSelectTotalCount{color: var(--primary-500); font-weight: var(--bold);}
+.formSection .formApplicationItemBox .itemSelectTotalPrice{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-size: var(--H5);}
+.formSection .formApplicationItemBox .itemSelectTotalPrice::before{content: ''; width: 18px; height: 18px; background: url(../images/sub/price_icon.svg)no-repeat center;}
+.formSection .formApplicationItemBox .formPickupScheduleBox{padding: var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-m); border-radius: var(--radius-s); border: 1px solid #CDD6E2;}
+.formSection .formApplicationItemBox .formPickupScheduleLabel{margin-bottom: var(--spacing-s); color: var(--gray-900); font-size: var(--Subtitle-1); font-weight: var(--bold);}
+.formSection .formApplicationItemBox .formDetailInfoBox{margin-bottom: var(--spacing-lm);}
+.formSection .formApplicationItemBox .formPickupScheduleInfo{display: flex; align-items: center; gap: 0 var(--spacing-m);}
+.formSection .formApplicationItemBox .formPickupScheduleDate::before{content: ''; background: url(../images/sub/date_icon.svg)no-repeat center / contain;}
+.formSection .formApplicationItemBox .formPickupScheduleTime::before{background: url(../images/sub/time_icon.svg)no-repeat center / contain;}
+.formSection .formApplicationItemBox .formPickupScheduleText{display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-600);  font-weight: var(--semi-bold); font-size: var(--Subtitle-1);}
+.formSection .formApplicationItemBox .formPickupScheduleText::before{content: ''; width: 20px; height: 20px;}
+
+@media (max-width: 768px){
+
+  .formSection .formDetailInfoBox .formDetailInfoDateBox .formDetailInfoBadge,
+  .formSection .formDetailInfoBox .formDetailInfoValue{font-size: var(--font-size-m);}
+  .formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptValue{font-size: var(--font-size-m);}
+  .formSection .formApplicationItemBox .itemSelectTotalPrice{font-size: var(--font-size-xl);}
+  .formSection .formApplicationItemBox .formPickupScheduleText{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .formSection .formApplicationItemBox .itemSelectList{margin: var(--spacing-m) 0 0;}
+  .formSection .formApplicationItemBox .itemSelectList li .itemSelectInfoBox{justify-content: center;}
+  .formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBox{align-items: center;}
+  .formSection .formDetailInfoBox .formDetailInfoItem{margin-bottom: var(--spacing-ms); flex-direction: column; gap: var(--spacing-xs) 0;}
+  .formSection .formApplicationItemBox .itemSelectTotalPrice{font-size: var(--font-size-l);}
+  
 }
