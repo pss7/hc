@@ -25,7 +25,36 @@ main{flex: 1;}
 
 }
 
-/* 공통 - 버튼 */
+/* 공통 - 폼 */
+/* 공통 - 체크박스 */
+input[type="radio"] + label,
+input[type="checkbox"] + label{position: relative; display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--black); font-weight: var(--semi-bold); font-size: var(--font-size-m); cursor: pointer;}
+input[type="radio"] + label::before,
+input[type="checkbox"] + label::before{content: ''; flex-shrink: 0; width: 20px; height: 20px; border: 2px solid var(--gray-200); border-radius: 50%;}
+input[type="radio"]:checked + label::before,
+input[type="checkbox"]:checked + label::before{border: 0; width: 24px; height: 24px; background: url(../images/common/chk_on.svg)no-repeat center / contain;}
+input{width: 100%;  padding-left: var(--spacing-s); height: 56px; line-height: 56px; border: 1px solid var(--guide-100); border-radius: var(--radius-s); color: var(--gray-900); font-size: var(--font-size-l); font-weight: var(--medium);}
+input::placeholder{color: var(--gray-900);}
+input.error{border-color: var(--danger-500);}
+input:hover{border-color: var(--primary-500);}
+input:read-only{background-color: var(--gray-100); border-color: var(--guide-100); color: var(--gray-600);}
+
+@media (max-width: 768px){
+
+  input{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  input{height: 50px; line-height: 50px; font-size: var(--font-size-s);}
+
+}
+
+/* 공통 - 가운데영역 */
+.container{max-width: 1190px; margin: 0 auto; padding: 0 var(--spacing-ms);} 
+
+/* 공통 - 버튼 */ 
 .btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
 .btn.btnPrimary{background-color: var(--gray-600);}
 .btn.btnPositive{background-color: var(--primary-500);}
@@ -34,6 +63,7 @@ main{flex: 1;}
 .btn:hover{background-color: var(--gray-400);} 
 .btn.btnPositive:hover{background-color: var(--primary-400);}
 .btn.btnNegative:hover{background-color: var(--primary-800);}
+button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); pointer-events: none;}
 
 /* 공통 - 버튼(정렬) */
 .btnBox{display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
@@ -76,15 +106,15 @@ transition: all .8s;}
 .active .toggleBtn::after{transform: rotate(-180deg);}
 
 /* 공통 - 호버 시 텍스트 슬라이드 */
-.slideText{position: relative; width: 100%; overflow: hidden; text-align: center;}
+.slideText{ position: relative; overflow: hidden; text-align: center;}
 .slideText,
 .slideTextItem{display: flex; align-items: center; justify-content: center; height: 100%;}
 .slideTextItem{white-space: nowrap; transition: transform .45s cubic-bezier(.22, 1, .36, 1);}
 .slideTextPrimary{transform: translateY(0);}
 .slideTextClone{position: absolute; top: 0; left: 0; width: 100%;
   transform: translateY(-100%);}
-.slideText:hover .slideTextPrimary{transform: translateY(100%);}
-.slideText:hover .slideTextClone{transform: translateY(0);}
+.btn:hover .slideTextPrimary{transform: translateY(100%);}
+.btn:hover .slideTextClone{transform: translateY(0);}
 
 /* 공통 - 팝업 */
 #popupWrap{display: flex; align-items: center; justify-content: center; padding: var(--radius-m); position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99;}
@@ -317,7 +347,7 @@ transition: all .8s;}
 #chatbot.large .chatbotContentWrap{right: 72px;}
 #chatbot.close .chatbotContentBox {transition: none;}
 
-.infoText{display: flex; align-items: center; gap: 0 var(--spacing-2xs); margin: var(--spacing-s) 0; padding: var(--spacing-xs) var(--spacing-s) var(--spacing-xs) var(--spacing-xs); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-m); background-color: var(--white); border-radius: var(--radius-s); border: 1px solid var(--gray-100); line-height: 1.5;}
+.infoText{display: inline-flex; align-items: center; gap: 0 var(--spacing-2xs); margin: var(--spacing-s) 0; padding: var(--spacing-xs) var(--spacing-s) var(--spacing-xs) var(--spacing-xs); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-m); background-color: var(--white); border-radius: var(--radius-s); border: 1px solid var(--gray-100); line-height: 1.5; background-color: var(--white); box-shadow: 0 4px 40px rgba(30, 43, 55, 0.1);}
 .infoText::before{content: ''; flex-shrink: 0; width: 20px; height: 20px; background: url(../images/common/info_icon.svg)no-repeat center;}
  .infoList{margin: var(--spacing-xs) 0 var(--spacing-s);}
  .infoList li{position: relative; padding-left: var(--spacing-m); margin-bottom: var(--spacing-xs); color: var(--gray-600); font-weight: var(--regular); font-size: var(--font-size-m );}
@@ -347,3 +377,110 @@ transition: all .8s;}
   
 }
 
+
+/* 신청 품목선택 영역 */
+#applicationSelectWrap{position: absolute; top: 50%; transform: translateY(-50%); right:0;}
+#applicationSelectWrap .applicationSelectBox{display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-s); width: 93px;}
+#applicationSelectWrap .applicationSelectBox .applicationSelectBtn{flex-shrink: 0; position: relative; padding: var(--spacing-m) var(--spacing-s) var(--spacing-m) var(--spacing-m); width: 88px; height: 152px; border: 1px solid var(--gray-600); background-color: var(--white); border-radius: var(--radius-l) 0 0 var(--radius-l); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22); text-align: center; color: var(--gray-600); border-width: 1px 0 1px 1px; transition: all .3s;}
+#applicationSelectWrap .applicationSelectBox .applicationSelectBtn:hover{padding: var(--spacing-m) var(--spacing-m) var(--spacing-m) var(--spacing-m); border-color: var(--primary-500); color: var(--primary-500); width: 93px;}
+#applicationSelectWrap .applicationSelectBox .applicationSelectBtn:hover .applicationSelectCount{left: 50%;}
+#applicationSelectWrap .applicationSelectBox .applicationSelectCount{ display: inline-flex; align-items: center; justify-content: center; min-width: 42px; padding: var(--spacing-2xs) var(--spacing-xs); position: absolute; top:-14px; left: 55%; transform: translateX(-50%); font-weight: var(--bold); color: var(--white); border: 1px solid var(--gray-100); background-color: var(--primary-500); font-style: normal; border-radius: var(--radius-l); box-shadow: 0 4px 20px #A3CFF6;   flex-shrink: 0; word-break: keep-all; overflow-wrap: normal; transition: all .3s;}
+#applicationSelectWrap .applicationSelectBox .applicationSelectBtn span{display: block; padding-top: var(--spacing-xl); position: relative; font-weight: var(--bold); font-size: var(--font-size-xl);}
+#applicationSelectWrap .applicationSelectBox .applicationSelectBtn span::before{content: ''; position: absolute; top:0; left: 50%; transform: translateX(-50%); width: 48px; height: 48px;}
+#applicationSelectWrap .applicationSelectBox .applicationSelectBtn:nth-child(1) span::before{background: url(../images/main/icon03.svg)no-repeat center / contain;}
+#applicationSelectWrap .applicationSelectBox .applicationSelectBtn:nth-child(2) span::before{background: url(../images/main/icon04.svg)no-repeat center / contain;}
+#applicationSelectWrap .applicationSelectBox .mobileBtn{display: none;}
+
+@media (max-width: 1280px){
+  
+  #applicationSelectWrap .applicationSelectBox{width: 382px; padding: var(--spacing-m) var(--spacing-m) var(--spacing-s); gap: 0 var(--spacing-ml); justify-content: center; flex-direction: row; align-items: center;  background-color: var(--white); border: 1px solid var(--gray-600); border-width: 1px 1px 0 1px; border-radius: var(--radius-l) var(--radius-l) 0 0; z-index: 1;}
+  #applicationSelectWrap{position: absolute; left:50%; transform: translateX(-50%); right:auto; bottom: -120px; top: auto;}
+  #applicationSelectWrap::before{content: ''; position: absolute; top:-31px; left:-1000%; right: -1000%; bottom: 0; background-color: var(--guide-50); z-index: -1;}
+  #applicationSelectWrap .applicationSelectBox .applicationSelectBtn{padding: 0; width: auto; height: auto; border: none; background: 0; box-shadow: none;}
+  #applicationSelectWrap .applicationSelectBox .applicationSelectBtn span{display: flex; align-items: center; gap: 0 var(--spacing-xs); padding: 0; font-size: var(--Subtitle-1);}
+  #applicationSelectWrap .applicationSelectBox .applicationSelectBtn span br{display: none;}
+  #applicationSelectWrap .applicationSelectBox .applicationSelectBtn span::before{flex-shrink: 0; position: static; transform: none; width: 40px; height: 40px;}
+  #applicationSelectWrap .applicationSelectBox .mobileBtn{display: block; flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--gray-100); border-radius: var(--radius-s); background-color: var(--guide-900); color: var(--white); font-weight: var(--bold); font-size: var(--Subtitle-1);}
+  #applicationSelectWrap .applicationSelectBox .applicationSelectCount{top: -41px; left:0; transform: none;}
+
+}
+
+@media (max-width: 576px){
+
+  #applicationSelectWrap{bottom: -104px; left: 20px; right:20px; transform: none; }
+  #applicationSelectWrap .applicationSelectBox{width: auto; padding: 12px var(--spacing-s); border-radius: var(--radius-m) var(--radius-m) 0 0;}
+  #applicationSelectWrap .applicationSelectBox .applicationSelectCount{top: -30px;}
+
+}
+
+@media (max-width: 480px){
+  
+  #applicationSelectWrap .applicationSelectBox .mobileBtn,
+  #applicationSelectWrap .applicationSelectBox .applicationSelectBtn span{font-size: var(--Subtitle-2);}
+  #applicationSelectWrap .applicationSelectBox .applicationSelectBtn span{gap: 0;}
+  #applicationSelectWrap{left:0; right:0; }
+  #applicationSelectWrap .applicationSelectBox{border-width: 1px 0 0 0; gap: 0 var(--spacing-m);}
+
+}
+
+/* 모바일 메뉴 */
+#mobileMenuWrap{display: none;}
+
+@media(max-width: 1280px){
+
+#mobileMenuWrap.active{bottom: 0;}
+#mobileMenuWrap{display: flex; flex-direction: column; position: fixed; left:0; right:0; bottom: -1000px; z-index: 999; background-color: var(--white); transition: all .3s;}
+#mobileMenuWrap .mobileMenuHeaderWrap{height: 64px; padding: 0 var(--spacing-s); display: flex; align-items: center; justify-content: space-between; background: linear-gradient(120deg, var(--guide-900) 0%, var(--guide-200) 50%, var(--guide-900) 100%);         background-size: 200% 100%;}
+#mobileMenuWrap .mobileMenuHeaderWrap h2{font-size: var(--font-size-xxxl); font-weight: var(--bold); color: var(--white); font-family: 'KIMM';}
+#mobileMenuWrap .mobileMenuHeaderWrap .mobileCloseBtn{width: 40px; height: 40px; background: url(../images/common/close_icon01.svg)no-repeat center / contain;}
+#mobileMenuWrap .mobileMenuNav{flex: 1; padding: 32px 0 94px;}
+#mobileMenuWrap .mobileMenuDepth li h2 .mobileMenuLink{display: block; padding: 12px 16px 12px 24px; color: var(--guide-800); font-weight: var(--semi-bold); font-size: var(--H6);}
+#mobileMenuWrap .mobileMenuFooterWrap{padding: var(--spacing-s) var(--spacing-xs); background-color: var(--guide-50);}
+#mobileMenuWrap .mobileMenuFooterBox{display: flex; flex-wrap: wrap; gap: var(--spacing-xs); }
+#mobileMenuWrap .mobileMenuFooterBox .mobileMenuFooterLink{height: 25px; line-height: 25px; padding: 0 var(--spacing-xs); color: var(--guide-500); font-weight: var(--medium); font-size: var(--font-size-s); border-radius: var(--radius-xs); background-color: var(--white);}
+#mobileMenuWrap .mobileMenuFooterBox .mobileMenuFooterLink.policy{border: 1px solid var(--guide-100); font-weight: var(--bold); color: var(--guide-700);}
+#mobileMenuWrap .mobileApplicationSelectWrap{display: flex; padding: var(--spacing-ms) var(--spacing-s); gap: 0 var(--spacing-xs);}
+#mobileMenuWrap .mobileApplicationSelectWrap .mobileApplicationSelect{flex: 1; height: 136px; border: 1px solid var(--guide-300); border-radius: var(--radius-m); background-color: var(--white); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
+#mobileMenuWrap .mobileApplicationSelectWrap .mobileApplicationSelect h3{ height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-xs) 0; color: var(--gray-900); font-size: var(--font-size-xl); font-weight: var(--bold);}
+#mobileMenuWrap .mobileApplicationSelectWrap .mobileApplicationSelect h3::before{content: ''; width: 64px; height: 64px;}
+#mobileMenuWrap .mobileApplicationSelectWrap .mobileApplicationSelect01 h3::before{background: url(../images/common/document_icon01.svg)no-repeat center / contain;}
+#mobileMenuWrap .mobileApplicationSelectWrap .mobileApplicationSelect02 h3::before{background: url(../images/common/document_icon02.svg)no-repeat center / contain;}
+#mobileMenuWrap .mobileMenuUserWrap{display: flex;  align-items: center; justify-content: space-between; padding: 12px var(--spacing-s);}
+#mobileMenuWrap .mobileMenuUserWrap .mobileMenuUserBox{ flex-shrink: 0; display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+#mobileMenuWrap .mobileMenuUserWrap .mobileMenuUserImg{ flex-shrink: 0; width: 40px; height: 40px; border-radius: var(--radius-l); background-color: var(--guide-50);}
+#mobileMenuWrap .mobileMenuUserWrap .mobileMenuUserImg img{height: 100%; object-fit: contain;}
+#mobileMenuWrap .mobileMenuUserWrap .mobileMenuUserName{font-size: var(--font-size-xl); font-weight: var(--semi-bold); color: var(--guide-300);}
+#mobileMenuWrap .mobileMenuUserWrap .mobileMenuUserName span{color: var(--guide-900);}
+#mobileMenuWrap .mobileMenuUserWrap .mobileMenuEndUseBtn{padding: var(--spacing-xs); border-radius: var(--radius-s); border: 1px solid var(--gray-100); background-color: var(--primary-500); font-weight: var(--bold); color: var(--white); box-shadow: 0 4px 20px #A3CFF6;}
+
+}
+
+/* 품목 목록 */
+.itemSelectList li{position: relative; margin-bottom: var(--spacing-xs); display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--spacing-ms); padding: var(--spacing-s); background-color: var(--white); border-radius: var(--radius-s);}
+.itemSelectList li:last-child{margin-bottom: 0;}
+.itemSelectList li .itemSelectImgBox{flex-shrink: 0; width: 64px; height: 64px; border-radius: var(--radius-m); background-color: var(--guide-50);}
+.itemSelectList li .itemSelectImgBox img{height: 100%; object-fit: cover;}
+.itemSelectList li .itemSelectTextBox{flex: 1;}
+.itemSelectList li .itemSelectTextBox .itemSelectName{padding-right: var(--spacing-lm); margin-bottom: var(--spacing-2xs); color: var(--gray-900); font-weight: var(--bold); font-size: var(--font-size-m);}
+.itemSelectList li .itemSelectTextBox .itemSelectOption{display: block; margin-bottom: var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium);}
+.itemSelectList li .itemSelectInfoBox{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-xs);}
+.itemSelectList li .itemSelectSummaryBox{display: flex; align-items: center; gap:0 var(--spacing-xs)}
+.itemSelectList li .itemSelectSummaryBox .itemSelectCount{color: var(--primary-500); font-weight: var(--bold);}
+.itemSelectList li .itemSelectSummaryBox .itemSelectPrice{color: var(--gray-600); font-weight: var(--medium);}
+.itemSelectList li .itemSelectDelBtn{position: absolute; top:16px; right:16px; width: 36px; height: 36px; background: url(../images/main/delete_icon.svg)no-repeat center / contain; transition: all .3s; border: 1px solid transparent;  border-radius: var(--radius-xs);}
+.itemSelectList li .itemSelectDelBtn:hover{background-color: var(--guide-50); border-color: var(--guide-100);}
+.itemSelectCountBox{display: flex; gap: 0 var(--spacing-2xs);}
+.itemSelectCountBtn{position: relative; width: 28px; height: 28px; border: 1px solid var(--guide-100); border-radius: var(--radius-xs); transition: all .3s;} 
+.itemSelectCountBtn:hover{background-color: var(--guide-50);}
+.itemSelectCountBtn::after{content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.itemSelectMinusBtn::after{width: 13px; height: 4px; background: url(../images/main/minus_icon.svg)no-repeat center;}
+.itemSelectPlusBtn::after{width: 13px; height: 13px; background: url(../images/main/plus_icon.svg)no-repeat center;}
+
+@media (max-width: 1024px) {
+
+  .itemSelectList li{flex-direction: column; gap: var(--spacing-xs) 0; padding: var(--spacing-ml) var(--spacing-s) var(--spacing-s) var(--spacing-s); }
+  .itemSelectList li .itemSelectTextBox .itemSelectName{padding: 0;}
+  .itemSelectList li .itemSelectImgBox{width: 100%; height: 130px;}
+  .itemSelectList li .itemSelectDelBtn{top: 6px; right:6px; width: 26px; height: 26px;}
+
+}
