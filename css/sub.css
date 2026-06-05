@@ -242,6 +242,7 @@
 
 @media (max-width: 480px){
 
+  .formSection{padding: var(--spacing-ml) var(--spacing-ms);}
   .formSection .formSelectBtnList li .formSelectBtn,
   .formSection .formAgreeBtnBox .formAgreeBtn,
   .formSection .formAgreeBox dl,
