@@ -73,6 +73,7 @@
 
 @media (max-width: 480px){
 
+  .processAsideWrap{margin: var(--spacing-ml) 0 0;}
   .processAsideWrap .processStepList{width: 289px; gap: var(--spacing-ml);}
   .processAsideWrap .processStepList::after{height: 5px;}
 
@@ -84,7 +85,6 @@
   .processAsideWrap .processStepList{width: 228px; gap: var(--spacing-s);}
   .processAsideWrap .processStepList li{width: 48px; height: 48px; font-size: 12px;}
 
-
 }
 
 /* 신청하기 */
@@ -95,12 +95,14 @@
 .formSection .emptyItemText{margin-bottom: var(--spacing-m); padding: var(--spacing-s) 0; display: flex; flex-direction: column; align-items: center; gap: var(--spacing-s) 0; font-size: var(--guide-400); font-weight: var(--semi-bold); color: var(--guide-400); font-size: var(--font-size-xxxl); text-align: center; background: linear-gradient(180deg, transparent 0%,
     #F7F9FB 18%,#ECF5FF 50%,#F7F9FB 82%, transparent 100%); border-radius: var(--radius-s);}
 .formSection .emptyItemText::before{content: ''; width: 64px; height: 64px; border-radius: var(--radius-s); background: var(--white) url(../images/sub/waste_icon.svg)no-repeat center; }
-.formSection .itemDelBtn{padding: var(--spacing-2xs) var(--spacing-xs); position: absolute; top:44px; right:40px; color: var(--guide-500); font-weight: var(--bold); font-size: var(--body-2); line-height: 1.1; border: 1px solid var(--guide-500); background-color: var(--white); border-radius: var(--radius-xs); transition: all .3s;}
+.formSection .itemDelBtn{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--guide-500); font-weight: var(--bold); font-size: var(--body-2); line-height: 1.1; border: 1px solid var(--guide-500); background-color: var(--white); border-radius: var(--radius-xs); transition: all .3s;}
 .formSection .itemDelBtn:hover{background-color: var(--guide-50);}
 .formSection .formSectionTitle{margin-bottom: var(--spacing-m); display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--guide-800); font-weight: var(--semi-bold); font-size: var(--H5);}
 .formSection .formSectionTitle .formSectionNumber{flex-shrink: 0; display: flex; align-items: center; justify-content: center; min-width: 32px; height: 25px; padding: var(--spacing-2xs); color: var(--primary-500); font-weight: var(--bold); font-size: var(--body-2); background-color: var(--primary-50); border-radius: var(--radius-xs); border: 1px solid var(--primary-500);}
 .formSection .formItemBox{margin-bottom: var(--spacing-m );}
+.formSection .itemSelectList li{padding: var(--spacing-s) 0; margin-bottom: 0;}
 .formSection .itemSelectList li .itemSelectImgBox{width: 80px; height: 80px;}
+.formSection .itemSelectList li .itemSelectDelBtn{right: 0;}
 .formSection .formBtn{width: 100%; gap: 0 var(--spacing-xs); background-color: var(--primary-900); border-radius: var(--radius-s); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
 .formSection .formBtn.formBtn:hover{background-color: var(--primary-800);}
 .formSection .formBtn .plusBtnIcon{width: 28px; height: 28px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
@@ -216,9 +218,9 @@
   .formLayout{flex-direction: column; gap: var(--spacing-lm) 0;}
   .formSection{padding: var(--spacing-lm) var(--spacing-ms);}
   .formWrap{width: 100%;}
-  .formSection .itemSelectList li{padding: var(--spacing-s); flex-direction: row; gap: var(--spacing-ms);}
+  .formSection .itemSelectList li{flex-direction: row; gap: var(--spacing-ms);}
+  .formSection .itemSelectList li .itemSelectDelBtn{top: 16px;}
   .formSection .formSectionTitle{font-size: var(--H6);}
-  .formSection .itemDelBtn{top: 40px; right: 20px;}
   .formAsideWrap{width: 100%;}
   .formAsideWrap .formAsideLinkList{display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-ms)}
 
@@ -247,12 +249,14 @@
   .formSection .formAgreeInfoBox p{font-size: var(--font-size-s);}
   .formSection .formSectionTitle{font-size: var(--font-size-l);}
   .formSection .formAgreeBtnBox .formAgreeBtn{height: 43px;}
-
-  .formSection .itemSelectList li{flex-direction: column; border-bottom: 1px solid var(--gray-100); border-radius: 0;}
+  
+  .formSection .itemSelectList li{padding: var(--spacing-ml) 0; flex-direction: column; border-bottom: 1px solid var(--gray-100); border-radius: 0;}
   .formSection .itemSelectList li .itemSelectTextBox .itemSelectOption,
   .formSection .itemSelectList li .itemSelectTextBox .itemSelectName{text-align: center;}
   .formSection .itemSelectList li .itemSelectImgBox{margin: 0 auto;}
-
+  .formSection .itemSelectList li .itemSelectDelBtn{top:8px;}
   .formSection .emptyItemText::before{width: 55px; height: 55px;}
+
+  .formSection .formSectionTopBox{flex-direction: column; align-items: flex-start; gap: var(--spacing-ms) 0;}
 
 }
