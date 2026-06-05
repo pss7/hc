@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 /* 공통 */
+#sub{position: relative;}
 .contentBox{padding: var(--spacing-4xl) 0 var(--spacing-lm);}
 .title{margin: 0 0 var(--spacing-m) ; color: var(--guide-800); font-weight: var(--bold); font-size: var(--H2); font-family: 'KIMM';}
 .dotList{margin-bottom: var(--spacing-m);}
@@ -38,6 +39,53 @@
 
 /* 공통 - 색상 */
 .colorPrimary{color: var(--primary-500);}
+
+/* 절차 영역  */
+.processAsideWrap{position: absolute; top:180px; left:0;}
+.processAsideWrap .processStepList::after{content: ''; position: absolute; top:40px; bottom: 40px; left: 50%; margin-left: -4px; width: 8px; background: linear-gradient(180deg,
+     var(--guide-100) 0%, var(--primary-200) 50%, var(--guide-100) 100%); z-index: -1;}
+.processAsideWrap .processStepList li{position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: var(--spacing-2xl); width: 56px; height: 56px; border-radius: 50%; background-color: var(--guide-300); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white);}
+.processAsideWrap .processStepList li.active{background-color: var(--primary-500);}
+.processAsideWrap .processStepList li:last-child{margin-bottom: 0;}
+.processAsideWrap .processAsideBox{padding: var(--spacing-lm) var(--spacing-m);background: linear-gradient(180deg,rgba(195, 209, 219, 0) 0%,rgba(168, 208, 253, 0.2) 38%,
+    rgba(168, 208, 253, 0.6) 50%,rgba(168, 208, 253, 0.2) 62%,rgba(195, 209, 219, 0) 100%);  overflow-x: auto;}
+
+@media (max-width: 1440px) {
+
+  .processAsideWrap{position: static; margin: var(--spacing-xl) 0 0; width: 100%;}
+  .processAsideWrap .processAsideBox { margin-bottom: -40px; padding: var(--spacing-lm) var(--spacing-ms);background: linear-gradient(
+             90deg,
+            rgba(195, 209, 219, 0) 0%,
+            rgba(168, 208, 253, 0.2) 38%,
+            rgba(168, 208, 253, 0.6) 50%,
+            rgba(168, 208, 253, 0.2) 62%,
+            rgba(195, 209, 219, 0) 100%
+        );
+    }
+  .processAsideWrap .processStepList{width: 355px; margin: 0 auto; position: relative; display: flex; align-items: center;
+        justify-content: center; gap: 0 var(--spacing-xl);}
+  .processAsideWrap .processStepList::after {top: 50%; bottom: auto; left: 0;
+        right: 0; margin-left: 0; width: auto; height: 8px; transform: translateY(-50%);
+    }
+  .processAsideWrap .processStepList li{margin-bottom: 0; width: 52px; height: 52px; flex-shrink: 0;
+    }
+}
+
+@media (max-width: 480px){
+
+  .processAsideWrap .processStepList{width: 289px; gap: var(--spacing-ml);}
+  .processAsideWrap .processStepList::after{height: 5px;}
+
+}
+
+@media (max-width: 360px){
+
+  .processAsideWrap .processAsideBox{padding: var(--spacing-ml) var(--spacing-ms);}
+  .processAsideWrap .processStepList{width: 228px; gap: var(--spacing-s);}
+  .processAsideWrap .processStepList li{width: 48px; height: 48px; font-size: 12px;}
+
+
+}
 
 /* 신청하기 */
 .formLayout{display: flex; align-items: flex-start; gap: 0 var(--spacing-lm);}
