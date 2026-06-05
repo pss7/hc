@@ -5,6 +5,7 @@
 .contentBox{padding: var(--spacing-4xl) 0 var(--spacing-lm);}
 .title{margin: 0 0 var(--spacing-m) ; color: var(--guide-800); font-weight: var(--bold); font-size: var(--H2); font-family: 'KIMM';}
 .dotList{margin-bottom: var(--spacing-m);}
+.dotList:last-child{margin-bottom: 0;}
 .dotList > li{padding-left: var(--spacing-m); position: relative; margin-bottom: var(--spacing-xs); color: var(--gray-600);}
 .dotList > li::before{content: ''; position: absolute; top:11px; left:10px; width: 4px; height: 4px; background-color: var(--gray-600); border-radius: 50%;}
 .dotList > li:last-child{margin-bottom: 0;}
@@ -107,8 +108,8 @@
 .formSection .formBtn.formBtn:hover{background-color: var(--primary-800);}
 .formSection .formBtn .plusBtnIcon{width: 28px; height: 28px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
 .formSection .formAgreeInfoText{margin: var(--spacing-s) 0 var(--spacing-m); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
-.formSection .formAgreeBox{margin-bottom: var(--spacing-m);}
-.formSection .formAgreeBox:last-child{margin-bottom: 0;}
+.formSection .formAgreeTextBox{margin-bottom: var(--spacing-m);}
+.formSection .formAgreeTextBox:last-child{margin-bottom: 0;}
 .formSection .formSectionTopBox{margin-bottom: var(--spacing-m); display: flex; align-items: center; justify-content: space-between;}
 .formSection .formSectionTopBox .formSectionTitle{margin: 0;}
 .formSection .formSectionTopBox .formDetailBtn{padding: var(--spacing-2xs) var(--spacing-2xs) var(--spacing-2xs) var(--spacing-xs); font-weight:var(--bold); font-size: var(--font-size-s); border-radius: var(--radius-l); border: 1px solid transparent; transition: all .3s;}
@@ -123,22 +124,25 @@
 .formSection .formAgreeInfoBox h4{margin-bottom: var(--spacing-xs); position: relative; padding-left: var(--spacing-ms); color: var(--guide-800); font-weight: var(--bold); font-size: var(--Subtitle-2);}
 .formSection .formAgreeInfoBox h4::before{content: ''; position: absolute; top:6px; left:7px; width: 6px; height: 6px; border-radius: 50%; background-color: var(--primary-500);}
 .formSection .formAgreeInfoBox .formAgreeTopText{margin-bottom: var(--spacing-m); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
-.formSection .formAgreeBox p span{display: inline-block; padding: var(--spacing-2xs) var(--spacing-xs); color: var(--guide-900); background-color: var(--white); border-radius: var(--spacing-xs); border: 1px solid var(--guide-100); font-weight: var(--semi-bold); line-height: 1.1;}
-.formSection .formAgreeBox dl,
-.formSection .formAgreeBox .list,
-.formSection .formAgreeBox p{padding-left: var(--spacing-ms);}
-.formSection .formAgreeBox .list li{color: var(--gray-600);}
-.formSection .formAgreeBox dl{margin-bottom: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-s);}
-.formSection .formAgreeBox dl:last-child{margin-bottom: 0;}
-.formSection .formAgreeBox dt{position: relative; color: var(--gray-600); font-weight: var(--bold);}
-.formSection .formAgreeBox dt::after{content: ':'; position: absolute; top:0; right:-10px;}
-.formSection .formAgreeBox dd{color: var(--gray-600);}
+.formSection .formAgreeTextBox p span{display: inline-flex; flex-wrap: wrap; gap: var(--spacing-2xs)}
+.formSection .formAgreeTextBox p em{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--guide-900); background-color: var(--white); border-radius: var(--spacing-xs); border: 1px solid var(--guide-100); font-weight: var(--semi-bold); line-height: 1.1; font-style: normal;}
+.formSection .formAgreeTextBox dl,
+.formSection .formAgreeTextBox .list,
+.formSection .formAgreeTextBox p{padding-left: var(--spacing-ms);}
+.formSection .formAgreeTextBox .list li{color: var(--gray-600);}
+.formSection .formAgreeTextBox dl{margin-bottom: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-s);}
+.formSection .formAgreeTextBox dl:last-child{margin-bottom: 0;}
+.formSection .formAgreeTextBox dt{position: relative; color: var(--gray-600); font-weight: var(--bold);}
+.formSection .formAgreeTextBox dt::after{content: ':'; position: absolute; top:0; right:-10px;}
+.formSection .formAgreeTextBox dd{color: var(--gray-600);}
 .formSection .formAgreeBtnBox{display: flex; } 
-.formSection .formAgreeBtnBox .formAgreeBtn{ height: 54px; flex: 1; background-color: var(--whitei); border: 1px solid var(--gray-600); text-align: center; color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); transition: all .3s;}
+.formSection .formAgreeBtnBox .formAgreeRadioBtn{flex: 1;}
+.formSection .formAgreeBtnBox .formAgreeBtn{display: block; height: 54px; line-height: 54px; background-color: var(--whitei); border: 1px solid var(--gray-600); text-align: center; color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); transition: all .3s;}
+.formSection .formAgreeBtnBox .formAgreeBtn::before{display: none;}
 .formSection .formAgreeBtnBox .formAgreeBtn:hover{background-color: var(--guide-50);}
 .formSection .formAgreeBtnBox .formAgreeBtn.active{background-color: var(--primary-500); color: var(--white); font-weight: var(--bold); border-color: var(--primary-500);}
-.formSection .formAgreeBtnBox .formAgreeBtn:nth-child(1){margin-right: -1px; border-radius: var(--radius-s) 0 0 var(--radius-s);}
-.formSection .formAgreeBtnBox .formAgreeBtn:nth-child(2){border-radius: 0 var(--radius-s) var(--radius-s) 0}
+.formSection .formAgreeBtnBox .formAgreeBtn01{margin-right: -1px; border-radius: var(--radius-s) 0 0 var(--radius-s);}
+.formSection .formAgreeBtnBox .formAgreeBtn02{border-radius: 0 var(--radius-s) var(--radius-s) 0}
 .formSection .formBox{margin-bottom: var(--spacing-ml);}
 .formSection .formBox:last-child{margin-bottom: 0;}
 .formSection .formLabel{display: block; margin-bottom: var(--spacing-s); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--Subtitle-1);}
@@ -232,7 +236,7 @@
 
   .formAsideBox,
   .formSection{border-radius: var(--radius-m);}
-  .formSection .formAgreeBtnBox .formAgreeBtn{height: 48px; font-size: var(--font-size-m);}
+  .formSection .formAgreeBtnBox .formAgreeBtn{height: 48px; line-height: 48px; font-size: var(--font-size-m);}
   .formSection .formLabel,
   .formSection .formSelectBtnList li .formSelectBtn,
   .formAsideWrap .formAsideContent .formAsideInfo .formAsidePrice,
@@ -243,13 +247,14 @@
 @media (max-width: 480px){
 
   .formSection{padding: var(--spacing-ml) var(--spacing-ms);}
+  .formSection .formAgreeInfoBox{padding: var(--spacing-ml) var(--spacing-s);}
   .formSection .formSelectBtnList li .formSelectBtn,
   .formSection .formAgreeBtnBox .formAgreeBtn,
-  .formSection .formAgreeBox dl,
-  .formSection .formAgreeBox .list li,
+  .formSection .formAgreeTextBox dl,
+  .formSection .formAgreeTextBox .list li,
   .formSection .formAgreeInfoBox p{font-size: var(--font-size-s);}
   .formSection .formSectionTitle{font-size: var(--font-size-l);}
-  .formSection .formAgreeBtnBox .formAgreeBtn{height: 43px;}
+  .formSection .formAgreeBtnBox .formAgreeBtn{height: 43px; line-height: 43px;}
   
   .formSection .itemSelectList li{padding: var(--spacing-ml) 0; flex-direction: column; border-bottom: 1px solid var(--gray-100); border-radius: 0;}
   .formSection .itemSelectList li .itemSelectTextBox .itemSelectOption,
