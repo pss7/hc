@@ -57,12 +57,10 @@ input:read-only{background-color: var(--gray-100); border-color: var(--guide-100
 /* 공통 - 버튼 */ 
 .btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
 .btn.btnPrimary{background-color: var(--gray-600);}
-.btn.btnPositive{background-color: var(--primary-500);}
 .btn.btnSecondary{background-color: var(--gray-400);}
-.btn.btnNegative{background-color: var(--primary-900);}
 .btn:hover{background-color: var(--gray-400);} 
+.btn.btnNegative:hover{background-color: var(--danger-500);}
 .btn.btnPositive:hover{background-color: var(--primary-400);}
-.btn.btnNegative:hover{background-color: var(--primary-800);}
 button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); pointer-events: none;}
 
 /* 공통 - 버튼(정렬) */
@@ -464,7 +462,7 @@ transition: all .8s;}
 .itemSelectList li .itemSelectTextBox .itemSelectOption{display: block; margin-bottom: var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium);}
 .itemSelectList li .itemSelectInfoBox{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--spacing-xs);}
 .itemSelectList li .itemSelectSummaryBox{display: flex; align-items: center; gap:0 var(--spacing-xs)}
-.itemSelectList li .itemSelectSummaryBox .itemSelectCount{color: var(--primary-500); font-weight: var(--bold);}
+.itemSelectList li .itemSelectSummaryBox .itemSelectCount{flex-shrink: 0; color: var(--primary-500); font-weight: var(--bold);}
 .itemSelectList li .itemSelectSummaryBox .itemSelectPrice{color: var(--gray-600); font-weight: var(--medium);}
 .itemSelectList li .itemSelectDelBtn{position: absolute; top:16px; right:16px; width: 36px; height: 36px; background: url(../images/main/delete_icon.svg)no-repeat center / contain; transition: all .3s; border: 1px solid transparent;  border-radius: var(--radius-xs);}
 .itemSelectList li .itemSelectDelBtn:hover{background-color: var(--guide-50); border-color: var(--guide-100);}
