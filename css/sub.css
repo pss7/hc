@@ -280,6 +280,7 @@
 .formSection .formpayMentInfoBox .formpayMentStatusBox{margin-bottom: var(--spacing-m); display: flex; align-items: center; gap: var(--spacing-xs) var(--spacing-s);}
 .formSection .formpayMentInfoBox .formpayMentStatusBox .itemSelectStatusBadge{flex-shrink: 0;}
 .formSection .formpayMentInfoBox .formpayMentStatusBox .formpayMentStatusText{color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1);} 
+.formSection .formpayMentInfoBox .photoSaveBtn{display: block; padding: 0 var(--spacing-ms); width: 100%; border: 1px solid var(--gray-200); border-radius: var(--radius-s); height: 56px; color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--Subtitle-1); text-align: center;}
 .formSection .formDetailInfoBox{margin-bottom: var(--spacing-m);}
 .formSection .formDetailInfoBox .formDetailInfoItem{margin-bottom: var(--spacing-s
   ); display: flex; align-items: center; gap: 0 var(--spacing-xs)}
@@ -353,5 +354,6 @@
   .formSection .formApplicationItemBox .itemRefundBox .btn{width: 100%;}
   .formSection .formApplicationItemBox .itemRefundBox .itemRefundText span{margin-left: 0;}
   .formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptInfo{flex-direction: column; gap: var(--spacing-2xs) 0;}
+  .formSection .formpayMentInfoBox .photoSaveBtn{height: 48px; font-size: var(--font-size-m);}
   
 }
