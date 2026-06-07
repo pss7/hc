@@ -35,13 +35,30 @@ $(function () {
   //복사
   $('.formDetailInfoCopyBtn').click(function (e) {
     e.preventDefault();
-
     navigator.clipboard.writeText(
       $(this).prev('.formAccountNumber').text()
     );
-
     alert('복사되었습니다.');
   });
+
+  //자주 묻는 질문
+  $('.faqList li .faqQuestionBtn').click(function () {
+    if ($(this).hasClass('active')) {
+      $(this)
+        .removeClass('active')
+        .attr('aria-expanded', 'false')
+        .next()
+        .slideUp();
+    } else {
+      $(this)
+        .addClass('active')
+        .attr('aria-expanded', 'true')
+        .next()
+        .slideDown();
+    }
+  });
+
+
 
 
 });

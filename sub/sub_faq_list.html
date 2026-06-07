@@ -183,144 +183,333 @@
 
                 <div class="noticeBox">
                     <div class="container">
-
                         <h2 class="title">
-                            공지사항
+                            자주 묻는 질문
                         </h2>
 
-                        <div class="noticeWriteBox subContentBox">
-                            <div class="boardWriteBox">
+                        <div class="faqListBox subContentBox">
 
-                                <h4>
-                                    글 작성
-                                </h4>
+                            <div class="topTitleLayoutBox">
+                                <h3 class="contentSubTitle">
+                                    목록
+                                </h3>
 
-                                <form class="boardWriteForm">
-
-                                    <!-- 제목 -->
-                                    <div class="boardWriteField">
-                                        <label for="boardTitle" class="blind">제목</label>
-                                        <input type="text" id="boardTitle" placeholder="제목">
+                                <button type="button" class="btn btnPrimary btnSmall">
+                                    <div class="slideText">
+                                        <span class="slideTextItem slideTextPrimary">글작성</span>
+                                        <span class="slideTextItem slideTextClone" aria-hidden="true">글작성</span>
                                     </div>
-                                    <!-- //boardWriteField -->
+                                </button>
+                            </div>
+                            <!-- //topTitleLayoutBox -->
 
-                                    <!-- 스마트에디터 -->
-                                    <div class="boardWriteField">
-                                        <div class="boardWriteEditor">
-                                            스마트에디터 영역
-                                        </div>
-                                    </div>
-                                    <!-- //boardWriteField -->
-
-                                    <!-- 공지여부 -->
-                                    <div class="boardWriteField">
-                                        <span class="boardWriteLabel">
-                                            공지여부
-                                            <span class="required" aria-hidden="true">*</span>
-                                            <span class="blind">필수 입력</span>
-                                        </span>
-                                        <div class="boardWriteContent">
-
-                                            <div class="boardWriteNoticeBox">
-                                                <input type="checkbox" id="noticeChk" class="blind" required="">
-                                                <label for="noticeChk" class="chkBtn">
-                                                    공지 설정
-                                                </label>
-                                            </div>
-                                            <!-- //boardWriteNoticeBox -->
-
-                                        </div>
-                                        <!-- //boardWriteContent -->
-
-                                    </div>
-                                    <!-- //boardWriteField -->
-
-                                    <!-- 첨부파일 -->
-                                    <div class="boardWriteField">
-                                        <span class="boardWriteLabel">
-                                            첨부파일
-                                            <span class="required" aria-hidden="true">*</span>
-                                            <span class="blind">필수 입력</span>
-                                        </span>
-                                        <!-- //boardWriteLabel -->
-
-                                        <div class="boardWriteContent">
-
-                                            <div class="boardWriteFileBox">
-                                                <div class="boardWriteFile">
-                                                    <input type="file" id="boardFile01" class="blind">
-                                                    <label for="boardFile01" class="boardWriteFileBtn">첨부파일을
-                                                        업로드해주세요.</label>
-
-                                                    <div class="boardWriteFileItem">
-                                                        <button type="button" class="boardWriteFileDel"
-                                                            aria-label="첨부파일.jpg 삭제">삭제</button>
-                                                        <span class="boardWriteFileName">첨부파일.jpg</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //boardWriteFileBox -->
-
-                                        </div>
-                                        <!-- //boardWriteContent -->
-
-                                    </div>
-                                    <!-- //boardWriteField -->
-                                    <div class="boardWriteField">
-                                        <span class="boardWriteLabel">
-                                            첨부파일
-                                            <span class="required" aria-hidden="true">*</span>
-                                            <span class="blind">필수 입력</span>
-                                        </span>
-                                        <!-- //boardWriteLabel -->
-
-                                        <div class="boardWriteContent">
-
-                                            <div class="boardWriteFileBox">
-                                                <div class="boardWriteFile">
-                                                    <input type="file" id="boardFile02" class="blind">
-                                                    <label for="boardFile02" class="boardWriteFileBtn">첨부파일을
-                                                        업로드해주세요.</label>
-
-                                                    <div class="boardWriteFileItem">
-                                                        <button type="button" class="boardWriteFileDel"
-                                                            aria-label="첨부파일.jpg 삭제">삭제</button>
-                                                        <span class="boardWriteFileName">첨부파일.jpg</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //boardWriteFileBox -->
-
-                                        </div>
-                                        <!-- //boardWriteContent -->
-
-                                    </div>
-                                    <!-- //boardWriteField -->
-
+                            <div class="searchBox">
+                                <form role="search">
+                                    <input id="search" type="text" placeholder="무엇을 찾으시나요">
+                                    <label for="search" class="blind">검색입력</label>
+                                    <button type="submit" class="searchBtn" aria-label="검색"></button>
                                 </form>
-                                <!-- //boardWriteForm -->
+                            </div>
+                            <!-- //searchBox -->
+
+                            <div class="tabLayoutBox faqTabBox">
+                                <div class="tabMenuBox">
+                                    <ul class="tabMenuList">
+                                        <li class="tabMenuItem active">
+                                            <button type="button" class="tabMenuBtn active">결제</button>
+                                        </li>
+                                        <li class="tabMenuItem">
+                                            <button type="button" class="tabMenuBtn">신청</button>
+                                        </li>
+                                        <li class="tabMenuItem">
+                                            <button type="button" class="tabMenuBtn">스티커</button>
+                                        </li>
+                                        <li class="tabMenuItem">
+                                            <button type="button" class="tabMenuBtn">배출</button>
+                                        </li>
+                                        <li class="tabMenuItem">
+                                            <button type="button" class="tabMenuBtn">기타</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //tabMenuBox -->
+
+                                <div class="tabContentBox">
+
+                                    <ul class="faqList">
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+
+                                        <li class="faqItem">
+                                            <button type="button" class="faqQuestionBtn" aria-expanded="false">
+                                                <span class="faqTitle">결제는 언제까지 해야 하나요?</span>
+                                            </button>
+
+                                            <div class="faqAnswerBox">
+                                                <div class="faqAnswerContent">
+                                                    <p>
+                                                        신청 후 5일 이내 결제해 주세요. 기간 내 결제하지 않으면 신청이 자동 취소됩니다.
+                                                    </p>
+
+                                                    <button type="button" class="btn btnPrimary btnSmall">
+                                                        <div class="slideText">
+                                                            <span class="slideTextItem slideTextPrimary">수정</span>
+                                                            <span class="slideTextItem slideTextClone"
+                                                                aria-hidden="true">수정</span>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- //faqAnswerBox -->
+
+                                        </li>
+                                    </ul>
+                                    <!-- //faqList -->
+
+                                </div>
+                                <!-- //tabContentBox -->
 
                             </div>
-                            <!-- //boardWriteBox -->
+                            <!-- //faqTabBox -->
 
-                            <div class="btnBox">
-                                <button type="button" class="btn btnSecondary btnNegative">
-                                    <div class="slideText">
-                                        <span class="slideTextItem slideTextPrimary">취소</span>
-                                        <span class="slideTextItem slideTextClone" aria-hidden="true">취소</span>
-                                    </div>
-                                </button>
-                                <button type="button" class="btn btnPrimary btnPositive">
-                                    <div class="slideText">
-                                        <span class="slideTextItem slideTextPrimary">등록</span>
-                                        <span class="slideTextItem slideTextClone" aria-hidden="true">등록</span>
-                                    </div>
-                                </button>
-                            </div>
-                            <!-- //btnBox -->
+                            <nav class="paginationBox" aria-label="페이지 네비게이션">
+                                <a href="#" class="pageLink pageLinkPrev" aria-label="이전 페이지로 이동">
+                                </a>
+                                <a href="#" class="pageLink active" aria-current="page">
+                                    1
+                                </a>
+                                <a href="#" class="pageLink">
+                                    2
+                                </a>
+                                <a href="#" class="pageLink">
+                                    3
+                                </a>
+                                <a href="#" class="pageLink">
+                                    4
+                                </a>
+                                <a href="#" class="pageLink">
+                                    5
+                                </a>
+                                <a href="#" class="pageLink pageLinkNext" aria-label="다음 페이지로 이동">
+                                </a>
+                            </nav>
+                            <!-- //paginationBox -->
 
                         </div>
-                        <!-- //noticeWriteBox -->
+                        <!-- faqListBox -->
 
                     </div>
                     <!-- //container -->

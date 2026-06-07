@@ -58,14 +58,14 @@ input:read-only{background-color: var(--gray-100); border-color: var(--guide-100
 .container{max-width: 1190px; margin: 0 auto; padding: 0 var(--spacing-ms);} 
 
 /* 공통 - 버튼 */ 
-.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
+.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px; height: 56px; padding: var(--spacing-xs) var(--spacing-s); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
 .btn.btnPrimary{background-color: var(--gray-600);}
 .btn.btnSecondary{background-color: var(--gray-400);}
 .btn:hover{background-color: var(--gray-400);} 
 .btn.btnNegative:hover{background-color: var(--danger-500);}
 .btn.btnPositive:hover{background-color: var(--primary-400);}
 button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); pointer-events: none;}
-.btn.btnSmall{min-width: 72px; height: 36px; font-size: var(--body-2);}
+.btn.btnSmall{min-width: 0; height: 36px; font-size: var(--body-2);}
 
 /* 공통 - 버튼(정렬) */
 .btnBox{display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}

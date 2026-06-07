@@ -365,6 +365,30 @@
   
 }
 
+/* 공통 - 탭 레이아웃 */
+.tabLayoutBox{display: flex; align-items: flex-start;}
+.tabLayoutBox .tabMenuBox{width: 140px; flex-shrink: 0;}
+.tabLayoutBox .tabMenuList li{margin-bottom: var(--spacing-s);}
+.tabLayoutBox .tabMenuList li .tabMenuBtn{padding: var(--spacing-2xs); min-width: 48px; min-height: 37px; border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); text-align: center; transition: all .3s;}
+.tabLayoutBox .tabMenuList li .tabMenuBtn:hover{background-color: var(--gray-100);}
+.tabLayoutBox .tabMenuList li .tabMenuBtn.active{background-color: var(--primary-500); border: 1px solid var(--gray-100); color: var(--white);}
+.tabLayoutBox .tabContentBox{flex: 1;}
+
+@media (max-width: 1024px){
+
+  .tabLayoutBox{margin-top: var(--spacing-lm); flex-direction: column; gap: var(--spacing-m) 0;}
+  .tabLayoutBox .tabMenuBox{width: 100%;}
+  .tabLayoutBox .tabMenuList{display: flex; flex-wrap: wrap; gap: var(--spacing-s); justify-content: center;}
+  .tabLayoutBox .tabMenuList li{margin: 0;}
+
+}
+
+@media (max-width: 768px){
+
+  .tabLayoutBox .tabMenuList li .tabMenuBtn{font-size: var(--font-size-m);}
+
+}
+
 /* 게시판 - 목록 */
 .topTitleLayoutBox{margin-bottom: var(--spacing-ms); display: flex; align-items: center; justify-content: space-between;}
 .topTitleLayoutBox .contentSubTitle{margin: 0;}
@@ -598,3 +622,23 @@
   .boardWriteBox .chkBtn{height: 50px; line-height: 50px;}
 
  }
+
+ /* 자주묻는질문 */
+.faqList li{padding: var(--spacing-s) 0; margin-bottom: var(--spacing-xs);}
+.faqList li:last-child{margin-bottom: 0;}
+.faqList li .faqQuestionBtn{width: 100%; display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.faqList li .faqQuestionBtn .faqTitle{color: var(--gray-600); font-weight: var(--medium); font-size: var(--H6); transition: all .3s;}
+.faqList li .faqQuestionBtn::before{content: "Q"; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; color: var(--guide-300); font-weight: var(--medium); font-size: var(--H6); transition: all .3s;}
+.faqList li .faqQuestionBtn:hover::before{background-color: var(--gray-100);}
+.faqList li .faqQuestionBtn:hover .faqTitle{color: var(--guide-500);;}
+.faqList li .faqAnswerBox{display: none;}
+.faqList li .faqAnswerBox .faqAnswerContent p{margin: var(--spacing-xs) 0; padding: var(--spacing-s); color: var(--white); font-weight: var(--medium); font-size: var(--Subtitle-1); border-radius: var(--radius-s); background-color: var(--guide-500); line-height: 1.2;}
+.faqList li .faqQuestionBtn.active .faqTitle{color: var(--gray-900); font-weight: var(--semi-bold);}
+.faqList li .faqQuestionBtn.active::before{background-color: var(--primary-500); color: var(--white);}
+
+@media (max-width: 768px){
+
+  .faqList li .faqQuestionBtn .faqTitle{font-size: var(--font-size-l);}
+  .faqList li .faqAnswerBox .faqAnswerContent p{font-size: var(--font-size-m);}
+
+}
