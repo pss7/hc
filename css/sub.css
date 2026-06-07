@@ -374,8 +374,9 @@
 .boardCountWrap .boardCountBox span strong{color: var(--gray-600);}
 .boardCountWrap .boardCountBox p{color: var(--gray-600); font-weight: var(--medium);}
 .boardList li{border-bottom: 1px solid var(--gray-50);}
-.boardList li a{position: relative; display: block; padding: var(--spacing-s) 0 var(--spacing-s); z-index: 1;}
+.boardList li a{position: relative; display: block; padding: var(--spacing-s) 0 var(--spacing-s); z-index: 1; transition: all .3s;}
 .boardList li a::before{content: ''; position: absolute; top:0; left:0; bottom: 0; width: 0; background: linear-gradient(to right, var(--white) 20%, var(--primary-50) 80%); z-index: -1; transition: all .5s;}
+.boardList li a:hover{transform: translateX(8px);}
 .boardList li a:hover:before{width: 100%;}
 .boardList li a:hover .boardTitle{color: var(--primary-500);}
 .boardList li a .boardMeta{margin-bottom: var(--spacing-xs); display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs);}
@@ -399,7 +400,7 @@
     
 }
 
-/* 공통 - 페이지네이션 */
+/* 게시판 - 페이지네이션 */
 .paginationBox{margin: 60px 0 40px; display: flex; flex-wrap: wrap; align-items: center; gap:var(--spacing-2xs);}
 .paginationBox .pageLink{position: relative; display: flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: var(--spacing-xs); background-color: var( --gray-50); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-600); border-radius: var(--radius-s); transition: all .3s;}
 .paginationBox .pageLink:hover{background-color: var(--gray-100);}
@@ -418,3 +419,182 @@
   .paginationBox .pageLink{min-width: 32px; min-height: 32px; border-radius:var(--radius-xs);}
 
 }
+
+/* 게시판 - 상세 */
+.boardViewBox{margin-bottom: var(--spacing-lm); position: relative;}
+.boardViewBox .boardViewTopBox{padding: var(--spacing-lm) var(--spacing-ms); border-bottom: 2px solid var(--gray-100); text-align: center;}
+.boardViewBox .boardViewTopBox .category{display: inline-block; margin-bottom: var(--spacing-xs); padding: var(--spacing-xs) var(--spacing-s); border-radius: var(--radius-xs); background-color: var(--primary-500); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white);}
+.boardViewBox .boardViewTopBox h4{margin-bottom: var(--spacing-s); color: var(--gray-900); font-size: var(--H1); font-weight: var(--bold); word-break: keep-all;}
+.boardViewBox .boardViewTopBox .boardViewInfoBox{display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap:var(--spacing-xs) var(--spacing-m);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewAuthor{font-weight: var(--bold); color: var(--gray-600);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewDate{display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewDate::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/date_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewCount{display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewCount::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/view_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewContentBox{padding: var(--spacing-l) 0;}
+.boardViewBox .boardViewContentBox .viewContentBox ,
+.boardViewBox .boardViewContentBox .viewContentBox p, 
+.boardViewBox .boardViewContentBox .viewContentBox span{color: var(--gray-600);}
+/* .boardViewBox .boardViewContentBox .viewContentBox p, 
+.boardViewBox .boardViewContentBox .viewContentBox span{margin-top: var(--spacing-lm); } */
+.boardViewBox .boardViewContentBox .viewContentBox img{width: auto; max-width: 720px; width: 100%; margin: 0 auto var(--spacing-s);}
+.boardViewFileBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-m); padding: var(--spacing-lm) var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
+.boardViewFileTitle{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-m);}
+.boardViewFileList li{margin-bottom: var(--spacing-s);}
+.boardViewFileList li:last-child{margin-bottom: 0;}
+.boardViewFileList li a{display: flex; flex-wrap: wrap; align-items: center;}
+.boardViewFileList li a:hover .boardViewFileName{text-shadow: 0.25px 0 0 currentColor, -0.25px 0 0 currentColor;}
+.boardViewFileList li a .boardViewFileIcon{width: 24px; height: 28px; margin-right: var(--spacing-xs);}
+.boardViewFileList li a.fileHwp .boardViewFileIcon{background: url(../images/sub/hwp_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.filePdf .boardViewFileIcon{background: url(../images/sub/pdf_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileXlsx .boardViewFileIcon{background: url(../images/sub/xlsx_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileJpg .boardViewFileIcon{background: url(../images/sub/jpg_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.filePpt .boardViewFileIcon{background: url(../images/sub/ppt_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileZip .boardViewFileIcon{background: url(../images/sub/zip_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a .boardViewFileName{margin-right: var(--spacing-2xs); color: var(--gray-600); transition: all .3s;}
+.boardViewFileList li a .boardViewFileSize{color: var(--gray-400);}
+.boardViewBox .boardViewLayoutBox{padding: 0 var(--spacing-m); display: flex; align-items: flex-start; justify-content: space-between; gap: 0 var(--spacing-xl);}
+.boardViewBox .viewContentInfoBox dl{margin-bottom: var(--spacing-m); display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
+.boardViewBox .viewContentInfoBox dl dt{ padding: var(--spacing-2xs) var(--spacing-xs); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s); background-color: var(--gray-100); border-radius: var(--radius-xs);}
+.boardViewBox .viewContentInfoBox dl dd{color: var(--gray-600); font-size: var(--Subtitle-1); font-weight: var(--medium);}
+.boardViewBox .viewParticipationBox{max-width: 200px; width: 100%; padding: var(--spacing-m) var(--spacing-ms); border-radius: var(--radius-m); border: 1px solid var(--gray-100);}
+.boardViewBox .viewParticipationBox p{margin-bottom: var(--spacing-s); line-height: 1.7; color: var(--gray-600); font-weight: var(--medium);}
+.boardViewBox .viewParticipationList{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
+.boardViewBox .viewParticipationList li .imgBox{margin: 0 auto var(--spacing-2xs); width: 32px; height: 32px; border-radius: var(--radius-m); overflow: hidden; background-color: var(--gray-100);}
+.boardViewBox .viewParticipationList li .imgBox img{height: 100%; object-fit: cover;}
+.boardViewBox .viewParticipationList li .name{display: block; color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-xs); text-align: center;}
+
+@media (max-width: 1024px){
+
+  .boardViewBox{margin-bottom: var(--spacing-m);}
+  .boardViewBox .boardViewTopBox h4{font-size: var(--H4);}
+  .boardViewFileBox{padding: var(--spacing-ml) var(--spacing-m);}
+
+  .boardViewBox .viewContentInfoBox{width: 100%; display: flex; justify-content: center; gap: 0 var(--spacing-ml);}
+  .boardViewBox .boardViewLayoutBox{padding: 0; flex-direction: column; gap: var(--spacing-lm) 0;}
+  .boardViewBox .viewContentInfoBox dl{margin: 0; align-items: center;}
+  .boardViewBox .boardViewContentBox .viewContentBox img{max-width: none;}
+  .boardViewBox .viewParticipationBox{max-width: none;}
+
+}
+
+@media (max-width: 768px){
+
+  .boardViewFileBox{padding: var(--spacing-m) var(--spacing-s); flex-direction: column; gap: var(--spacing-ms) 0;}
+  .boardViewFileList li a .boardViewFileSize{font-size: var(--body-2);}
+  .boardViewBox .viewContentInfoBox dl dd{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .boardViewBox .boardViewContentBox{padding: var(--spacing-lm) 0;}
+  .boardViewBox .boardViewTopBox h4{font-size: var(--H5);}
+  .boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewAuthor{width: 100%;}
+  .boardViewBox .boardViewTopBox .boardViewInfoBox span{font-size: var(--font-size-s);}
+
+}
+
+@media (max-width: 320px){
+
+  .boardViewBox .viewContentInfoBox{flex-direction: column; gap: var(--spacing-lm) 0;}
+
+}
+
+/* 게시판 - 이전글, 다음글 */
+.boardViewNavWrap{margin-top: var(--spacing-ms); padding: var(--spacing-m) var(--spacing-lm); border: 1px solid var(--guide-200);    border-radius: var(--radius-l);  background-color: var(--white);}
+.boardViewNavBox .boardViewNavItem{padding: var(--spacing-s) 0; display: flex; align-items: center; min-height: 54px;}
+.boardViewNavBox .boardViewNavItem:hover .boardViewNavTitle{transform: translateX(5px);}
+.boardViewNavBox .boardViewNavIcon{margin-right:var(--spacing-xs); width: 24px; height: 24px;}
+.boardViewNavBox .boardViewNavItem.prev .boardViewNavIcon{transform: rotate(-90deg); background: url(../images/sub/arrow_icon02.svg)no-repeat center;}
+.boardViewNavBox .boardViewNavItem.next .boardViewNavIcon{transform: rotate(90deg); background: url(../images/sub/arrow_icon02.svg)no-repeat center;}
+.boardViewNavBox .boardViewNavLabel{flex-shrink: 0; margin-right: 30px; color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--bold);}
+.boardViewNavBox .boardViewNavTitle{flex: 1 1 auto; min-width: 0; color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); transition: all .3s;}
+.boardViewNavBox .boardViewNavDate{flex: 0 0 auto; color: var(--gray-400); font-weight: var(--medium); font-size: var(--body-2);} 
+.boardViewNavBox .boardViewNavContent{width: 100%; display: flex; align-items: center; justify-content: space-between;}
+
+@media (max-width: 1024px){
+
+  .boardViewNavBox .boardViewNav{margin: var(--spacing-2xl) 0 var(--spacing-lm);}
+
+  .boardViewNavWrap{border-radius: var(--radius-m);} 
+
+}
+
+@media (max-width: 480px){
+
+  .boardViewNavBox .boardViewNavTitle{font-size: var(--font-size-s);}
+  .boardViewNavBox .boardViewNavContent{flex-direction: column; align-items:flex-start; gap: var(--spacing-xs) 0;}
+
+}
+
+/* 게시판 - 등록 */
+.boardWriteBox{margin-bottom: var(--spacing-2xl);}
+.boardWriteBox h4{margin-bottom: var(--spacing-s); color: var(--gray-600); font-size: var(--H5); font-weight: var(--bold);}
+
+@media (max-width: 768px){
+
+  .boardWriteBox h4{font-size: var(--H6);}
+
+}
+
+@media (max-width: 480px){
+
+  .boardWriteBox{margin-bottom:var(--spacing-m);}
+  .boardWriteBox h4{font-size: var(--Subtitle-1);}
+
+}
+
+/* 게시판 - 레이아웃 */
+.boardWriteField{padding-bottom: var(--spacing-m); display: flex; flex-direction: column;}
+.boardWriteField.row{padding: var(--spacing-ml) 0; flex-direction: row; align-items: center; border-top: 1px solid var(--gray-100);}
+.boardWriteField.row.start{align-items: flex-start;}
+.boardWriteContent{flex: 1 1 auto; min-width: 0; width: 100%;}
+.boardWriteField:last-child{margin-bottom: 0;}
+.boardWriteEditor{display: flex; align-items: center; justify-content: center; height: 407px; border-radius: var(--radius-s); border: 1px solid var(--guide-100); background-color: var(--white); font-weight: var(--medium);}
+
+/* 게시판 - 제목 */
+.boardWriteLabel{padding: var(--spacing-s) 0; font-size: var(--Subtitle-1); font-weight: var(--semi-bold); color: var(--gray-600);}
+.boardWriteLabel .required{color: var(--warning-500);}
+
+@media (max-width: 480px){
+
+  .boardWriteLabel{font-size: var(--Subtitle-2);}
+
+}
+
+/* 게시판 - 파일 */
+.boardWriteFileBox .boardWriteFile{margin-bottom: var(--spacing-s);}
+.boardWriteFileBox .boardWriteFile:last-child{margin-bottom: 0;}
+.boardWriteFileBox .boardWriteFileBtn{display: flex; align-items: center; gap: 0 var(--spacing-xs); max-width: 699px; height: 56px; padding:0 var(--spacing-s); border: 1px solid var(--guide-100); border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--white); cursor: pointer;}
+.boardWriteFileBox .boardWriteFileBtn.active {border-color: var(--primary-800); font-weight: var(--bold);}
+.boardWriteFileBox:first-child .boardWriteFileBtn{max-width: none; width: 100%;}
+.boardWriteFileBox .boardWriteFileBtn::before{content: ''; margin-top: 2px; width: 16px; height: 16px; background: url(../images/sub/file_icon.svg)no-repeat center / contain;}
+.boardWriteFileBox .boardWriteFileItem{margin-top: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.boardWriteFileBox .boardWriteFileItem .boardWriteFileDel{display: flex; align-items: center; justify-content: center; width: 48px; height: 28px; border-radius: var(--radius-xs); background-color: var(--guide-700); color: var(--white); font-size: var(--font-size-s); font-weight: var(--semi-bold);}
+.boardWriteFileBox .boardWriteFileItem .boardWriteFileName{color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
+
+@media (max-width: 480px){
+
+  .boardWriteFileBox .boardWriteFileBtn{height: 50px;}
+
+}
+
+/* 게시판 - 체크, 라디오 */
+.boardWriteBox .chkBtn{display: inline-flex; align-items: center;  gap: 0 var(--spacing-xs);
+    padding: 0 var(--spacing-s); max-width: 220px; width: 100%; height: 56px; line-height: 56px; background-color: var(--white);
+    border: 1px solid var(--guide-100); border-radius: var(--radius-s); color: var(--gray-600);
+    font-weight: var(--medium);; cursor: pointer; white-space: nowrap;}
+.boardWriteBox .chkBtn::before {content: ''; width: 22px!important; height: 22px!important; border: 0; background: url(../images/sub/chk_icon02.svg) no-repeat center / contain;}
+.boardWriteBox input[type="radio"]:checked + .chkBtn,
+.boardWriteBox input[type="checkBox"]:checked + .chkBtn
+{background-color: var(--primary-500); color: var(--white); border: 1px solid var(--primary-500);}
+.boardWriteBox input[type="radio"]:checked + .chkBtn::before,
+.boardWriteBox input[type="checkBox"]:checked + .chkBtn::before
+ {background: url(../images/sub/chk_on_icon.svg) no-repeat center / contain;}
+
+ @media (max-width: 480px){
+
+  .boardWriteBox .chkBtn{height: 50px; line-height: 50px;}
+
+ }
