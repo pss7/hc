@@ -9,6 +9,8 @@
 
 .dotList{margin-bottom: var(--spacing-m);}
 .dotList:last-child{margin-bottom: 0;}
+.dotList > li.emphasize{color: var(--primary-500); font-weight: var(--semi-bold);}
+.dotList > li.emphasize::before{top: 7px; background-color: var(--primary-500);}
 .dotList > li{padding-left: var(--spacing-m); position: relative; margin-bottom: var(--spacing-xs); color: var(--gray-600);}
 .dotList > li::before{content: ''; position: absolute; top:11px; left:10px; width: 4px; height: 4px; background-color: var(--gray-600); border-radius: 50%;}
 .dotList > li:last-child{margin-bottom: 0;}
@@ -139,8 +141,8 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 .formSection .itemSelectList li:last-child{border-bottom: 0;}
 .formSection .itemSelectList li .itemSelectImgBox{width: 80px; height: 80px;}
 .formSection .itemSelectList li .itemSelectDelBtn{right: 0;}
-.formSection .formBtn{width: 100%; gap: 0 var(--spacing-xs); background-color: var(--primary-900); border-radius: var(--radius-s); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
-.formSection .formBtn.formBtn:hover{background-color: var(--primary-800);}
+.formBtn{width: 100%; gap: 0 var(--spacing-xs); background-color: var(--primary-900); border-radius: var(--radius-s); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
+.formBtn.formBtn:hover{background-color: var(--primary-800);}
 .formSection .formBtn .plusBtnIcon{width: 28px; height: 28px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
 .formSection .formAgreeInfoText{margin: var(--spacing-s) 0 var(--spacing-m); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
 .formSection .formAgreeTextBox{margin-bottom: var(--spacing-m);}
@@ -328,10 +330,6 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 .formSection .formDetailInfoBox .formDetailInfoDateBox{display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
 .formSection .formDetailInfoBox .formDetailInfoDateBox .formDetailInfoBadge{color: var(--primary-500); font-weight: var(--medium); font-size: var(--font-size-l);}
 .formSection .formApplicationItemBox .itemSelectList{margin: var(--spacing-m) 0;}
-.formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBox{display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-xs) 0;}
-.formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptInfo{min-width: 138px; min-height: 29px; padding: var(--radius-2xs) var(--spacing-xs); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-xs); border: 1px solid var(--guide-500); border-radius: var(--radius-xs); line-height: 1.1;}
-.formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptLabel{flex-shrink: 0; font-weight: var(--bold); font-size: var(--body-2); color: var(--guide-300);}
-.formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptValue{color: var(--guide-900); font-size: var(--Subtitle-1); font-weight: var(--medium); text-align: center;} 
 .formSection .formApplicationItemBox .itemSelectTotalBox{display: flex; justify-content: space-between; align-items: center; padding-top: var(--spacing-m); border-top: 2px solid var(--guide-500);}
 .formSection .formApplicationItemBox .itemSelectTotalInfo{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
 .formSection .formApplicationItemBox .itemSelectTotalLabel{color: var(#2F3D4A); font-weight: var(--semi-bold);}
@@ -350,6 +348,12 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 .formSection .formApplicationItemBox .itemRefundBox .btn{flex-shrink: 0;}
 .formSection .formApplicationItemBox .itemRefundBox .itemRefundText{color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1);}
 .formSection .formApplicationItemBox .itemRefundBox .itemRefundText span{margin-left: var(--spacing-xs);}
+
+.itemSelectStatusBox{display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-xs) 0;}
+.itemSelectReceiptInfo{min-width: 138px; min-height: 29px; padding: var(--radius-2xs) var(--spacing-xs); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-xs); border: 1px solid var(--guide-500); border-radius: var(--radius-xs); line-height: 1.1;}
+.itemSelectReceiptLabel{flex-shrink: 0; font-weight: var(--bold); font-size: var(--body-2); color: var(--guide-300);}
+.itemSelectReceiptValue{color: var(--guide-900); font-size: var(--Subtitle-1); font-weight: var(--medium); text-align: center;} 
+
 .itemSelectStatusBadge{padding: var(--spacing-2xs) var(--spacing-xs); font-size: var(--body-2); font-weight: var(--semi-bold); border-radius: 0 0 0 var(--radius-xs); line-height: 1.1;}
 .itemSelectStatusBadge.unpaid{background-color: var(--secondary-50); border: 1px solid var(--secondary-100); color: var(--secondary-700);}
 .itemSelectStatusBadge.cancel{background-color: var(--danger-50); border: 1px solid var(--danger-100); color: var(--danger-700);}
@@ -359,7 +363,7 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 
   .formSection .formDetailInfoBox .formDetailInfoDateBox .formDetailInfoBadge,
   .formSection .formDetailInfoBox .formDetailInfoValue{font-size: var(--font-size-m);}
-  .formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptValue{font-size: var(--font-size-m);}
+  .itemSelectReceiptValue{font-size: var(--font-size-m);}
   .formSection .formApplicationItemBox .itemSelectTotalPrice{font-size: var(--font-size-xl);}
   .formSection .formApplicationItemBox .formPickupScheduleText{font-size: var(--font-size-m);}
 
@@ -372,7 +376,7 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 @media (max-width: 576px){
 
   .formSection .formApplicationItemBox .itemSelectList li .itemSelectInfoBox{justify-content: center;}
-  .formSection .formApplicationItemBox .itemSelectList li .itemSelectStatusBox{align-items: center;}
+  .itemSelectStatusBox{align-items: center;}
 
 }
 
@@ -387,7 +391,7 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
   .formSection .formApplicationItemBox .itemRefundBox{flex-direction: column; gap: var(--spacing-s) 0;}
   .formSection .formApplicationItemBox .itemRefundBox .btn{width: 100%;}
   .formSection .formApplicationItemBox .itemRefundBox .itemRefundText span{margin-left: 0;}
-  .formSection .formApplicationItemBox .itemSelectList li .itemSelectReceiptInfo{flex-direction: column; gap: var(--spacing-2xs) 0;}
+  .itemSelectReceiptInfo{flex-direction: column; gap: var(--spacing-2xs) 0;}
   .formSection .formpayMentInfoBox .photoSaveBtn{height: 48px; font-size: var(--font-size-m);}
   
 }
@@ -398,8 +402,8 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 .tabLayoutBox .tabMenuList li{margin-bottom: var(--spacing-s);}
 .tabLayoutBox .tabMenuList li .tabMenuBtn{padding: var(--spacing-xs); border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); text-align: center; line-height: 1.1; transition: all .3s;}
 .tabLayoutBox .tabMenuList li .tabMenuBtn:hover{background-color: var(--gray-100);}
-.tabLayoutBox .tabMenuList li .tabMenuBtn.active{background-color: var(--primary-500); border: 1px solid var(--gray-100); color: var(--white);}
-.tabLayoutBox .tabContentBox{flex: 1;}
+.tabLayoutBox .tabMenuList li .tabMenuBtn.active{background-color: var(--primary-500); border: 1px solid var(--gray-100); color: var(--white); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
+.tabLayoutBox .tabContentBox{width: 100%;}
 
 @media (max-width: 1024px){
 
@@ -692,3 +696,69 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 #itemSpecSelectWrap .itemSpecCheckBox .itemSpecInfoText{color: var(--gray-600); font-weight: var(--medium);}
 #itemSpecSelectWrap .itemSpecCheckBox .itemSpecPriceBox span{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium);}
 #itemSpecSelectWrap .itemSpecCheckBox .itemSpecPriceBox span::before{content: ''; width: 18px; height: 18px; background: url(../images/main/price_icon.svg)no-repeat center;}
+
+/* 나의신청내역 */
+.myApplyBox .myApplyTopInfoBox{display: flex; gap: 0 var(--spacing-lm); margin-bottom: var(--spacing-ms); padding: var(--spacing-lm); border: 2px solid var(--guide-200); border-radius: var(--radius-l); background-color: var(--white); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
+.myApplyBox .myApplyTopInfoBox .myApplyTopImgBox{flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 200px; height: 258px; border-radius: var(--radius-l); background: linear-gradient(to bottom, var(--guide-200), var(--guide-50));}
+.myApplyBox .myApplyTopInfoBox .myApplyTopImgBox img{width: auto;}
+.myApplyBox .myApplyTopInfoBox .myApplyTopTextBox{width: 100%;}
+.myApplyBox .myApplyTopInfoBox .myApplyTopTextBox h3{margin-bottom: var(--spacing-s); color: var(--guide-800); font-weight: var(--semi-bold); font-size: var(--H5);}
+.myApplyBox .myApplyTopInfoBox .myApplyTopTextBox .infoText{margin: 0 0 var(--spacing-lm);}
+.myApplyBox .myApplyTopInfoBox .myApplySearchBox{display: flex; justify-content: space-between; gap: 0 var(--spacing-s);} 
+.myApplyBox .myApplyTopInfoBox .myApplyInputLayoutBox{margin-bottom: var(--spacing-s); display: flex; align-items: center;} 
+.myApplyBox .myApplyTopInfoBox .myApplyInputLayoutBox:last-child{margin-bottom: 0;}
+.myApplyBox .myApplyTopInfoBox .myApplyInputBox{width: 100%;}
+.myApplyBox .myApplyTopInfoBox .myApplyInputBox .myApplyLable{width: 80px; flex-shrink: 0; color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--Subtitle-1);}
+.myApplyBox .myApplyTopInfoBox .myApplySearchBox .formBtn{width: 128px; height: auto; border-radius: var(--radius-m);}
+.myApplyBox .myApplyResultBox{margin-bottom: var(--spacing-ms);}
+.myApplyBox .myApplyResultBox .itemSelectStatusBox{align-items: flex-start; margin-bottom: var(--spacing-s);}
+.myApplyBox .myApplyResultBox .itemSelectList{padding-top: var(--spacing-s);}
+.myApplyBox .myApplyResultBox .itemSelectList li{margin: 0; padding: var(--spacing-s) 0; gap: var(--spacing-s); border-radius: 0;}
+.myApplyBox .myApplyResultBox .itemSelectList li .itemSelectDate{display: block; width: 100%; color: var(--gray-900); font-weight:var(--semi-bold); font-size: var(--Subtitle-1);}
+.myApplyBox .myApplyResultBox .itemSelectList li .itemSelectImgBox{width: 80px; height: 80px;}
+.myApplyBox .myApplyResultBox .myApplyResultBtnBox{display: flex; flex-direction: column; gap: var( --spacing-xs) 0;}
+.myApplyBox .myApplyResultBox .myApplyResultBtnBox .myApplyResultBtn{width: 117px; padding: var(--spacing-2xs); height: 56px; border: 1px solid var(--gray-200); border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--Subtitle-1); text-align: center;}
+.myApplyBox .myApplyResultBox .myApplyResultTitle{margin-bottom: var(--spacing-s);; color: var(--guide-800); font-weight: var(--semi-bold); font-size: var(--H5);}
+.myApplyBox .myApplyResultBox .myApplyResultPriceBox{padding-bottom: var(--spacing-m); display: flex; align-items: center; flex-wrap: wrap; gap: 0 var(--spacing-m); border-bottom: 2px solid var(--guide-500);}
+.myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPriceCount{color: #2F3D4A; font-weight: var(--semi-bold);} 
+.myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPriceCount strong{padding-left: var(--spacing-xs);}
+.myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPrice{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--H5);}
+.myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPrice::before{content: ''; width: 18px; height: 18px; background: url(../images/sub/price_icon.svg)no-repeat center;}
+
+
+@media (max-width: 1024px){
+
+  .myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPrice,
+  .myApplyBox .myApplyResultBox .myApplyResultTitle,
+  .myApplyBox .myApplyTopInfoBox .myApplyTopTextBox h3{font-size: var(--font-size-xl);}
+  .myApplyBox .myApplyResultBox .itemSelectList li{flex-direction: row;}
+  .myApplyBox .myApplyResultBox .myApplyResultBtnBox .myApplyResultBtn{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 768px){
+
+
+  .myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPrice,
+  .myApplyBox .myApplyResultBox .myApplyResultTitle,
+  .myApplyBox .myApplyTopInfoBox .myApplyTopTextBox h3{font-size: var(--font-size-l);}
+
+  .myApplyBox .myApplyTopInfoBox{padding: var(--spacing-lm) var(--spacing-ms);}
+  .myApplyBox .myApplyTopInfoBox .myApplyTopTextBox h3{font-size: var(--font-size-l);}
+  .myApplyBox .myApplyTopInfoBox{flex-direction: column; align-items: center; gap: var(--spacing-m) 0;}
+  .myApplyBox .myApplyTopInfoBox .myApplyInputLayoutBox{flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
+  .myApplyBox .myApplyTopInfoBox .myApplyInputBox .myApplyLable{width: 100%; font-size: var(--font-size-m);}
+  .myApplyBox .myApplyTopInfoBox .myApplySearchBox{flex-direction: column; gap: var(--spacing-m) 0;}
+  .myApplyBox .myApplyTopInfoBox .myApplySearchBox .formBtn{width: 100%; height: 48px;}
+
+  .myApplyBox .myApplyResultBox .itemSelectList li{padding: var(--spacing-ml) 0; flex-direction: column; align-items: center;  border-bottom: 1px solid var(--guide-100);}
+  .myApplyBox .myApplyResultBox .myApplyResultBtnBox{width: 100%; flex-direction: row; gap: 0 var(--spacing-s);}
+  .myApplyBox .myApplyResultBox .itemSelectList li:last-child{border-bottom: 0; padding-bottom: 0;}
+  .myApplyBox .myApplyResultBox .myApplyResultBtnBox .myApplyResultBtn{flex: 1; height: 48px;}
+  .myApplyBox .myApplyResultBox .itemSelectList li .itemSelectTextBox .itemSelectName,
+  .myApplyBox .myApplyResultBox .itemSelectList li .itemSelectDate{text-align: center;}
+  .myApplyBox .myApplyResultBox .itemSelectList li .itemSelectInfoBox{justify-content: center;}
+  .myApplyBox .myApplyResultBox .itemSelectStatusBox{align-items: center;}
+
+  
+}
