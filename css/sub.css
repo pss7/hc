@@ -45,6 +45,10 @@
 
 }
 
+/* 공통 - 제목 */
+.iconTitle{display: flex; align-items: center; gap:0 var(--spacing-2xs); margin-bottom: var(--spacing-s); color: #343B43; font-weight: var(--bold); font-size: var(--font-size-l);}
+.iconTitle::before{content: ''; width: 20px; height: 20px; background: url(../images/sub/exclamation_icon.svg)no-repeat center;}
+
 /* 공통 - 선택 */
 .toggleBtnBox{position: relative;}
 .toggleBtn{width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-xs); padding: var(--spacing-s); height: 56px; background-color: var(--white); border: 1px solid var(--guide-100); border-radius: var(--radius-s); background-color: var(--white);}
@@ -390,9 +394,9 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 
 /* 공통 - 탭 레이아웃 */
 .tabLayoutBox{display: flex; align-items: flex-start;}
-.tabLayoutBox .tabMenuBox{width: 140px; flex-shrink: 0;}
+.tabLayoutBox .tabMenuBox{width: 180px; flex-shrink: 0;}
 .tabLayoutBox .tabMenuList li{margin-bottom: var(--spacing-s);}
-.tabLayoutBox .tabMenuList li .tabMenuBtn{padding: var(--spacing-2xs); min-width: 48px; min-height: 37px; border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); text-align: center; transition: all .3s;}
+.tabLayoutBox .tabMenuList li .tabMenuBtn{padding: var(--spacing-xs); border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); text-align: center; line-height: 1.1; transition: all .3s;}
 .tabLayoutBox .tabMenuList li .tabMenuBtn:hover{background-color: var(--gray-100);}
 .tabLayoutBox .tabMenuList li .tabMenuBtn.active{background-color: var(--primary-500); border: 1px solid var(--gray-100); color: var(--white);}
 .tabLayoutBox .tabContentBox{flex: 1;}
@@ -672,3 +676,19 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
   .faqList li .faqAnswerBox .faqAnswerContent p{font-size: var(--font-size-m);}
 
 }
+
+/* 비용안내 */
+.costBox .costInfoBox{margin-bottom: var(--spacing-ms); padding: var(--spacing-lm); border: 1px solid var(--guide-200);
+    border-radius: var(--radius-l); background-color: var(--white);}
+.costBox .costInfoBox a,
+.costBox .costInfoBox strong{font-weight: var(--semi-bold);}
+.costBox .itemListTabContentBox .itemListTabContentList li .itemListImgBox .itemSpecification{font-size: var(--body-2);}
+.costBox .itemListTabContentBox .itemListTabContentListBox::after{display: none;}
+#itemSpecSelectWrap{max-height: none; height: auto;}
+#itemSpecSelectWrap .itemSpecCheckLayoutBox{flex: 1; display: flex; flex-wrap: wrap; justify-content: space-between;}
+#itemSpecSelectWrap .itemSpecCheckBox{padding: var(--spacing-xs) 0; margin-bottom: var(--spacing-xs);  display: flex; flex-wrap: wrap; gap: var(--spacing-xs); align-items: center;
+    }
+#itemSpecSelectWrap .itemSpecCheckBox::before{content: ''; flex-shrink: 0; width: 24px; height: 24px; background: url(../images/sub/chk_active_icon.svg)no-repeat center;}
+#itemSpecSelectWrap .itemSpecCheckBox .itemSpecInfoText{color: var(--gray-600); font-weight: var(--medium);}
+#itemSpecSelectWrap .itemSpecCheckBox .itemSpecPriceBox span{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium);}
+#itemSpecSelectWrap .itemSpecCheckBox .itemSpecPriceBox span::before{content: ''; width: 18px; height: 18px; background: url(../images/main/price_icon.svg)no-repeat center;}

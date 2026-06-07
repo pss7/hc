@@ -505,3 +505,90 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
   .itemSelectList li .itemSelectDelBtn{top: 6px; right:6px; width: 26px; height: 26px;}
 
 }
+
+.itemListTabContentBox{position: relative; flex: 1; height: 100%;}
+.itemListTabContentBox .itemListTabContentListBox{height: 100%; overflow-x: hidden; overflow-y: auto; padding-bottom: var(--spacing-m);}
+.itemListTabContentBox .itemListTabContentList{display: grid; grid-template-columns: repeat(3,1fr); gap: var(--spacing-lm) var(--spacing-ms);} 
+.itemListTabContentBox .itemListTabContentListBox::after{content: ''; opacity: 0; position: absolute; left: 0; right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 40%,rgba(255,255,255,1) 100%); z-index: 9; transition: all .3s; pointer-events: none;}
+.itemListTabContentBox .itemListTabContentListBox.hasScroll::after{opacity: 1;}
+.itemListTabContentBox .itemListTabContentListBox.scrollEnd::after{opacity: 0;}
+.itemListTabContentBox .itemListTabContentList li .itemListBtn{display: block; width: 100%;}
+.itemListTabContentBox .itemListTabContentList li .itemListBtn:hover .itemListImgBox img{transform: scale(1.03);}
+.itemListTabContentBox .itemListTabContentList li .itemListBtn:hover .itemListImgBox{background-color: var(--white); border-color: var(--gray-900);}
+.itemListTabContentBox .itemListTabContentList li .itemListImgBox{position: relative; margin-bottom: var(--spacing-s); height: 0; padding-top: 99%; border-radius: var(--radius-m); background-color: var(--guide-50); border: 2px solid transparent; transition: all .7s;}
+.itemListTabContentBox .itemListTabContentList li .itemListImgBox img{position: absolute; top:0; left:0; right:0; bottom: 0; height: 100%; object-fit: cover; transition: all .7s;}
+.itemListTabContentBox .itemListTabContentList li .itemListImgBox .itemSpecification{padding: var(--spacing-2xs) var(--spacing-xs); position: absolute; left:16px; bottom: 16px; border: 1px solid var(--gray-200); background-color: var(--white); border-radius: var(--radius-xs); font-weight: var(--medium); line-height: 1;}
+.itemListTabContentBox .itemListTabContentList li .itemListBtn:hover .itemListTextBox h3{color: var(--primary-500);}
+.itemListTabContentBox .itemListTabContentList li .itemListTextBox h3{margin-bottom: var(--radius-xs); color: var(--gray-900); font-weight: var(--semi-bold); font-size: var(--H6); transition: all .7s;}
+.itemListTabContentBox .itemListTabContentList li .itemListTextBox .itemPrice{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium);}
+.itemListTabContentBox .itemListTabContentList li .itemListTextBox .itemPrice::before{content: ''; margin-top: 2px; width: 18px; height: 18px; background: url(../images/main/price_icon.svg)no-repeat center;} 
+
+
+@media (max-width: 1280px) {
+
+  .itemListTabContentBox .itemListTabContentList{grid-template-columns: repeat(2, 1fr);}
+
+}
+
+@media (max-width: 1024px) {
+
+  .itemListTabContentBox{width: 100%;}
+  .itemListTabContentBox .itemListTabContentList li .itemListTextBox h3 {font-size: var(--font-size-l);}
+  
+}
+
+@media (max-width: 768px) {
+
+  .itemListTabContentBox .itemListTabContentList li .itemListImgBox .itemSpecification{font-size: var(--font-size-s);}
+  .itemListTabContentBox .itemListTabContentList li .itemListTextBox h3{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .itemListTabContentBox .itemListTabContentList li .itemListTextBox h3,
+  .itemListTabContentBox .itemListTabContentList li .itemListTextBox .itemPrice{font-size: var(--font-size-s);}
+  .itemListTabContentBox .itemListTabContentList li .itemListTextBox .itemPrice::before{margin: 0;}
+  .itemListTabContentBox .itemListTabContentList{grid-template-columns: 1fr;}
+
+}
+
+/* 품목 규격 선택 모달 */ 
+#itemSpecSelectWrap{ display: flex; flex-direction: column; max-width: 532px; width: calc(100% - 20px); max-height: 540px; height: calc(100vh - 80px); padding: var(--spacing-m); position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 999; background-color: var(--white); border-radius: var(--radius-m); border: 1px solid var(--gray-600);  box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22); opacity: 0; visibility: hidden; transition: all 1s;}
+#itemSpecSelectWrap.active{opacity: 1; visibility: visible;}
+ #itemSpecSelectWrap .itemSpecSelectTopBox{padding-right: var(--spacing-l); margin-bottom: var(--spacing-m); display: flex; align-items: center; gap: 0 var(--spacing-s);}
+ #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectImgBox{flex-shrink: 0; width: 64px; height: 64px; border-radius: var(--radius-m); background-color: var(--guide-50);}
+#itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectImgBox img{height: 100%; object-fit: cover;}
+#itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectTextBox .itemSpecSelectText{color: var(--gray-900); font-weight: var(--semi-bold); font-size: var(--font-size-xxxl); line-height: 1.4;} 
+#itemSpecSelectWrap .itemSpecText{align-self: flex-start; padding: var(--spacing-2xs) var(--spacing-xs); margin-bottom: var(--spacing-xs); display: inline-block; color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-2); border: 1px solid var(--gray-200); border-radius: var(--radius-xs); line-height: 1.3;}
+#itemSpecSelectWrap .itemSpecListBox{flex: 1;}
+#itemSpecSelectWrap .itemSpecListBox .itemSpecRadioBox{padding: var(--spacing-xs) 0; margin-bottom: var(--spacing-xs); display: flex; flex-wrap: wrap; gap: var(--spacing-xs); align-items: center; justify-content: space-between;}
+#itemSpecSelectWrap .itemSpecListBox .itemSpecRadioBox:last-child{margin-bottom: 0;}
+#itemSpecSelectWrap .itemSpecListBox .itemSpecRadioBox .itemSpecPriceBox span{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium);}
+#itemSpecSelectWrap .itemSpecListBox .itemSpecRadioBox .itemSpecPriceBox span::before{content: ''; width: 18px; height: 18px; background: url(../images/main/price_icon.svg)no-repeat center;}
+#itemSpecSelectWrap .itemSpecQuantityBox{margin:auto 0 var(--spacing-s); display: flex; align-items: center; justify-content: space-between;}
+#itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityText{color: #2F3D4A; font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+#itemSpecSelectWrap .itemSpecQuantityBox .itemSelectCountBox{display: flex; align-items: center;}
+#itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox .itemSelectCountText{color: var(--gray-600); font-weight: var(--bold); font-size: var(--H5);}
+#itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox{display: flex; align-items: center; gap:0 var(--spacing-s); }
+#itemSpecSelectWrap .btn{width: 100%;}
+#itemSpecSelectWrap .itemSpecModalCloseBtn{position: absolute; top:24px; right:24px;}
+
+@media (max-width: 1024px){
+
+  #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox .itemSelectCountText,
+  #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectTextBox .itemSpecSelectText{font-size: var(--font-size-xl);}
+
+}
+
+@media (max-width: 480px){
+
+  #itemSpecSelectWrap{padding: var(--spacing-l) var(--spacing-s) var(--spacing-s);}
+  #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox{gap: 0 var(--spacing-xs);}
+  #itemSpecSelectWrap .itemSpecQuantityBox .itemSpecQuantityBoxCountBox .itemSelectCountText,
+  #itemSpecSelectWrap .itemSpecSelectTopBox .itemSpecSelectTextBox .itemSpecSelectText{font-size: var(--font-size-m);}
+  #itemSpecSelectWrap .itemSpecSelectTopBox{flex-direction: column; gap: var(--spacing-xs) 0; padding: 0; text-align: center;}
+  #itemSpecSelectWrap .itemSpecModalCloseBtn{top: 10px; right:10px;}
+
+}
+    

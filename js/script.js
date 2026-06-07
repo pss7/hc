@@ -67,6 +67,22 @@ $(function () {
     $(this).parents('.toggleBox').find('.toggleBtn').attr('aria-expanded', 'false').focus();
   });
 
+  // 품목 규격 선택 모달 
+  $('.itemListBtn').click(function () {
+    $('#itemSpecSelectWrap').addClass('active');
+  });
+
+  $('#itemSpecSelectWrap .itemSpecModalCloseBtn').click(function () {
+    $('#itemSpecSelectWrap').removeClass('active');
+  });
+
+    $('.itemListBtn').click(function () {
+    $('#itemSpecSelectWrap').addClass('active');
+  });
+
+  $('#itemSpecSelectWrap .itemSpecModalCloseBtn').click(function () {
+    $('#itemSpecSelectWrap').removeClass('active');
+  });
 
 
 
