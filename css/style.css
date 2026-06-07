@@ -169,10 +169,10 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 #headerWrap{padding: var(--spacing-s) var(--spacing-ms); display: flex; justify-content: space-between; align-items: center;}
 #headerWrap .headerLogoBox{display: flex; align-items: flex-end; gap: var(--spacing-s)}
 #headerWrap .headerLanguageSelectBox{position: relative;}
-#headerWrap .headerLanguageSelectBox .languageSelect{padding-left: var(--spacing-2xs); height: 28px; display: flex; align-items: center; background-color: var(--white); color: var(--gray-600); font-weight: var(--medium); border-radius: var( --radius-xs); transition: all .3s;}
+#headerWrap .headerLanguageSelectBox .languageSelect{gap:0; padding:0 0 0 var(--spacing-2xs); height: 28px; display: flex; align-items: center; background-color: var(--white); color: var(--gray-600); font-weight: var(--medium); border-radius: var( --radius-xs); transition: all .3s; border: 0;}
 #headerWrap .headerLanguageSelectBox .languageSelect::before{content: ''; margin-right: var(--spacing-xs); width: 28px; height: 28px; background: url(../images/common/gonfalon_icon.svg)no-repeat center;}
 #headerWrap .headerLanguageSelectBox .languageSelect::after{content: ''; margin-left: var(--spacing-2xs); width: 24px; height: 24px; background: url(../images/common/arrow_icon01.svg)no-repeat center;}
-#headerWrap .headerLanguageSelectBox .languageSelectList{padding: var(--spacing-2xs); position: absolute; top:28px; left:0; right:0; background-color: var(--white); border-radius: 0 0 var( --radius-xs) var( --radius-xs); z-index: 9;}
+#headerWrap .headerLanguageSelectBox .languageSelectList{padding: var(--spacing-2xs); position: absolute; top:28px; left:0; right:0; background-color: var(--white); border-radius: 0 0 var( --radius-xs) var( --radius-xs); z-index: 9; border: 0; box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
 #headerWrap .headerLanguageSelectBox .languageSelectList li .languageSelectBtn{width: 100%; padding-left: var(--spacing-2xs); margin-bottom: var(--spacing-2xs); display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-2); border-radius: var(--radius-2xs); border: 1px solid transparent; transition: all .3s;}
 #headerWrap .headerLanguageSelectBox .languageSelectList li .languageSelectBtn::before{content: ''; flex-shrink: 0; width: 28px; height: 28px;}
 #headerWrap .headerLanguageSelectBox .languageSelectList li .gonfalonIcon01::before{background: url(../images/common/gonfalon_icon01.svg)no-repeat center;}
@@ -184,7 +184,9 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 #headerWrap .headerLanguageSelectBox .languageSelectList li .gonfalonIcon07::before{background: url(../images/common/gonfalon_icon07.svg)no-repeat center;}
 #headerWrap .headerLanguageSelectBox .languageSelectList li .languageSelectBtn:last-child{margin-bottom: 0;}
 #headerWrap .headerLanguageSelectBox .languageSelectList li .languageSelectBtn:hover{background-color: #EBF4FE; border-color: var(--primary-500);} 
-#headerWrap .headerLanguageSelectBox.active .languageSelect{border-radius: var(--radius-xs) var(--radius-xs) 0 0; color: var(--primary-500);}
+#headerWrap .headerLanguageSelectBox.active .languageSelect{border-radius: var(--radius-xs) var(--radius-xs) 0 0; color: var(--primary-500); border: 0;}
+#headerWrap .headerLanguageSelectBox.active .languageSelect span{color: var(--primary-500);}
+#headerWrap .headerLanguageSelectBox.active .languageSelect::after{transform: rotate(-180deg);}
 #headerWrap .headerLanguageSelectBox .languageSelect:hover{color: var(--primary-500);}
 #headerWrap nav .headerDepth{display: flex;}
 #headerWrap nav .headerDepth li h2 a{display: block; padding: var(--spacing-xs) var(--spacing-ml); color: var(--guide-800); font-size: var(--font-size-xxxl); font-weight: var(--semi-bold);}
