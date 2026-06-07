@@ -185,7 +185,7 @@
                     <div class="container">
 
                         <h2 class="title">
-                            공지사항
+                            자주 묻는 질문
                         </h2>
 
                         <div class="noticeWriteBox subContentBox">
@@ -212,22 +212,56 @@
                                     </div>
                                     <!-- //boardWriteField -->
 
-                                    <!-- 공지여부 -->
+                                    <!-- 카테고리 -->
                                     <div class="boardWriteField">
                                         <span class="boardWriteLabel">
-                                            공지여부
+                                            카테고리
                                             <span class="required" aria-hidden="true">*</span>
                                             <span class="blind">필수 입력</span>
                                         </span>
                                         <div class="boardWriteContent">
 
-                                            <div class="boardWriteNoticeBox">
-                                                <input type="checkbox" id="noticeChk" class="blind" required="">
-                                                <label for="noticeChk" class="chkBtn">
-                                                    공지 설정
-                                                </label>
+                                            <div class="boardWriteSelectBox">
+                                                <div class="selectBox toggleBtnBox">
+
+                                                    <button type="button" class="selectBtn toggleBtn"
+                                                        aria-expanded="false" aria-controls="categorySelectList">
+                                                        <span>
+                                                            선택
+                                                        </span>
+                                                    </button>
+
+                                                    <div id="categorySelectList" class="selectListBox dropdown">
+                                                        <ul class="selectList">
+                                                            <li>
+                                                                <button type="button" class="selectListBtn"
+                                                                    aria-pressed="false">
+                                                                    선택
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="selectListBtn"
+                                                                    aria-pressed="false">
+                                                                    선택
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="selectListBtn"
+                                                                    aria-pressed="false">
+                                                                    선택
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- //selectList -->
+
+                                                    </div>
+                                                    <!-- //selectListBox -->
+
+                                                </div>
+                                                <!-- //boardWriteSelectBox -->
+
                                             </div>
-                                            <!-- //boardWriteNoticeBox -->
+                                            <!-- //boardWriteParticipation -->
 
                                         </div>
                                         <!-- //boardWriteContent -->
@@ -247,30 +281,6 @@
                                         <div class="boardWriteContent">
 
                                             <div class="boardWriteFileBox">
-                                                <div class="boardWriteFile">
-                                                    <input type="file" id="boardFile01" class="blind">
-                                                    <label for="boardFile01" class="boardWriteFileBtn">첨부파일을
-                                                        업로드해주세요.</label>
-
-                                                    <div class="boardWriteFileItem">
-                                                        <button type="button" class="boardWriteFileDel"
-                                                            aria-label="첨부파일.jpg 삭제">삭제</button>
-                                                        <span class="boardWriteFileName">첨부파일.jpg</span>
-                                                    </div>
-                                                </div>
-
-                                                <div class="boardWriteFile">
-                                                    <input type="file" id="boardFile01" class="blind">
-                                                    <label for="boardFile01" class="boardWriteFileBtn">첨부파일을
-                                                        업로드해주세요.</label>
-
-                                                    <div class="boardWriteFileItem">
-                                                        <button type="button" class="boardWriteFileDel"
-                                                            aria-label="첨부파일.jpg 삭제">삭제</button>
-                                                        <span class="boardWriteFileName">첨부파일.jpg</span>
-                                                    </div>
-                                                </div>
-
                                                 <div class="boardWriteFile">
                                                     <input type="file" id="boardFile01" class="blind">
                                                     <label for="boardFile01" class="boardWriteFileBtn">첨부파일을

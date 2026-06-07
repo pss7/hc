@@ -36,6 +36,7 @@ input[type="checkbox"]:checked + label::before{border: 0; width: 24px; height: 2
 input{width: 100%;  padding-left: var(--spacing-s); height: 56px; line-height: 56px; border: 1px solid var(--guide-100); border-radius: var(--radius-s); color: var(--gray-900); font-size: var(--font-size-l); font-weight: var(--medium);}
 input::placeholder{color: var(--gray-900);}
 input.error{border-color: var(--danger-500);}
+.selectBtn:hover,
 .boardWriteFileBtn:hover,
 .boardWriteEditor:hover,
 .chkBtn:hover,
@@ -98,13 +99,6 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
   .closeBtn span{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
 }
-
-/* 공통 - 애니메이션(드롭다운) */
-.dropdown {opacity: 0; visibility: hidden; max-height: 0; overflow: hidden; pointer-events: none;
-transition: all .8s;}
-.toggleBtn::after {transition: all .3s;}
-.active .dropdown {opacity: 1; visibility: visible; max-height: 500px; pointer-events: auto;transition: all .8s;}
-.active .toggleBtn::after{transform: rotate(-180deg);}
 
 /* 공통 - 호버 시 텍스트 슬라이드 */
 .slideText{ position: relative; overflow: hidden; text-align: center;}
