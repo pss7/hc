@@ -4,7 +4,7 @@
 html, body{height: 100%;}
 #wrap{min-height: 100vh; position: relative; display: flex; flex-direction: column;}
 #wrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: linear-gradient(180deg, #ECF0F3 0%, #ECF5FF 50%, #ECF0F3 100%); z-index: -2;}
-main{flex: 1;}
+main{flex: 1; overflow-x: hidden;}
 .blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 .mobileMenuBg,
 .bg,
@@ -638,7 +638,7 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 
 @media (max-width: 1280px){
 
-  #applicationQuestionWrap{margin-bottom: var(--spacing-ms); flex-direction: row; justify-content: center; position: static; transform: none;}
+  #applicationQuestionWrap{flex-direction: row; justify-content: center; position: static; transform: none;}
   #applicationQuestionWrap .applicationQuestionLink{padding: 0 0 0 var(--spacing-s); align-items: center; flex-direction: row; width: 173px; height: 88px; font-size: var(--font-size-xl);}
   #applicationQuestionWrap .applicationQuestionLink::after{align-self: auto;}
 
