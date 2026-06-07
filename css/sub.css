@@ -51,29 +51,6 @@
 .iconTitle{display: flex; align-items: center; gap:0 var(--spacing-2xs); margin-bottom: var(--spacing-s); color: #343B43; font-weight: var(--bold); font-size: var(--font-size-l);}
 .iconTitle::before{content: ''; width: 20px; height: 20px; background: url(../images/sub/exclamation_icon.svg)no-repeat center;}
 
-/* 공통 - 선택 */
-.toggleBtnBox{position: relative;}
-.toggleBtn{width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-xs); padding: var(--spacing-s); height: 56px; background-color: var(--white); border: 1px solid var(--guide-100); border-radius: var(--radius-s); background-color: var(--white);}
-.toggleBtn span{font-weight: var(--medium); font-size: var(--Subtitle-1); color: var(--gray-600);}
-.toggleBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/sub/arrow_icon06.svg)no-repeat center; border-radius: var(--radius-l); background-color: var(--guide-50); transition: all .3s;}
-.toggleBtn:hover::after{background-color: var(--guide-100);}
-.dropdown{position: absolute; top:70px; left:0; right:0; opacity: 0; visibility: hidden; max-height: 0; overflow: hidden; pointer-events: none;
-transition: all .8s; background-color: var(--white); border: 1px solid var(--guide-100); border-radius: var(--radius-s);}
-.dropdown .selectList{padding: var(--spacing-s) 0;}
-.dropdown .selectListBtn{display: block; width: 100%; padding: var(--spacing-s); font-weight: var(--medium); font-size: var(--Subtitle-1); color: var(--gray-600);}
-.dropdown .selectListBtn:hover{color: var(--gray-900);}
-.toggleBtnBox.active .dropdown{opacity: 1; visibility: visible; max-height: 500px; pointer-events: auto;transition: all .8s;}
-.toggleBtnBox.active .toggleBtn{border-color: var(--primary-500);}
-.toggleBtnBox.active .toggleBtn span{color: var(--gray-900);}
-.toggleBtnBox.active .toggleBtn::after{transform: rotate(-90deg); background-color: var(--guide-100);}
-
-@media (max-width: 480px){
-
-  .toggleBtn span,
-  .dropdown .selectListBtn{font-size: var(--font-size-m);}
-
-}
-
 /* 공통 - 색상 */
 .colorPrimary{color: var(--primary-500);}
 
