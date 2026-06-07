@@ -209,7 +209,7 @@ background: linear-gradient(
 #itemListWrap .itemListBox{flex: 1; display: flex; flex-direction: column; height: 100%; padding: var(--spacing-lm) var(--spacing-lm) 0; background-color: var(--white);}
 #itemListWrap .itemListLayoutBox{display: flex; align-items: flex-start; min-height: 0;}
 #itemListWrap .itemListSearchTopBox{margin-bottom: var(--spacing-lm ); position: relative;}
-#itemListWrap .itemListSearchTopBox input{width: 100%; padding: 0 var(--spacing-2xl) 0 var(--spacing-s); height: 64px; border: 1px solid var(--gray-600); border-radius: var(--radius-m); font-weight: var(--medium); font-size: var(--font-size-xl); color: var(--gray-600);}
+#itemListWrap .itemListSearchTopBox input{width: 100%; padding: 0 var(--spacing-2xl) 0 var(--spacing-s); height: 64px; border: 2px solid var(--gray-600); border-radius: var(--radius-m); font-weight: var(--medium); font-size: var(--font-size-xl); color: var(--gray-600);}
 #itemListWrap .itemListSearchTopBox input::placeholder{color: var(--gray-600);}
 #itemListWrap .itemListSearchTopBox .searchBtn{width: 40px; height: 40px; position: absolute; top: 50%; transform: translateY(-50%); right:16px; border-radius: var(--radius-l); background-color: var(--gray-100); transition: all .3s;}
 #itemListWrap .itemListSearchTopBox .searchBtn:hover{background-color: var(--white); border: 1px solid var(--primary-100); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}

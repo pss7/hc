@@ -178,477 +178,261 @@
 
         <main id="sub">
 
-            <!-- 절차 영역 -->
-            <aside class="processAsideWrap" aria-label="배출 신청 절차">
-                <div class="processAsideBox">
-                    <ol class="processStepList">
-                        <li class="processStepText">
-                            신청
-                        </li>
-                        <li class="processStepText active">
-                            결제
-                        </li>
-                        <li class="processStepText">
-                            출력
-                        </li>
-                        <li class="processStepText">
-                            배출
-                        </li>
-                    </ol>
-                </div>
-            </aside>
-
             <!-- 콘텐츠 영역 -->
             <div class="contentBox">
 
-                <div class="applicationBox">
+                <div class="noticeBox">
                     <div class="container">
-
                         <h2 class="title">
-                            신청 내용
+                            공지사항
                         </h2>
 
-                        <!-- 신청하기 폼 -->
-                        <div class="formLayout">
+                        <div class="noticeListBox subContentBox">
 
-                            <!-- 신청하기 폼 왼쪽 영역 -->
-                            <div class="formWrap">
+                            <div class="topTitleLayoutBox">
+                                <h3 class="contentSubTitle">
+                                    목록
+                                </h3>
 
-                                <!-- 결제 정보 -->
-                                <div class="formSection">
-
-                                    <div class="formpayMentInfoBox">
-
-                                        <h3 class="formSectionTitle">
-                                            결제정보
-                                        </h3>
-
-                                        <div class="formpayMentStatusBox">
-
-                                            <!-- 
-                                                        클래스적용
-                                                        미결제 > unpaid
-                                                        취소요청 > cancel
-                                                        수거요청 / 결제완료 > approved
-                                                        수거완료 > complete
-                                                    -->
-
-                                            <span class="itemSelectStatusBadge unpaid">
-                                                미결제
-                                            </span>
-
-                                            <p class="formpayMentStatusText">
-                                                2026년 06월 02일 23:59 까지 입금해주세요
-                                            </p>
-
-                                        </div>
-                                        <!-- //formpayMentStatusBox -->
-
-                                        <div class="formDetailInfoBox">
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">결제수단</dt>
-                                                <dd class="formDetailInfoValue">가상계좌</dd>
-                                            </dl>
-
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">입금은행</dt>
-                                                <dd class="formDetailInfoValue">NH농협</dd>
-                                            </dl>
-
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">계좌번호</dt>
-                                                <dd class="formDetailInfoValue">
-                                                    <div class="formDetailInfoCopyBox">
-                                                        <span
-                                                            class="formDetailInfoText formAccountNumber">79004858353010</span>
-                                                        <button type="button" class="formDetailInfoCopyBtn">복사</button>
-                                                    </div>
-                                                </dd>
-                                            </dl>
-
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">입금금액</dt>
-                                                <dd class="formDetailInfoValue">13,000원</dd>
-                                            </dl>
-
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">입금기한</dt>
-                                                <dd class="formDetailInfoValue">
-                                                    <div class="formDetailInfoDateBox">
-                                                        <span class="formDetailInfoText">
-                                                            2026년 06월 02일 23:59 까지
-                                                        </span>
-                                                        <span class="formDetailInfoBadge">
-                                                            1일 남음
-                                                        </span>
-                                                    </div>
-                                                </dd>
-                                            </dl>
-
-                                        </div>
-                                        <!-- //formDetailInfoBox -->
-
-
-                                        <P class="infoText">
-                                            배출일 전날까지 입금하지 않으면 신청이 자동 취소됩니다
-                                        </P>
-
+                                <button type="button" class="btn btnPrimary btnSmall">
+                                    <div class="slideText">
+                                        <span class="slideTextItem slideTextPrimary">글작성</span>
+                                        <span class="slideTextItem slideTextClone" aria-hidden="true">글작성</span>
                                     </div>
-                                    <!-- //formpayMentInfoBox -->
+                                </button>
+                            </div>
+                            <!-- //topTitleLayoutBox -->
 
+                            <div class="searchBox">
+                                <form role="search">
+                                    <input id="search" type="text" placeholder="무엇을 찾으시나요">
+                                    <label for="search" class="blind">검색입력</label>
+                                    <button type="submit" class="searchBtn" aria-label="검색"></button>
+                                </form>
+                            </div>
+                            <!-- //searchBox -->
+
+                            <div class="boardCountWrap">
+                                <div class="boardCountBox">
+                                    <span>
+                                        <strong>1</strong>
+                                        / 50
+                                    </span>
+                                    <p>
+                                        총 <strong>410</strong>건의 게시글이 있습니다.
+                                    </p>
                                 </div>
-                                <!-- //formSection -->
-
-                                <!-- 신청품목 -->
-                                <div class="formSection">
-
-                                    <div class="formApplicationItemBox">
-
-                                        <h3 class="formSectionTitle">
-                                            신청 품목
-                                        </h3>
-
-                                        <P class="infoText">
-                                            배출일 전날까지 입금하지 않으면 신청이 자동 취소됩니다
-                                        </P>
-
-                                        <ul class="itemSelectList">
-                                            <li>
-
-                                                <div class="itemSelectImgBox">
-                                                    <img src="../images/sub/item_img01.png" alt="">
-                                                </div>
-                                                <!-- //itemSelectImgBox -->
-
-                                                <div class="itemSelectTextBox">
-                                                    <h3 class="itemSelectName">가스오븐레인지</h3>
-                                                    <span class="itemSelectOption">1m 이상</span>
-
-                                                    <div class="itemSelectInfoBox">
-                                                        <div class="itemSelectSummaryBox">
-                                                            <span class="itemSelectCount">1개</span>
-                                                            <span class="itemSelectPrice">3,000원</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- //itemSelectTextBox -->
-
-                                                <div class="itemSelectStatusBox">
-                                                    <dl class="itemSelectReceiptInfo">
-                                                        <dt class="itemSelectReceiptLabel">접수번호</dt>
-                                                        <dd class="itemSelectReceiptValue">발급대기</dd>
-                                                    </dl>
-
-                                                    <!-- 
-                                                        클래스적용
-                                                        미결제 > unpaid
-                                                        취소요청 > cancel
-                                                        수거요청 / 결제완료 > approved
-                                                        수거완료 > complete
-                                                    -->
-
-                                                    <span class="itemSelectStatusBadge unpaid">
-                                                        미결제
-                                                    </span>
-                                                </div>
-
-                                            </li>
-
-                                            <li>
-
-                                                <div class="itemSelectImgBox">
-                                                    <img src="../images/sub/item_img01.png" alt="">
-                                                </div>
-                                                <!-- //itemSelectImgBox -->
-
-                                                <div class="itemSelectTextBox">
-                                                    <h3 class="itemSelectName">가스오븐레인지</h3>
-                                                    <span class="itemSelectOption">1m 이상</span>
-
-                                                    <div class="itemSelectInfoBox">
-                                                        <div class="itemSelectSummaryBox">
-                                                            <span class="itemSelectCount">1개</span>
-                                                            <span class="itemSelectPrice">3,000원</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- //itemSelectTextBox -->
-
-                                                <div class="itemSelectStatusBox">
-                                                    <dl class="itemSelectReceiptInfo">
-                                                        <dt class="itemSelectReceiptLabel">접수번호</dt>
-                                                        <dd class="itemSelectReceiptValue">발급대기</dd>
-                                                    </dl>
-
-                                                    <!-- 
-                                                        클래스적용
-                                                        미결제 > unpaid
-                                                        취소요청 > cancel
-                                                        수거요청 / 결제완료 > approved
-                                                        수거완료 > complete
-                                                    -->
-
-                                                    <span class="itemSelectStatusBadge unpaid">
-                                                        미결제
-                                                    </span>
-                                                </div>
-
-                                            </li>
-                                        </ul>
-                                        <!-- //itemSelectList -->
-
-                                        <div class="itemSelectTotalBox">
-                                            <div class="itemSelectTotalInfo">
-                                                <span class="itemSelectTotalLabel">총 수수료</span>
-                                                <span class="itemSelectTotalCount">5개</span>
-                                            </div>
-
-                                            <strong class="itemSelectTotalPrice">15,000원</strong>
-                                        </div>
-                                        <!-- //itemSelectTotalBox -->
-
-                                    </div>
-                                    <!-- //formApplicationItemBox -->
-
-                                </div>
-                                <!-- //formSection -->
-
-                                <!-- 신청 정보 -->
-                                <div class="formSection">
-
-                                    <div class="formApplicationItemBox">
-
-                                        <h3 class="formSectionTitle">
-                                            신청 정보
-                                        </h3>
-
-                                        <div class="formDetailInfoBox">
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">신청인</dt>
-                                                <dd class="formDetailInfoValue">
-                                                    <span class="formDetailInfoName">
-                                                        홍길동
-                                                    </span>
-                                                    010-1234-5678
-                                                </dd>
-                                            </dl>
-
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">배출장소</dt>
-                                                <dd class="formDetailInfoValue">강원특별자치도 춘천시 중앙로194번길 48 (근화동, 영광연립주택)
-                                                    110동 쓰레기 집하장</dd>
-                                            </dl>
-                                        </div>
-                                        <!-- //formDetailInfoBox -->
-
-                                        <h4 class="formPickupScheduleLabel">
-                                            수거예정일
-                                        </h4>
-
-                                        <div class="formPickupScheduleBox">
-
-                                            <div class="formPickupScheduleInfo">
-                                                <strong class="formPickupScheduleText formPickupScheduleDate">
-                                                    2026년 06월 03일
-                                                </strong>
-                                                <span class="formPickupScheduleText formPickupScheduleTime">
-                                                    오전 9시
-                                                </span>
-                                            </div>
-
-                                        </div>
-                                        <!-- //formPickupScheduleBox -->
-
-                                    </div>
-                                    <!-- //formApplicationItemBox -->
-
-                                </div>
-                                <!-- //formSection -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                <!-- 안내 -->
-                                <div class="formSection">
-
-                                    <div class="formDischargeInfoBox">
-                                        <h4 class="formSectionTitle02">
-                                            결제 안내
-                                        </h4>
-                                        <ul class="dotList">
-                                            <li>
-                                                가상계좌는 일회성 계좌이므로 재사용 시(다시 그 계좌로 입금하시는 경우) 타인의 계좌로 입금될 가능성이 있습니다. 이 경우는
-                                                고객의 책임이므로 사용에 주의하시기 바랍니다.
-                                            </li>
-                                            <li>
-                                                가상계좌의 경우 CD기에서 현금입금 하실 수 없습니다. CD기에서 이체는 가능합니다
-                                            </li>
-                                            <li>
-                                                신청 후 <strong class="colorPrimary">5일 이내</strong> 결제하지 않으면 신청이 자동 취소됩니다.
-                                            </li>
-                                            <li>
-                                                총 수수료 1,000원 이상일 경우 반드시 결제를 완료하시고 배출하셔야 합니다.
-                                            </li>
-                                            <li>
-                                                결제시스템이 정상적으로 작동하지 않은 경우 진성이디씨(☎ 033-252-0580)로 문의하시기 바랍니다.
-                                            </li>
-                                        </ul>
-
-                                        <h4 class="formSectionTitle02">
-                                            배출 안내
-                                        </h4>
-                                        <ul class="dotList">
-                                            <li>
-                                                폐기물은 건물 밖 지정 장소에 직접 배출해 주세요.
-                                            </li>
-                                            <li>
-                                                방문 수거는 불가능합니다.
-                                            </li>
-                                            <li>
-                                                공휴일에는 수거하지 않습니다.
-                                            </li>
-                                            <li>
-                                                수거 상황에 따라 일정이 지연될 수 있습니다.
-                                            </li>
-                                        </ul>
-
-                                        <h4 class="formSectionTitle02">
-                                            환불 안내
-                                        </h4>
-
-                                        <ul class="dotList">
-                                            <li>
-                                                신청 후 7일 이내 환불 가능합니다.
-                                            </li>
-                                            <li>
-                                                7일째 되는 날이 주말이나 공휴일이면 다음 평일까지 환불할 수 있습니다.
-                                            </li>
-                                            <li>
-                                                환불 금액은 카드결제 취소 또는 계좌이체로 처리되며 1~2일 정도 걸릴 수 있습니다.
-                                            </li>
-                                            <li>
-                                                수거가 완료된 폐기물은 환불이 어렵습니다.
-                                            </li>
-                                        </ul>
-
-                                        <h4 class="formSectionTitle02">
-                                            신청 조회 안내
-                                        </h4>
-                                        <ul class="dotList">
-                                            <li>
-                                                [신청 확인 및 필증 출력] 메뉴에서 신청 내역을 조회할 수 있습니다.
-                                            </li>
-                                            <li>
-                                                신청 정보 조회 후 환불 신청이 가능합니다.
-                                            </li>
-                                        </ul>
-
-                                        <h4 class="formSectionTitle02">
-                                            문의
-                                        </h4>
-                                        <ul class="dotList">
-                                            <li>
-                                                홍천군청 환경과(☎033-430-2631)
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                    <!-- //formDischargeInfoBox -->
-
-                                </div>
-                                <!-- //formSection -->
+                                <!-- //boardCountBox -->
 
                             </div>
-                            <!-- //formWrap -->
+                            <!-- //boardCountWrap -->
 
-                            <!-- 신청하기 폼 오른쪽 영역 -->
-                            <aside class="formAsideWrap">
+                            <ul class="boardList">
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
 
-                                <div class="formAsideBox">
-                                    <div class="formAsideHead">
-                                        <h3 class="formAsideTitle">확인사항</h3>
-                                        <span class="formAsideProgress">진행률 <strong
-                                                class="colorPrimary">0%</strong></span>
-                                    </div>
-                                    <!-- //formAsideHead -->
-
-                                    <nav class="formStepNav" aria-label="신청 진행 단계">
-                                        <a href="##" class="formStepLink">
-                                            결제 여부
-                                        </a>
-                                        <a href="#" class="formStepLink">
-                                            스티커 출력
-                                        </a>
-                                    </nav>
-                                    <!-- //formStepNav -->
-
-                                    <div class="btnBox">
-
-                                        <p class="infoText">
-                                            아직 결제되지 않았어요
-                                        </p>
-
-                                        <button type="button" class="btn btnPrimary btnPositive" disabled>
-                                            <div class="slideText">
-                                                <span class="slideTextItem slideTextPrimary">스티커출력</span>
-                                                <span class="slideTextItem slideTextClone"
-                                                    aria-hidden="true">스티커출력</span>
+                                            <div class="boardMeta">
+                                                <span class="boardCategory">공지</span>
+                                                <span class="boardNumber">46152</span>
                                             </div>
-                                        </button>
-                                    </div>
-                                    <!-- //formAsideBtnBox -->
 
-                                    <div class="formAsideBtnBox">
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
 
-                                        <button type="button" class="formAsideBtn">
-                                            <span>
-                                                신청 취소
-                                            </span>
-                                        </button>
+                                            <span class="boardDate">2026. 04. 23</span>
 
-                                        <button type="button" class="formAsideBtn">
-                                            <span>
-                                                신청 수정
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <!-- //formAsideBtnBox -->
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
 
-                                </div>
-                                <!-- //formAsideBox -->
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
 
-                                <ul class="formAsideLinkList">
-                                    <li>
-                                        <a href="#" class="formAsideLink arrowButton arrowButtonRight">폐기물 수거 문의</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="formAsideLink arrowButton arrowButtonRight formAsideLinkError">결제 오류
-                                            문의</a>
-                                    </li>
-                                </ul>
-                                <!-- //formAsideLinkList -->
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
 
-                            </aside>
-                            <!-- //formAsideWrap -->
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
+
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
+
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
+
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
+
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
+
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
+
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
+
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
+
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
+
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
+
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
+
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
+
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
+
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
+
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
+
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
+
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
+
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
+
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
+
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
+
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
+
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="boardInfoBox">
+
+                                            <div class="boardMeta">
+                                                <span class="boardNumber">46152</span>
+                                            </div>
+
+                                            <h4 class="boardTitle">
+                                                카드 결제 시 부분취소 유의사항 안내
+                                            </h4>
+
+                                            <span class="boardDate">2026. 04. 23</span>
+
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- //boardList -->
+
+                            <nav class="paginationBox" aria-label="페이지 네비게이션">
+                                <a href="#" class="pageLink pageLinkPrev" aria-label="이전 페이지로 이동">
+                                </a>
+                                <a href="#" class="pageLink active" aria-current="page">
+                                    1
+                                </a>
+                                <a href="#" class="pageLink">
+                                    2
+                                </a>
+                                <a href="#" class="pageLink">
+                                    3
+                                </a>
+                                <a href="#" class="pageLink">
+                                    4
+                                </a>
+                                <a href="#" class="pageLink">
+                                    5
+                                </a>
+                                <a href="#" class="pageLink pageLinkNext" aria-label="다음 페이지로 이동">
+                                </a>
+                            </nav>
+                            <!-- //paginationBox -->
 
                         </div>
-                        <!-- //formLayout -->
+                        <!-- noticeListBox -->
 
                     </div>
                     <!-- //container -->
 
                 </div>
-                <!-- //applicationBox -->
+                <!-- //noticeBox -->
 
             </div>
             <!-- //contentBox -->
