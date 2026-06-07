@@ -181,158 +181,148 @@
             <!-- 콘텐츠 영역 -->
             <div class="contentBox">
 
-                <div class="noticeBox">
+                <div class="myApplyBox">
                     <div class="container">
-
                         <h2 class="title">
-                            공지사항
+                            나의 신청내역
                         </h2>
 
-                        <div class="noticeViewBox subContentBox">
+                        <div class="myApplyTopInfoBox">
 
-                            <div class="boardViewBox">
-                                <div class="boardViewTopBox">
-                                    <span class="category">공지</span>
-                                    <h4>
-                                        카드 결제 시 부분취소 유의사항 안내
-                                    </h4>
-                                    <div class="boardViewInfoBox">
-                                        <span class="boardViewAuthor">관리자</span>
-                                        <span class="boardViewDate">2024-01-03</span>
-                                        <span class="boardViewCount">123</span>
-                                    </div>
-                                </div>
-                                <!-- //boardViewTopBox -->
-
-                                <div class="boardViewContentBox">
-
-                                    <div class="viewContentBox">
-                                        <img src="../images/sub/view_img01.jpg" alt="">
-                                        <br>
-                                        <p>
-                                            안녕하십니까 홍천군 환경과에서 안내드립니다. <br> <br>
-                                             
-                                            카드로 대형폐기물 대금 결제 후, 부분취소가 불가하니(전체 취소만 가능), 결제하실 때 참고해서 부탁드립니다. <br>
-                                            따라서 부분 취소 건이 발생할 경우 담당자가 신청인께 다시 전화드릴 수 있는 점 이해 부탁드립니다.
-                                        </p>
-                                    </div>
-                                    <!-- //viewContentBox -->
-
-                                </div>
-                                <!-- //boardViewContentBox -->
-
-                                <div class="boardViewFileBox">
-                                    <h5 class="boardViewFileTitle">첨부파일</h5>
-                                    <ul class="boardViewFileList">
-                                        <li class="boardViewFileItem">
-                                            <a href="#" class="boardViewFileLink fileHwp">
-                                                <span class="boardViewFileIcon" aria-hidden="true"></span>
-                                                <span class="boardViewFileName">한글파일입니다.hwp</span>
-                                                <span class="boardViewFileSize">(79 KB)</span>
-                                            </a>
-                                        </li>
-                                        <li class="boardViewFileItem">
-                                            <a href="#" class="boardViewFileLink filePdf">
-                                                <span class="boardViewFileIcon" aria-hidden="true"></span>
-                                                <span class="boardViewFileName">PDF 파일입니다.pdf</span>
-                                                <span class="boardViewFileSize">(79 KB)</span>
-                                            </a>
-                                        </li>
-                                        <li class="boardViewFileItem">
-                                            <a href="#" class="boardViewFileLink fileXlsx">
-                                                <span class="boardViewFileIcon" aria-hidden="true"></span>
-                                                <span class="boardViewFileName">엑셀 파일입니다.xlsx</span>
-                                                <span class="boardViewFileSize">(79 KB)</span>
-                                            </a>
-                                        </li>
-                                        <li class="boardViewFileItem">
-                                            <a href="#" class="boardViewFileLink fileJpg">
-                                                <span class="boardViewFileIcon" aria-hidden="true"></span>
-                                                <span class="boardViewFileName">사진 파일입니다.jpg</span>
-                                                <span class="boardViewFileSize">(79 KB)</span>
-                                            </a>
-                                        </li>
-                                        <li class="boardViewFileItem">
-                                            <a href="#" class="boardViewFileLink filePpt">
-                                                <span class="boardViewFileIcon" aria-hidden="true"></span>
-                                                <span class="boardViewFileName">파워포인트 파일입니다.ppt</span>
-                                                <span class="boardViewFileSize">(79 KB)</span>
-                                            </a>
-                                        </li>
-                                        <li class="boardViewFileItem">
-                                            <a href="#" class="boardViewFileLink fileZip">
-                                                <span class="boardViewFileIcon" aria-hidden="true"></span>
-                                                <span class="boardViewFileName">그외 파일입니다.zip</span>
-                                                <span class="boardViewFileSize">(79 KB)</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <!-- //boardViewFileList -->
-
-                                </div>
-                                <!-- //boardViewFileBox -->
-
+                            <div class="myApplyTopImgBox">
+                                <img src="../images/sub/profile01.png" alt="">
                             </div>
-                            <!-- //boardViewBox -->
+                            <!-- //myApplyTopImgBox -->
 
-                            <div class="btnBox between">
-                                <a href="#" class="btn btnPrimary">
-                                    <div class="slideText">
-                                        <span class="slideTextItem slideTextPrimary">목록</span>
-                                        <span class="slideTextItem slideTextClone" aria-hidden="true">목록</span>
+                            <div class="myApplyTopTextBox">
+                                <h3>
+                                    신청인 정보
+                                </h3>
+
+                                <p class="infoText">
+                                    온라인 신청 당시 입력하신 이름과 전화번호를 정확하게 기입하여 주세요
+                                </p>
+
+                                <form class="myApplySearchBox">
+
+                                    <div class="myApplyInputBox">
+                                        <div class="myApplyInputLayoutBox">
+                                            <label for="name" class="myApplyLable">이름</label>
+                                            <input type="text" id="name" name="name" value="홍길동">
+                                        </div>
+
+                                        <div class="myApplyInputLayoutBox">
+                                            <label for="phone" class="myApplyLable">연락처</label>
+                                            <input type="tel" id="phone" name="phone" value="01012345678">
+                                        </div>
                                     </div>
-                                </a>
-                                <div class="btnLayoutBox">
-                                    <button type="button" class="btn btnSecondary btnNegative">
+
+                                    <button type="button" class="formBtn btn">
                                         <div class="slideText">
-                                            <span class="slideTextItem slideTextPrimary">삭제</span>
-                                            <span class="slideTextItem slideTextClone" aria-hidden="true">삭제</span>
+                                            <span class="slideTextItem slideTextPrimary">조회</span>
+                                            <span class="slideTextItem slideTextClone" aria-hidden="true">조회</span>
                                         </div>
                                     </button>
-                                    <button type="button" class="btn btnPrimary btnPositive">
-                                        <div class="slideText">
-                                            <span class="slideTextItem slideTextPrimary">수정</span>
-                                            <span class="slideTextItem slideTextClone" aria-hidden="true">수정</span>
-                                        </div>
-                                    </button>
-                                </div>
+
+                                </form>
+                                <!-- //myApplySearchBox -->
+
                             </div>
-                            <!-- //btnBox -->
+                            <!-- //myApplyTopTextBox -->
 
                         </div>
-                        <!-- //noticeViewBox -->
+                        <!-- //myApplyTopInfoBox -->
 
+                        <div class="myApplyResultBox subContentBox">
 
-                        <div class="boardViewNavWrap">
-                            <nav class="boardViewNavBox" aria-label="이전글 다음글">
-                                <a href="#" class="boardViewNavItem prev">
-                                    <span class="boardViewNavIcon" aria-hidden="true"></span>
-                                    <span class="boardViewNavLabel">이전글</span>
-                                    <div class="boardViewNavContent">
-                                        <span class="boardViewNavTitle">이전글 제목이 들어갑니다.</span>
-                                        <span class="boardViewNavDate">2024-01-03</span>
-                                    </div>
-                                </a>
+                            <h3 class="myApplyResultTitle">
+                                홍길동님의 신청내역
+                            </h3>
 
-                                <a href="#" class="boardViewNavItem next">
-                                    <span class="boardViewNavIcon" aria-hidden="true"></span>
-                                    <span class="boardViewNavLabel">다음글</span>
-                                    <div class="boardViewNavContent">
-                                        <span class="boardViewNavTitle">다음글 제목이 들어갑니다.</span>
-                                        <span class="boardViewNavDate">2024-01-04</span>
-                                    </div>
-                                </a>
-                            </nav>
-                            <!-- //boardViewNavBox -->
+                            <div class="myApplyResultPriceBox">
+                                <span class="myApplyResultPriceCount">
+                                    총 <strong class="colorPrimary">0개</strong>
+                                </span>
+                                <span class="myApplyResultPrice">
+                                    0원
+                                </span>
+                            </div>
+                            <!-- //myApplyResultPriceBox -->
+
+                            <!-- //조회된 내용 없을 경우 -->
+                            <div class="myApplyResultEmptyBox">
+                                <p class="myApplyResultEmptyText">
+                                    조회된 내역이 없어요
+                                </p>
+                            </div>
+                            <!-- //myApplyResultEmptyBox -->
 
                         </div>
-                        <!-- //boardViewNavWrap -->
+                        <!-- //myApplyResultBox -->
+
+                        <div class="subContentBox">
+
+                            <h4 class="iconTitle">
+                                신청 조회 안내
+                            </h4>
+                            <ul class="dotList">
+                                <li>
+                                    [신청 확인 및 필증 출력] 메뉴에서 신청 내역을 조회할 수 있습니다.
+                                </li>
+                                <li>
+                                    대형폐기물 접수내역은 이전 <strong class="colorPrimary">(20251129)일 부터 현재</strong>일까지의
+                                    민원접수 내역을 조회할 수 있습니다.
+                                </li>
+                                <li>
+                                    신청 정보 조회 후 환불 신청이 가능합니다.
+                                </li>
+                                <li>
+                                    프린터가 없는 경우 빈 용지에 신고필증 번호, 배출 품목, 금액 등을 기재하고 폐기물에 부착하여 배출하시기 바랍니다.
+                                </li>
+                                <li>
+                                    수수료 결제 이전에 물품 배출 시 무단투기로 간주되어 과태료 부과 대상이 됩니다.
+                                </li>
+                            </ul>
+
+                            <h4 class="iconTitle">
+                                환불 안내
+                            </h4>
+                            <ul class="dotList">
+                                <li>
+                                    신청 후 7일 이내 환불 가능합니다.
+                                </li>
+                                <li>
+                                    7일째 되는 날이 주말이나 공휴일이면 다음 평일까지 환불할 수 있습니다.
+                                </li>
+                                <li class="emphasize">
+                                    환불계좌는 예금주와 신청인 이름이 동일해야 합니다.
+                                </li>
+                                <li>
+                                    환불 금액은 카드결제 취소 또는 계좌이체로 처리되며 1~2일 정도 걸릴 수 있습니다.
+                                </li>
+                                <li>
+                                    수거가 완료된 폐기물은 환불이 어렵습니다.
+                                </li>
+                            </ul>
+
+                            <h4 class="iconTitle">
+                                문의
+                            </h4>
+
+                            <ul class="dotList">
+                                <li>
+                                    홍천군청 환경과(☎033-430-2631)
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- //subContentBox -->
 
                     </div>
                     <!-- //container -->
 
                 </div>
-                <!-- //noticeBox -->
+                <!-- //myApplyBox -->
 
             </div>
             <!-- //contentBox -->
@@ -348,6 +338,32 @@
                 </a>
             </aside>
             <!-- //applicationQuestionWrap -->
+
+            <aside id="applicationSelectWrap">
+                <div class="applicationSelectBox">
+                    <a href="#" class="applicationSelectBtn">
+                        <span>
+                            품목 <br>
+                            선택
+                        </span>
+                        <em class="applicationSelectCount">
+                            8개
+                        </em>
+                    </a>
+                    <a href="#" class="applicationSelectBtn">
+                        <span>
+                            신청 <br>
+                            내역
+                        </span>
+                    </a>
+
+                    <button type="button" class="mobileBtn">
+                        메뉴
+                    </button>
+                </div>
+
+            </aside>
+            <!-- //applicationSelectWrap -->
 
             <div id="mobileMenuWrap">
 

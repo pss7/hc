@@ -724,6 +724,10 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 .myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPriceCount strong{padding-left: var(--spacing-xs);}
 .myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPrice{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--H5);}
 .myApplyBox .myApplyResultBox .myApplyResultPriceBox .myApplyResultPrice::before{content: ''; width: 18px; height: 18px; background: url(../images/sub/price_icon.svg)no-repeat center;}
+.myApplyBox .myApplyResultEmptyBox{padding: var(--spacing-2xl) 0 var(--spacing-ml);}
+.myApplyBox .myApplyResultEmptyBox .myApplyResultEmptyText{display: flex; flex-direction: column; align-items: center; gap: var(--spacing-xs) 0; color: var(--gray-600); font-weight: var(--bold); text-align: center;}
+.myApplyBox .myApplyResultEmptyBox .myApplyResultEmptyText::before{content: ''; width: 72px; height: 72px; background: url(../images/sub/document_icon01.svg)no-repeat center;}
+
 
 
 @media (max-width: 1024px){

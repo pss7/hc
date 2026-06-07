@@ -225,6 +225,12 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 
 }
 
+@media (max-width: 1280px){
+
+  #footerWrap{margin-bottom: var(--spacing-lm);}
+
+}
+
 @media (max-width: 576px){
 
   #footerWrap .footerLinkBox{justify-content: center;}
@@ -395,12 +401,8 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 
 }
 
-
-
-
-
 /* 신청 품목선택 영역 */
-#applicationSelectWrap{position: absolute; top: 50%; transform: translateY(-50%); right:0;}
+#applicationSelectWrap{position: fixed; top:300px; right:0;}
 #applicationSelectWrap .applicationSelectBox{display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-s); width: 93px;}
 #applicationSelectWrap .applicationSelectBox .applicationSelectBtn{flex-shrink: 0; position: relative; padding: var(--spacing-m) var(--spacing-s) var(--spacing-m) var(--spacing-m); width: 88px; height: 152px; border: 1px solid var(--gray-600); background-color: var(--white); border-radius: var(--radius-l) 0 0 var(--radius-l); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22); text-align: center; color: var(--gray-600); border-width: 1px 0 1px 1px; transition: all .3s;}
 #applicationSelectWrap .applicationSelectBox .applicationSelectBtn:hover{padding: var(--spacing-m) var(--spacing-m) var(--spacing-m) var(--spacing-m); border-color: var(--primary-500); color: var(--primary-500); width: 93px;}
@@ -415,7 +417,7 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 @media (max-width: 1280px){
   
   #applicationSelectWrap .applicationSelectBox{width: 382px; padding: var(--spacing-m) var(--spacing-m) var(--spacing-s); gap: 0 var(--spacing-ml); justify-content: center; flex-direction: row; align-items: center;  background-color: var(--white); border: 1px solid var(--gray-600); border-width: 1px 1px 0 1px; border-radius: var(--radius-l) var(--radius-l) 0 0; z-index: 1;}
-  #applicationSelectWrap{position: absolute; left:50%; transform: translateX(-50%); right:auto; bottom: -120px; top: auto;}
+  #applicationSelectWrap{position: relative; top: auto; right: auto; margin: 0 auto;}
   #applicationSelectWrap::before{content: ''; position: absolute; top:-31px; left:-1000%; right: -1000%; bottom: 0; background-color: var(--guide-50); z-index: -1;}
   #applicationSelectWrap .applicationSelectBox .applicationSelectBtn{padding: 0; width: auto; height: auto; border: none; background: 0; box-shadow: none;}
   #applicationSelectWrap .applicationSelectBox .applicationSelectBtn span{display: flex; align-items: center; gap: 0 var(--spacing-xs); padding: 0; font-size: var(--Subtitle-1);}
@@ -428,8 +430,8 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 
 @media (max-width: 576px){
 
-  #applicationSelectWrap{bottom: -104px; left: 20px; right:20px; transform: none; }
-  #applicationSelectWrap .applicationSelectBox{width: auto; padding: 12px var(--spacing-s); border-radius: var(--radius-m) var(--radius-m) 0 0;}
+  #applicationSelectWrap{width: 100%;}
+  #applicationSelectWrap .applicationSelectBox{width: auto; padding: 12px var(--spacing-s); border-radius: var(--radius-m) var(--radius-m) 0 0; border-width: 1px 0 0 0; gap: 0 var(--spacing-m);}
   #applicationSelectWrap .applicationSelectBox .applicationSelectCount{top: -30px;}
 
 }
@@ -439,8 +441,6 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
   #applicationSelectWrap .applicationSelectBox .mobileBtn,
   #applicationSelectWrap .applicationSelectBox .applicationSelectBtn span{font-size: var(--Subtitle-2);}
   #applicationSelectWrap .applicationSelectBox .applicationSelectBtn span{gap: 0;}
-  #applicationSelectWrap{left:0; right:0; }
-  #applicationSelectWrap .applicationSelectBox{border-width: 1px 0 0 0; gap: 0 var(--spacing-m);}
 
 }
 
@@ -592,9 +592,8 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 
 }
     
-
 /* 신청 질문 영역 */
-#applicationQuestionWrap{position: absolute; top: 50%; transform: translateY(-50%); left:20px; display: flex; flex-direction: column; gap: var(--spacing-xs);}
+#applicationQuestionWrap{position: fixed; top: 357px; left:20px; display: flex; flex-direction: column; gap: var(--spacing-xs);}
 #applicationQuestionWrap .applicationQuestionLink{display: flex; flex-direction: column; padding: var(--spacing-ms) var(--spacing-s); width: 136px; height: 136px; border-radius: var(--radius-l); color: var(--white); font-weight: var(--bold); font-size: var(--font-size-xl); transition: all .3s;}
 #applicationQuestionWrap .applicationQuestionLink::after{content: ''; align-self: flex-end; width: 48px; height: 48px; transition: all .3s;}
 #applicationQuestionWrap .applicationQuestionLink01:hover{background-color: var(--primary-700);}
@@ -614,7 +613,7 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 
 @media (max-width: 1280px){
 
-  #applicationQuestionWrap{flex-direction: row; justify-content: center; position: static; transform: none;}
+  #applicationQuestionWrap{margin-bottom: var(--spacing-lm); flex-direction: row; justify-content: center; position: static; transform: none;}
   #applicationQuestionWrap .applicationQuestionLink{padding: 0 0 0 var(--spacing-s); align-items: center; flex-direction: row; width: 173px; height: 88px; font-size: var(--font-size-xl);}
   #applicationQuestionWrap .applicationQuestionLink::after{align-self: auto;}
 
