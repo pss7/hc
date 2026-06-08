@@ -17,7 +17,7 @@
 .arrowButton{ padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-s); display: inline-flex; align-items: center; gap: 0 var(--spacing-xs);} 
 .arrowButton::after{content: ''; flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;}
 .arrowButtonRight::after{background: var(--guide-50) url(../images/sub/arrow_icon02.svg)no-repeat 10px center;}
-.arrowButtonDown::after{background: var(--guide-50) url(../images/sub/arrow_icon03.svg)no-repeat center;}
+.arrowButtonDown::after{background: var(--guide-50) url(../images/sub/arrow_icon06.svg)no-repeat center;}
 
 @media (max-width: 1280px){
 
@@ -140,16 +140,17 @@
 .formSection .formSectionTopBox .formDetailBtn:not(.active):hover::after{background-color: var(--guide-100);}
 .formSection .formSectionTopBox .formDetailBtn.active{border-color:var(--primary-500);}
 .formSection .formSectionTopBox .formDetailBtn.active::after{background-color: var(--primary-100);}
-.formSection .formAgreeInfoBox{padding: var(--spacing-ml) var(--spacing-ms); background-color: var(--gray-50); border-radius: var(--radius-m);}
-.formSection .formAgreeInfoBox p{color: var(--gray-600);}
-.formSection .formAgreeInfoBox h4{margin-bottom: var(--spacing-xs); position: relative; padding-left: var(--spacing-ms); color: var(--guide-800); font-weight: var(--bold); font-size: var(--Subtitle-2);}
-.formSection .formAgreeInfoBox h4::before{content: ''; position: absolute; top:6px; left:7px; width: 6px; height: 6px; border-radius: 50%; background-color: var(--primary-500);}
+.formAgreeInfoBox{padding: var(--spacing-ml) var(--spacing-ms); background-color: var(--gray-50); border-radius: var(--radius-m);}
+.formAgreeInfoBox p{color: var(--gray-600);}
+.formAgreeInfoBox h4{margin-bottom: var(--spacing-xs); position: relative; padding-left: var(--spacing-ms); color: var(--guide-800); font-weight: var(--bold); font-size: var(--Subtitle-2);}
+.formAgreeInfoBox h4::before{content: ''; position: absolute; top:6px; left:7px; width: 6px; height: 6px; border-radius: 50%; background-color: var(--primary-500);}
 .formSection .formAgreeInfoBox .formAgreeTopText{margin-bottom: var(--spacing-m); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
-.formSection .formAgreeTextBox p span{display: inline-flex; flex-wrap: wrap; gap: var(--spacing-2xs)}
-.formSection .formAgreeTextBox p em{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--guide-900); background-color: var(--white); border-radius: var(--spacing-xs); border: 1px solid var(--guide-100); font-weight: var(--semi-bold); line-height: 1.1; font-style: normal;}
+.formAgreeTextBox p span{display: inline-flex; flex-wrap: wrap; gap: var(--spacing-2xs)}
+.formAgreeTextBox p em{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--guide-900); background-color: var(--white); border-radius: var(--spacing-xs); border: 1px solid var(--guide-100); font-weight: var(--semi-bold); line-height: 1.1; font-style: normal;}
 .formSection .formAgreeTextBox dl,
 .formSection .formAgreeTextBox .list,
 .formSection .formAgreeTextBox p{padding-left: var(--spacing-ms);}
+.formSection .formAgreeTextBox p{word-break: keep-all;}
 .formSection .formAgreeTextBox .list li{color: var(--gray-600);}
 .formSection .formAgreeTextBox dl{margin-bottom: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-s);}
 .formSection .formAgreeTextBox dl:last-child{margin-bottom: 0;}
@@ -281,12 +282,12 @@
 @media (max-width: 480px){
 
   .formSection{padding: var(--spacing-ml) var(--spacing-ms);}
-  .formSection .formAgreeInfoBox{padding: var(--spacing-ml) var(--spacing-s);}
+  .formAgreeInfoBox{padding: var(--spacing-ml) var(--spacing-s);}
   .formSection .formSelectBtnList li .formSelectBtn,
   .formSection .formAgreeBtnBox .formAgreeBtn,
   .formSection .formAgreeTextBox dl,
   .formSection .formAgreeTextBox .list li,
-  .formSection .formAgreeInfoBox p{font-size: var(--font-size-s);}
+  .formAgreeInfoBox p{font-size: var(--font-size-s);}
   .formSection .formSectionTitle{font-size: var(--font-size-l);}
   .formSection .formAgreeBtnBox .formAgreeBtn{height: 43px; line-height: 43px;}
     .formSection .emptyItemText::before{width: 55px; height: 55px;}
@@ -302,12 +303,12 @@
 .formSection .formpayMentInfoBox .formpayMentStatusBox .formpayMentStatusText{color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1);} 
 .formSection .formpayMentInfoBox .photoSaveBtn{display: block; padding: 0 var(--spacing-ms); width: 100%; border: 1px solid var(--gray-200); border-radius: var(--radius-s); height: 56px; color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--Subtitle-1); text-align: center;}
 .formSection .formDetailInfoBox{margin-bottom: var(--spacing-m);}
-.formSection .formDetailInfoBox .formDetailInfoItem{margin-bottom: var(--spacing-s
+.formDetailInfoItem{margin-bottom: var(--spacing-s
   ); display: flex; align-items: center; gap: 0 var(--spacing-xs)}
-.formSection .formDetailInfoBox .formDetailInfoItem:last-child{margin-bottom: 0;}
-.formSection .formDetailInfoBox .formDetailInfoLabel{flex-shrink: 0; padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--guide-500); color: var(--white); font-weight: var(--medium ); border-radius: var(--radius-xs); line-height: 1.2;}
-.formSection .formDetailInfoBox .formDetailInfoValue{color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-l);}
-.formSection .formDetailInfoBox .formDetailInfoValue .formDetailInfoName{margin-right: var(--spacing-2xs); font-weight: var(--semi-bold);}
+.formDetailInfoItem:last-child{margin-bottom: 0;}
+.formDetailInfoLabel{flex-shrink: 0; padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--guide-500); color: var(--white); font-weight: var(--medium ); border-radius: var(--radius-xs); line-height: 1.2;}
+.formDetailInfoValue{color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-l);}
+.formDetailInfoValue .formDetailInfoName{margin-right: var(--spacing-2xs); font-weight: var(--semi-bold);}
 .formSection .formDetailInfoBox .formDetailInfoCopyBox{display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
 .formSection .formDetailInfoBox .formDetailInfoCopyBox .formDetailInfoText{text-decoration: underline;}
 .formSection .formDetailInfoBox .formDetailInfoCopyBox .formDetailInfoCopyBtn{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--guide-500); font-weight: var(--bold); font-size: var(--body-2); border-radius: var(--radius-xs); border: 1px solid var(--guide-500); line-height: 1.1;}
@@ -345,7 +346,7 @@
 @media (max-width: 768px){
 
   .formSection .formDetailInfoBox .formDetailInfoDateBox .formDetailInfoBadge,
-  .formSection .formDetailInfoBox .formDetailInfoValue{font-size: var(--font-size-m);}
+  .formDetailInfoValue{font-size: var(--font-size-m);}
   .itemSelectReceiptValue{font-size: var(--font-size-m);}
   .formSection .formApplicationItemBox .itemSelectTotalPrice{font-size: var(--font-size-xl);}
   .formSection .formApplicationItemBox .formPickupScheduleText{font-size: var(--font-size-m);}
@@ -367,7 +368,7 @@
 
   .formSection .formpayMentInfoBox .formpayMentStatusBox{flex-direction: column;}
   .formSection .formApplicationItemBox .itemSelectList{margin: var(--spacing-m) 0 0;}
-  .formSection .formDetailInfoBox .formDetailInfoItem{margin-bottom: var(--spacing-ms); flex-direction: column; gap: var(--spacing-xs) 0;}
+  .formDetailInfoItem{margin-bottom: var(--spacing-ms); flex-direction: column; gap: var(--spacing-xs) 0;}
   .formSection .formApplicationItemBox .itemSelectTotalPrice{font-size: var(--font-size-l);}
   .formSection .formApplicationItemBox .itemSelectTotalBox{flex-direction: column; gap: var(--spacing-s) 0;}
   .formSection .formApplicationItemBox .formPickupScheduleInfo{width: 100%; flex-direction: column; align-items:center; gap: var(--spacing-s);}
@@ -747,5 +748,46 @@
   .myApplyBox .myApplyResultBox .itemSelectList li .itemSelectInfoBox{justify-content: center;}
   .myApplyBox .myApplyResultBox .itemSelectStatusBox{align-items: center;}
 
-  
+}
+
+/* 도움요청하기 모달 */
+#requestModalWrap{max-width: 818px; width: calc(100% - 20px); max-height: calc(100vh - 80px); padding: var(--spacing-xl) var(--spacing-lm) var(--spacing-lm); position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 999999; background-color: var(--white); border-radius: var(--radius-l); overflow-y: auto;}
+#requestModalWrap .requestTitle{margin-bottom: var(--spacing-m); text-align: center; font-family: 'KIMM'; color: var(--guide-800); font-size: var(--H2); font-weight: var(--bold);}
+#requestModalWrap .formDetailInfoBox{margin-bottom: var(--spacing-m); padding: var(--spacing-m); border: 1px solid var(--guide-200); border-radius: var(--radius-m);}
+#requestModalWrap .formDetailInfoValue{font-size: var(--H5); font-weight: var(--semi-bold);}
+#requestModalWrap .infoText{margin: var(--spacing-xs) 0 0;}
+#requestModalWrap .requestTitle02{margin-bottom: var(--spacing-s); color: var(--gray-900); font-weight: var(--bold); font-size: var(--Subtitle-1);}
+#requestModalWrap .inputRadioBox{margin-bottom: var(--spacing-ms);}
+#requestModalWrap .inputRadioBox:last-child{margin-bottom: 0;}
+#requestModalWrap .formAgreeInfoBox{margin: var(--spacing-m) 0 var(--spacing-s);}
+#requestModalWrap .formAgreeInfoBox .formAgreeTextBox p{padding-left: var(--spacing-ms); line-height: 2; word-break: keep-all;}
+#requestModalWrap .requestInfoText{margin-bottom: var(--spacing-m); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
+#requestModalWrap .requestBtnBox{display: flex; } 
+#requestModalWrap .requestBtnBox .requestRadioBtn{flex: 1;}
+#requestModalWrap .requestBtnBox .requestBtn{display: block; height: 54px; line-height: 54px; background-color: var(--whitei); border: 1px solid var(--gray-600); text-align: center; color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); transition: all .3s;}
+#requestModalWrap .requestBtnBox .requestBtn::before{display: none;}
+#requestModalWrap .requestBtnBox .requestBtn:hover{background-color: var(--guide-50);}
+#requestModalWrap .requestBtnBox .requestBtn.active{background-color: var(--primary-500); color: var(--white); font-weight: var(--bold); border-color: var(--primary-500);}
+#requestModalWrap .requestBtnBox .requestBtn01{margin-right: -1px; border-radius: var(--radius-s) 0 0 var(--radius-s);}
+#requestModalWrap .requestBtnBox .requestBtn02{border-radius: 0 var(--radius-s) var(--radius-s) 0}
+
+@media (max-width: 1024px){
+
+  #requestModalWrap .requestTitle{font-size: var(--H4);}
+  #requestModalWrap .formDetailInfoValue{font-size: var(--H6);}
+
+}
+
+@media (max-width: 768px){
+
+  #requestModalWrap{padding: var(--spacing-xl) var(--spacing-ml) var(--spacing-lm);     border-radius: var(--radius-m);}
+  #requestModalWrap .requestTitle{font-size: var(--H5);}
+  #requestModalWrap .formDetailInfoValue{font-size: var(--font-size-l);}
+
+}
+
+@media (max-width: 480px){
+
+  #requestModalWrap .requestBtnBox .requestBtn{height: 43px; line-height: 43px; font-size: var(--font-size-s);}
+
 }
