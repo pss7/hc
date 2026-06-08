@@ -810,6 +810,7 @@
 .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessIconBox img{width: auto; margin: 0 auto;}
 .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02{margin-bottom: var(--spacing-s); color: var(--gray-900); font-weight: var(--bold); font-size: var(--H5); font-family: 'KIMM'; text-align: center;}
 .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessText{color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); text-align: center;}
+.applicationInfoBox .applicationWasteInfoBox{margin-bottom: var(--spacing-2xl);}
 .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox{margin-bottom: var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-xs); }
 .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox h4{color: var(--gray-900); font-weight: var(--bold); font-size: var(--H5); font-family: 'KIMM';}
 .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox span{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-1); border: 1px solid var(--gray-200); border-radius: var(--radius-xs); line-height: 1.1;}
@@ -827,9 +828,12 @@
 .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoList{margin: 0;}
 .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoText{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-top: var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-2);}
 .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoText::before{content: ''; margin-top: -1px; width: 32px; height: 32px; flex-shrink: 0; background: url(../images/sub/map_icon.svg)no-repeat center;}
+.applicationInfoBox .applicationWasteDisposalNoticeBox{margin-bottom: var(--spacing-3xl); padding: var(--spacing-lm); border: 1px solid var(--guide-200); border-radius: var(--radius-l); background-color: var(--white);}
+
 
 @media (max-width: 1024px){
 
+   .applicationInfoBox .applicationWasteDisposalNoticeBox{padding: var(--spacing-lm) var(--spacing-ms); border-radius: var(--radius-m);}
   .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox h4,
   .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02,
   .applicationInfoBox .applicationInfoTitle{font-size: var(--H6);}
