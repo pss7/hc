@@ -52,6 +52,8 @@
 .iconTitle::before{content: ''; width: 20px; height: 20px; background: url(../images/sub/exclamation_icon.svg)no-repeat center;}
 
 /* 공통 - 색상 */
+.btnBgPrimary{background-color: var(--primary-500)!important;}
+.btnBgPrimary:hover{background-color: var(--primary-400)!important;}
 .colorPrimary{color: var(--primary-500);}
 
 /* 절차 영역  */
@@ -829,16 +831,20 @@
 .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoText{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-top: var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-2);}
 .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoText::before{content: ''; margin-top: -1px; width: 32px; height: 32px; flex-shrink: 0; background: url(../images/sub/map_icon.svg)no-repeat center;}
 .applicationInfoBox .applicationWasteDisposalNoticeBox{margin-bottom: var(--spacing-3xl); padding: var(--spacing-lm); border: 1px solid var(--guide-200); border-radius: var(--radius-l); background-color: var(--white);}
-.applicationInfoBox .applicationWasteInfoLinkBox .wasteInfoLinkLeftBox{position: relative; display: flex; flex-direction: column; padding: var(--spacing-ml) var(--spacing-m) var(--spacing-m); width: 387px; border-radius: var(--radius-l); background-color: #3E9C31; height: 464px;}
-.applicationInfoBox .applicationWasteInfoLinkBox .wasteInfoLinkLeftBox::after{content: ''; width: 162px; height: 129px; position: absolute; right:0; top:52%; transform: translateY(-50%); background: url(../images/sub/truck.svg)no-repeat center / contain;}
-.applicationInfoBox .applicationWasteInfoLinkBox .wasteInfoLinkTitle{margin-bottom: var(--spacing-s); font-family: 'KIMM'; font-size: var(--H3); color: var(--white); line-height: 1.3;}
-.applicationInfoBox .applicationWasteInfoLinkBox .wasteInfoLinkText{color: var(--white);}
-.applicationInfoBox .applicationWasteInfoLinkBox .wasteInfoPhoneBox{display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-xs); padding: var(--spacing-s); margin-top: auto; border-radius: var(--radius-m); background-color: #1A3A20;}
-.applicationInfoBox .applicationWasteInfoLinkBox .wasteInfoPhone{display: flex; align-items: center; gap: 0 var(--spacing-xs); font-weight: var(--bold); font-size: var(--H5); color: var(--white);}
-.applicationInfoBox .applicationWasteInfoLinkBox .wasteInfoPhone::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/phone_icon.svg)no-repeat center;}
-.applicationInfoBox .applicationWasteInfoLinkBox  .wasteInfoPageLink{height: 29px; line-height: 30px; display: flex; align-items: center; gap: 0 12px; padding: var(--spacing-2xs) var(--spacing-xs); color: #52616D; font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--white); border-radius: var(--radius-xs); border: 1px solid #DAE2E9;} 
-.applicationInfoBox .applicationWasteInfoLinkBox  .wasteInfoPageLink::after{content: ''; margin-top: 1px; width: 7px; height: 10px; background: url(../images/sub/arrow_icon02.svg)no-repeat center;}
-
+.applicationInfoBox .applicationWasteInfoLinkBox{display: flex; gap: var(--spacing-2xl);}
+.applicationInfoBox .wasteInfoLinkLeftBox{flex-shrink: 0; position: relative; display: flex; flex-direction: column; padding: var(--spacing-ml) var(--spacing-m) var(--spacing-m); width: 387px; border-radius: var(--radius-l); background-color: #3E9C31; height: 464px;}
+.applicationInfoBox .wasteInfoLinkLeftBox::after{content: ''; width: 162px; height: 129px; position: absolute; right:0; top:52%; transform: translateY(-50%); background: url(../images/sub/truck.svg)no-repeat center / contain;}
+.applicationInfoBox .wasteInfoLinkLeftBox .wasteInfoLinkTitle{margin-bottom: var(--spacing-s); font-family: 'KIMM'; font-size: var(--H3); color: var(--white); line-height: 1.3;}
+.applicationInfoBox .wasteInfoLinkLeftBox .wasteInfoLinkText{color: var(--white);}
+.applicationInfoBox .wasteInfoLinkLeftBox .wasteInfoPhoneBox{display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-xs); padding: var(--spacing-s); margin-top: auto; border-radius: var(--radius-m); background-color: #1A3A20;}
+.applicationInfoBox .wasteInfoLinkLeftBox .wasteInfoPhone{display: flex; align-items: center; gap: 0 var(--spacing-xs); font-weight: var(--bold); font-size: var(--H5); color: var(--white);}
+.applicationInfoBox .wasteInfoLinkLeftBox .wasteInfoPhone::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/phone_icon.svg)no-repeat center;}
+.applicationInfoBox .wasteInfoLinkLeftBox  .wasteInfoPageLink{height: 29px; line-height: 30px; display: flex; align-items: center; gap: 0 12px; padding: var(--spacing-2xs) var(--spacing-xs); color: #52616D; font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--white); border-radius: var(--radius-xs); border: 1px solid #DAE2E9;} 
+.applicationInfoBox .wasteInfoLinkLeftBox .wasteInfoPageLink::after{content: ''; margin-top: 1px; width: 7px; height: 10px; background: url(../images/sub/arrow_icon02.svg)no-repeat center;}
+.applicationInfoBox .wasteInfoLinkRightBox{width: 482px;}
+.applicationInfoBox .wasteInfoLinkRightBox .wasteInfoLinkDesc{margin-bottom: var(--spacing-lm); color: var(--gray-600); line-height: 1.7;}
+.applicationInfoBox .wasteInfoLinkRightBox .wasteInfoLinkDesc a{font-weight: var(--semi-bold);}
+.applicationInfoBox .wasteInfoLinkRightBox .btnBox .btn{padding: var(--spacing-xs) var(--spacing-xs); flex: 1;}
 
 @media (max-width: 1024px){
 
