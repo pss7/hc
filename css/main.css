@@ -180,7 +180,10 @@ background: linear-gradient(
 #itemListWrap .itemListSearchTopBox .searchBtn{width: 40px; height: 40px; position: absolute; top: 50%; transform: translateY(-50%); right:16px; border-radius: var(--radius-l); background-color: var(--gray-100); transition: all .3s;}
 #itemListWrap .itemListSearchTopBox .searchBtn:hover{background-color: var(--white); border: 1px solid var(--primary-100); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
 #itemListWrap .itemListSearchTopBox .searchBtn::after{content: ''; width: 19px; height: 19px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/main/search_icon.svg)no-repeat center;}
-#itemListWrap .itemListTabBtnBox{width: 183px; flex-shrink: 0;}
+#itemListWrap .itemListTabBtnBox{width: 190px; height: 100%; flex-shrink: 0; overflow-y: auto; padding: 21px; margin: -21px 0 -21px -21px;}
+#itemListWrap .itemListTabBtnBox{overflow: auto; scrollbar-width: none; -ms-overflow-style: none;}
+#itemListWrap .itemListTabBtnBox::-webkit-scrollbar{display: none;}
+#itemListWrap .itemListTabBtnBox .itemListTabBtnList{padding-bottom: var(--spacing-ml);}
 #itemListWrap .itemListTabBtnBox .itemListTabBtnList li{margin-bottom: var(--spacing-s);}
 #itemListWrap .itemListTabBtnBox .itemListTabBtnList li:last-child{margin-bottom: 0;}
 #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn{padding: var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); border-radius: var(--radius-s); transition: all .3s;}
@@ -206,7 +209,7 @@ background: linear-gradient(
   #itemListWrap .itemListSearchTopBox {margin-bottom: var(--spacing-m);}
   #itemListWrap .itemListSearchTopBox input{font-size: var(--font-size-l);}
   #itemListWrap .itemListLayoutBox {flex-direction: column;}
-  #itemListWrap .itemListTabBtnBox {width: 100%; margin-bottom: var(--spacing-ml);}
+  #itemListWrap .itemListTabBtnBox {width: 100%; height: auto; padding: 0 0 0 20px; margin: 0 0 0 -21px;}
   #itemListWrap .itemListTabBtnBox .itemListTabBtnList{display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
   #itemListWrap .itemListTabBtnBox .itemListTabBtnList li{margin: 0;}
   #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn{font-size: var(--font-size-m);}
