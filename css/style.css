@@ -88,6 +88,7 @@ input:read-only{background-color: var(--gray-100); border-color: var(--guide-100
 .btn:hover{background-color: var(--gray-400);} 
 .btn.btnNegative:hover{background-color: var(--danger-500);}
 .btn.btnPositive:hover{background-color: var(--primary-400);}
+input:disabled + label,
 button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); pointer-events: none;}
 .btn.btnSmall{min-width: 0; height: 36px; font-size: var(--body-2);}
 

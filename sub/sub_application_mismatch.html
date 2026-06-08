@@ -182,13 +182,13 @@
             <aside class="processAsideWrap" aria-label="배출 신청 절차">
                 <div class="processAsideBox">
                     <ol class="processStepList">
-                        <li class="processStepText active">
+                        <li class="processStepText complete">
                             신청
                         </li>
-                        <li class="processStepText">
+                        <li class="processStepText complete">
                             결제
                         </li>
-                        <li class="processStepText">
+                        <li class="processStepText active">
                             출력
                         </li>
                         <li class="processStepText">
@@ -205,7 +205,7 @@
                     <div class="container">
 
                         <h2 class="title">
-                            신청하기
+                            환불하기
                         </h2>
 
                         <!-- 신청하기 폼 -->
@@ -214,378 +214,251 @@
                             <!-- 신청하기 폼 왼쪽 영역 -->
                             <div class="formWrap">
 
-                                <!-- 품목 선택 -->
+                                <!-- 신청품목 -->
                                 <div class="formSection">
 
-                                    <div class="formItemSelectBox">
-                                        <div class="formSectionTopBox">
-                                            <h3 class="formSectionTitle">
-                                                <span class="formSectionNumber">
-                                                    01
-                                                </span>
-                                                품목 선택
-                                            </h3>
+                                    <div class="formApplicationItemBox">
 
-                                            <button type="button" class="itemDelBtn">
-                                                모두 비우기
-                                            </button>
-                                        </div>
-
-                                        <!-- 선택된 품목이 없을 경우 -->
-                                        <p class="emptyItemText">
-                                            아직 선택된 품목이 없어요
-                                        </p>
-
-                                    </div>
-                                    <!-- //formItemSelectBox -->
-
-                                </div>
-                                <!-- //formSection -->
-
-                                <!-- 개인정보 동의 -->
-                                <div class="formSection">
-
-                                    <div class="formAgreeBox">
-                                        <div class="formSectionTopBox">
-                                            <h3 class="formSectionTitle">
-                                                <span class="formSectionNumber">
-                                                    02
-                                                </span>
-                                                개인정보 동의
-                                            </h3>
-
-                                            <button type="button" class="arrowButton arrowButtonDown formDetailBtn"
-                                                aria-expanded="false" aria-controls="privacyDetail">
-                                                자세히 보기
-                                            </button>
-                                        </div>
-
-                                        <div class="formAgreeInfoBox">
-
-                                            <div class="formAgreeSummary">
-                                                <div class="formAgreeTextBox">
-                                                    <h4>
-                                                        수집 목적·정보·기간
-                                                    </h4>
-                                                    <p>
-                                                        수거 신청 처리 및 연락 목적으로
-                                                        <span class="formAgreeInfoTextBox">
-                                                            <em>이름</em> <em>연락처</em>
-                                                            <em>배출장소</em>
-                                                            <em>결제정보</em>
-                                                        </span> <strong class="colorPrimary">최대 5년</strong>
-                                                        보관합니다
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!-- //formAgreeSummary -->
-
-                                            <div class="formAgreeDetail" id="privacyDetail">
-                                                <p class="formAgreeTopText">
-                                                    대형폐기물 배출 신청 홈페이지" 서비스는 개인정보보호법 제15조에 따라 아래와 같은 사항을 안내하고 동의를 받아 개인정보를
-                                                    수집
-                                                    및 이용합니다
-                                                </p>
-
-                                                <div class="formAgreeTextBox">
-                                                    <h4>수집 및 이용목적</h4>
-                                                    <p>
-                                                        대형폐기물 배출 신청 시스템을 통해 수집된 정보는 대형폐기물 배출에 따른 수거 및 처리 안내를 위한 목적으로 수집
-                                                        및
-                                                        이용됩니다.
-                                                    </p>
-                                                </div>
-
-                                                <div class="formAgreeTextBox">
-                                                    <h4>수집하는 개인정보의 항목</h4>
-                                                    <dl>
-                                                        <dt>수집항목</dt>
-                                                        <dd>성명, 연락처, 배출장소, 결제 정보</dd>
-                                                    </dl>
-                                                    <p>
-                                                        수수료 환급처리 과정에서 아래와 같은 결제 정보들이 수집될 수 있습니다.
-                                                    </p>
-                                                    <ul class="list">
-                                                        <li>- 계좌이체 시 : 은행명, 계좌번호 등</li>
-                                                    </ul>
-                                                </div>
-
-                                                <div class="formAgreeTextBox">
-                                                    <h4>개인정보 보유 및 이용기간</h4>
-                                                    <dl>
-                                                        <dt>보유목적</dt>
-                                                        <dd>폐기물 배출정보 및 결제내역 확인</dd>
-                                                    </dl>
-                                                    <dl>
-                                                        <dt>보유기간</dt>
-                                                        <dd>5년 (대형폐기물 수집운반업체 : 1년)</dd>
-                                                    </dl>
-                                                </div>
-
-                                                <div class="formAgreeTextBox">
-                                                    <h4>개인정보의 수집·이용에 대한 거부 권리</h4>
-                                                    <p>
-                                                        정보주체는 개인정보의 수집 및 이용에 대한 동의를 거부할 권리가 있으며, 동의 거부 시에는 대형폐기물 배출 신청
-                                                        서비스
-                                                        이용이 제한 됩니다.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!-- //formAgreeDetail -->
-
-                                        </div>
-
-                                        <p class="formAgreeInfoText">
-                                            정보주체는 개인정보의 제3자 제공에 대한 동의를 거부할 수 있으며, 동의 거부 시 서비스를 이용할 수 없습니다.
-                                        </p>
-
-                                        <div class="formAgreeBtnBox" aria-label="개인정보 수집 및 이용 동의 여부">
-
-                                            <div class="formAgreeRadioBtn">
-                                                <input id="agreeBtn01" name="agreeBtn" type="radio" class="blind">
-                                                <label for="agreeBtn01" class="formAgreeBtn formAgreeBtn01">
-                                                    동의안함
-                                                </label>
-                                            </div>
-
-                                            <div class="formAgreeRadioBtn">
-                                                <input id="agreeBtn02" name="agreeBtn" type="radio" class="blind">
-                                                <label for="agreeBtn02" class="formAgreeBtn formAgreeBtn02">
-                                                    네, 동의합니다
-                                                </label>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <!-- //formAgreeBox -->
-
-                                </div>
-                                <!-- //formSection -->
-
-                                <!-- 정보 입력 -->
-                                <div class="formSection">
-
-                                    <div class="formInfoInputBox">
                                         <h3 class="formSectionTitle">
-                                            <span class="formSectionNumber">
-                                                03
-                                            </span>
-                                            정보 입력
+                                            환불품목 선택
                                         </h3>
 
-                                        <div class="formBox">
-                                            <span class="formLabel">
-                                                이름
-                                                <span class="required" aria-hidden="true">*</span>
-                                                <span class="blind">필수 입력</span>
-                                            </span>
-                                            <div class="inputTextBox">
-                                                <label for="name" class="blind">이름</label>
-                                                <input type="text" id="name" placeholder="이름을 입력해주세요">
-                                            </div>
-                                            <p class="infoText">
-                                                안내 말을 입력합니다
-                                            </p>
-                                        </div>
+                                        <ul class="itemSelectList">
+                                            <li>
 
-                                        <div class="formBox">
-                                            <span class="formLabel">
-                                                연락처
-                                                <span class="required" aria-hidden="true">*</span>
-                                                <span class="blind">필수 입력</span>
-                                            </span>
-                                            <div class="inputTextBox">
-                                                <label for="phone" class="blind">연락처</label>
-                                                <input type="text" id="phone" placeholder="연락처를 입력해주세요" class="error">
-                                            </div>
-                                            <p class="infoText">
-                                                연락처를 정확히 적어주세요
-                                            </p>
-                                        </div>
+                                                <div class="itemSelectImgBox">
+                                                    <img src="../images/sub/item_img01.png" alt="">
+                                                </div>
+                                                <!-- //itemSelectImgBox -->
 
-                                    </div>
-                                    <!-- //formInfoInputBox -->
+                                                <div class="itemSelectTextBox">
+                                                    <h3 class="itemSelectName">가스오븐레인지</h3>
+                                                    <span class="itemSelectOption">1m 이상</span>
 
-                                </div>
-                                <!-- //formSection -->
-
-                                <!-- 배출 장소 -->
-                                <div class="formSection">
-
-                                    <div class="formDischargePlaceBox">
-                                        <h3 class="formSectionTitle">
-                                            <span class="formSectionNumber">
-                                                04
-                                            </span>
-                                            배출 장소
-                                        </h3>
-
-                                        <div class="formMapBox">
-                                            <img src="../images/sub/map.png" alt="">
-                                            <span class="waste">
-                                                내 폐기물
-                                            </span>
-                                            <p class="infoText">
-                                                사진에서 주소를 가져왔습니다
-                                            </p>
-                                        </div>
-
-                                        <div class="formAddressBox">
-
-                                            <span class="formAdressInfoText">
-                                                홍길동님의 최근 주소
-                                            </span>
-
-                                            <div class="inputRadioBox">
-                                                <input id="address01" name="address" type="radio" class="blind" checked>
-                                                <label for="address01">강원특별자치도 춘천시 춘천로 419 전봇대 근처</label>
-                                            </div>
-
-                                            <div class="inputRadioBox">
-                                                <input id="address02" name="address" type="radio" class="blind">
-                                                <label for="address02">강원특별자치도 춘천시 중앙로194번길 48 (근화동, 영광연립주택) 110동 쓰레기
-                                                    집하장</label>
-                                            </div>
-
-                                            <div class="inputRadioBox">
-                                                <input id="address03" name="address" type="radio" class="blind">
-                                                <label for="address03">직접 입력</label>
-                                            </div>
-
-                                            <div class="formBox">
-                                                <span class="formLabel">
-                                                    주소
-                                                    <span class="required" aria-hidden="true">*</span>
-                                                    <span class="blind">필수 입력</span>
-                                                </span>
-
-                                                <div class="formZipCodeBox">
-                                                    <div class="inputTextBox">
-                                                        <label for="code" class="blind">우편번호</label>
-                                                        <input type="text" id="code" placeholder="우편번호" readonly>
+                                                    <div class="itemSelectInfoBox">
+                                                        <div class="itemSelectSummaryBox">
+                                                            <span class="itemSelectCount">1개</span>
+                                                            <span class="itemSelectPrice">3,000원</span>
+                                                        </div>
                                                     </div>
-                                                    <button type="button" class="addressBtn">주소검색</button>
+                                                </div>
+                                                <!-- //itemSelectTextBox -->
+
+                                                <div class="itemSelectStatusBox">
+                                                    <dl class="itemSelectReceiptInfo">
+                                                        <dt class="itemSelectReceiptLabel">접수번호</dt>
+                                                        <dd class="itemSelectReceiptValue">20260527-640059-1</dd>
+                                                    </dl>
+
+                                                    <!-- 
+                                                        클래스적용
+                                                        미결제 > unpaid
+                                                        취소요청 > cancel
+                                                        수거요청 / 결제완료 > approved
+                                                        수거완료 > complete
+                                                    -->
+
+                                                    <span class="itemSelectStatusBadge approved">
+                                                        수거요청
+                                                    </span>
+                                                </div>
+                                                <!-- //itemSelectStatusBox -->
+
+                                                <div class="refundBtnBox">
+                                                    <input id="refundBtn01" type="checkbox" class="blind">
+                                                    <label for="refundBtn01" class="refundBtn">
+                                                        환불하기
+                                                    </label>
                                                 </div>
 
-                                                <div class="inputTextBox">
-                                                    <label for="address04" class="blind">주소</label>
-                                                    <input type="text" id="address04" placeholder="주소">
+                                            </li>
+
+                                            <li>
+
+                                                <div class="itemSelectImgBox">
+                                                    <img src="../images/sub/item_img01.png" alt="">
                                                 </div>
-                                                <div class="inputTextBox">
-                                                    <label for="address05" class="blind">버릴 위치</label>
-                                                    <input type="text" id="address05" class="wastePlaceInput"
-                                                        placeholder="버릴 위치">
+                                                <!-- //itemSelectImgBox -->
+
+                                                <div class="itemSelectTextBox">
+                                                    <h3 class="itemSelectName">가스오븐레인지</h3>
+                                                    <span class="itemSelectOption">1m 이상</span>
+
+                                                    <div class="itemSelectInfoBox">
+                                                        <div class="itemSelectSummaryBox">
+                                                            <span class="itemSelectCount">1개</span>
+                                                            <span class="itemSelectPrice">3,000원</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <p class="infoText">
-                                                    안내 말을 입력합니다
-                                                </p>
-                                            </div>
+                                                <!-- //itemSelectTextBox -->
 
-                                            <h4>
-                                                추천 배출장소
-                                            </h4>
+                                                <div class="itemSelectStatusBox">
+                                                    <dl class="itemSelectReceiptInfo">
+                                                        <dt class="itemSelectReceiptLabel">접수번호</dt>
+                                                        <dd class="itemSelectReceiptValue">20260527-640059-2</dd>
+                                                    </dl>
 
-                                            <ul class="formSelectBtnList">
-                                                <li>
-                                                    <button type="button" class="formSelectBtn active">
-                                                        집 앞
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="formSelectBtn">
-                                                        쓰레기 집하장
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="formSelectBtn">
-                                                        전봇대 근처
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="formSelectBtn">
-                                                        건물 입구
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="formSelectBtn">
-                                                        주차장 근처
-                                                    </button>
-                                                </li>
-                                            </ul>
+                                                    <!-- 
+                                                        클래스적용
+                                                        미결제 > unpaid
+                                                        취소요청 > cancel
+                                                        수거요청 / 결제완료 > approved
+                                                        수거완료 > complete
+                                                    -->
 
-                                        </div>
-                                        <!-- //formAddressBox -->
+                                                    <span class="itemSelectStatusBadge approved">
+                                                        수거요청
+                                                    </span>
+                                                </div>
+                                                <!-- //itemSelectStatusBox -->
+
+                                                <div class="refundBtnBox">
+                                                    <input id="refundBtn02" type="checkbox" class="blind">
+                                                    <label for="refundBtn02" class="refundBtn">
+                                                        환불하기
+                                                    </label>
+                                                </div>
+
+                                            </li>
+
+
+                                            <li>
+
+                                                <div class="itemSelectImgBox">
+                                                    <img src="../images/sub/item_img01.png" alt="">
+                                                </div>
+                                                <!-- //itemSelectImgBox -->
+
+                                                <div class="itemSelectTextBox">
+                                                    <h3 class="itemSelectName">가스오븐레인지</h3>
+                                                    <span class="itemSelectOption">1m 이상</span>
+
+                                                    <div class="itemSelectInfoBox">
+                                                        <div class="itemSelectSummaryBox">
+                                                            <span class="itemSelectCount">1개</span>
+                                                            <span class="itemSelectPrice">3,000원</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //itemSelectTextBox -->
+
+                                                <div class="itemSelectStatusBox">
+                                                    <dl class="itemSelectReceiptInfo">
+                                                        <dt class="itemSelectReceiptLabel">접수번호</dt>
+                                                        <dd class="itemSelectReceiptValue">20260527-640059-3</dd>
+                                                    </dl>
+
+                                                    <!-- 
+                                                        클래스적용
+                                                        미결제 > unpaid
+                                                        취소요청 > cancel
+                                                        수거요청 / 결제완료 > approved
+                                                        수거완료 > complete
+                                                    -->
+
+                                                    <span class="itemSelectStatusBadge complete">
+                                                        수거완료
+                                                    </span>
+                                                </div>
+                                                <!-- //itemSelectStatusBox -->
+
+                                                <div class="refundBtnBox">
+                                                    <input id="refundBtn03" type="checkbox" class="blind" disabled>
+                                                    <label for="refundBtn03" class="refundBtn">
+                                                        환불하기
+                                                    </label>
+                                                </div>
+
+                                            </li>
+                                        </ul>
+                                        <!-- //itemSelectList -->
 
                                     </div>
-                                    <!-- //formDischargePlaceBox -->
+                                    <!-- //formApplicationItemBox -->
+
+                                    <h4 class="iconTitle">
+                                        환불 안내
+                                    </h4>
+
+                                    <ul class="dotList">
+                                        <li>
+                                            신청 후 7일 이내 환불 가능합니다.
+                                        </li>
+                                        <li>
+                                            7일째 되는 날이 주말이나 공휴일이면 다음 평일까지 환불할 수 있습니다.
+                                        </li>
+                                        <li class="emphasize">
+                                            환불계좌는 예금주와 신청인 이름이 동일해야 합니다.
+                                        </li>
+                                        <li>
+                                            환불 금액은 카드결제 취소 또는 계좌이체로 처리되며 1~2일 정도 걸릴 수 있습니다.
+                                        </li>
+                                        <li>
+                                            수거가 완료된 폐기물은 환불이 어렵습니다.
+                                        </li>
+                                    </ul>
 
                                 </div>
                                 <!-- //formSection -->
 
-                                <!-- 배출 장소 -->
+
+
+
+
+
+
+
+
+
+                                <!-- 신청 정보 -->
                                 <div class="formSection">
 
-                                    <div class="formDischargePlaceBox">
+                                    <div class="formApplicationItemBox">
+
                                         <h3 class="formSectionTitle">
-                                            <span class="formSectionNumber">
-                                                05
-                                            </span>
-                                            배출 장소
+                                            신청 정보
                                         </h3>
 
-                                        <div class="formBox">
-                                            <span class="formLabel">
-                                                배출 날짜
-                                                <span class="required" aria-hidden="true">*</span>
-                                                <span class="blind">필수 입력</span>
-                                            </span>
-                                            <div class="inputTextBox">
-                                                <div class="inputDateBox">
-                                                    <input id="date" class="dateInput" type="text" placeholder="날짜 선택">
-                                                    <label for="date" class="blind">날짜 선택</label>
-                                                    <button type="button" class="calendarBtn" aria-label="날짜 선택">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <ul class="formSelectBtnList">
-                                                <li>
-                                                    <button type="button" class="formSelectBtn active">
-                                                        내일
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="formSelectBtn">
-                                                        2일 후
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="formSelectBtn">
-                                                        3일 후
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="formSelectBtn">
-                                                        7일 후
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <div class="formDetailInfoBox">
+                                            <dl class="formDetailInfoItem">
+                                                <dt class="formDetailInfoLabel">신청인</dt>
+                                                <dd class="formDetailInfoValue">
+                                                    <span class="formDetailInfoName">
+                                                        홍길동
+                                                    </span>
+                                                    010-1234-5678
+                                                </dd>
+                                            </dl>
 
-                                        <div class="formBox">
-                                            <span class="formLabel">
-                                                배출 시간
-                                                <span class="required" aria-hidden="true">*</span>
-                                                <span class="blind">필수 입력</span>
-                                            </span>
-                                            <div class="inputTextBox">
-                                                <label for="time" class="blind">배출시간</label>
-                                                <input type="text" id="time" placeholder="9시">
-                                            </div>
+                                            <dl class="formDetailInfoItem">
+                                                <dt class="formDetailInfoLabel">배출장소</dt>
+                                                <dd class="formDetailInfoValue">강원특별자치도 춘천시 중앙로194번길 48 (근화동, 영광연립주택)
+                                                    110동 쓰레기 집하장</dd>
+                                            </dl>
                                         </div>
+                                        <!-- //formDetailInfoBox -->
+
+                                        <h4 class="formPickupScheduleLabel">
+                                            수거예정일
+                                        </h4>
+
+                                        <div class="formPickupScheduleBox">
+
+                                            <div class="formPickupScheduleInfo">
+                                                <strong class="formPickupScheduleText formPickupScheduleDate">
+                                                    2026년 06월 03일
+                                                </strong>
+                                                <span class="formPickupScheduleText formPickupScheduleTime">
+                                                    오전 9시
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <!-- //formPickupScheduleBox -->
 
                                     </div>
-                                    <!-- //formDischargePlaceBox -->
+                                    <!-- //formApplicationItemBox -->
 
                                 </div>
                                 <!-- //formSection -->
@@ -594,6 +467,7 @@
                                 <div class="formSection">
 
                                     <div class="formDischargeInfoBox">
+
                                         <h4 class="formSectionTitle02">
                                             배출 안내
                                         </h4>
@@ -613,11 +487,18 @@
                                         </ul>
 
                                         <h4 class="formSectionTitle02">
-                                            결제 안내
+                                            환불 안내
                                         </h4>
+
                                         <ul class="dotList">
                                             <li>
-                                                신청 후 <strong class="colorPrimary">5일 이내</strong> 결제하지 않으면 신청이 자동 취소됩니다.
+                                                신청 후 7일 이내 환불 가능합니다.
+                                            </li>
+                                            <li>
+                                                7일째 되는 날이 주말이나 공휴일이면 다음 평일까지 환불할 수 있습니다.
+                                            </li>
+                                            <li>
+                                                환불 금액은 카드결제 취소 또는 계좌이체로 처리되며 1~2일 정도 걸릴 수 있습니다.
                                             </li>
                                             <li>
                                                 수거가 완료된 폐기물은 환불이 어렵습니다.
@@ -625,22 +506,19 @@
                                         </ul>
 
                                         <h4 class="formSectionTitle02">
-                                            대형 폐가전 무상수거
+                                            신청 조회 안내
                                         </h4>
-
                                         <ul class="dotList">
                                             <li>
-                                                고장여부와 상관없이 원형이 보존된 TV,냉장고, 세탁기 에어컨 등 1m이상 가전제품은 <a
-                                                    href="https://15990903.or.kr/portal/main/main.do" title="새 창 열기"
-                                                    target="_blank" class="link colorPrimary">여기를
-                                                    클릭</a>하시거나 ☎1599-0903으로
-                                                연락하시기
-                                                바랍니다
+                                                [신청 확인 및 필증 출력] 메뉴에서 신청 내역을 조회할 수 있습니다.
+                                            </li>
+                                            <li>
+                                                신청 정보 조회 후 환불 신청이 가능합니다.
                                             </li>
                                         </ul>
 
                                         <h4 class="formSectionTitle02">
-                                            배출신청 문의
+                                            문의
                                         </h4>
                                         <ul class="dotList">
                                             <li>
@@ -664,51 +542,37 @@
                                     <div class="formAsideHead">
                                         <h3 class="formAsideTitle">확인사항</h3>
                                         <span class="formAsideProgress">진행률 <strong
-                                                class="colorPrimary">40%</strong></span>
+                                                class="colorPrimary">0</strong></span>
                                     </div>
                                     <!-- //formAsideHead -->
 
                                     <nav class="formStepNav" aria-label="신청 진행 단계">
-                                        <a href="#" class="formStepLink active">
-                                            품목선택하기
-                                        </a>
-                                        <a href="#" class="formStepLink">
-                                            개인정보동의
-                                        </a>
-                                        <a href="#" class="formStepLink">
-                                            정보입력
-                                        </a>
-                                        <a href="#" class="formStepLink">
-                                            배출장소
-                                        </a>
-                                        <a href="#" class="formStepLink">
-                                            배출일시
+                                        <a href="##" class="formStepLink">
+                                            신청인 계좌 명의 확인
                                         </a>
                                     </nav>
                                     <!-- //formStepNav -->
 
                                     <div class="formAsideContent">
-                                        <strong class="formAsideLabel">결제할 금액</strong>
+                                        <strong class="formAsideLabel">환불할 금액</strong>
 
                                         <div class="formAsideInfo">
                                             <span class="formAsideCount">총 <strong
-                                                    class="colorPrimary">5개</strong></span>
-                                            <strong class="formAsidePrice">15,000원</strong>
+                                                    class="colorPrimary">1개</strong></span>
+                                            <strong class="formAsidePrice">3,000원</strong>
                                         </div>
                                     </div>
                                     <!-- //formAsideContent -->
 
                                     <div class="btnBox">
-
                                         <p class="infoText">
-                                            아직 작성이 안됐어요
+                                            예금주 불일치
                                         </p>
-
                                         <button type="button" class="btn btnPrimary btnPositive" disabled>
                                             <div class="slideText">
-                                                <span class="slideTextItem slideTextPrimary">결제하기</span>
+                                                <span class="slideTextItem slideTextPrimary">환불신청</span>
                                                 <span class="slideTextItem slideTextClone"
-                                                    aria-hidden="true">결제하기</span>
+                                                    aria-hidden="true">환불신청</span>
                                             </div>
                                         </button>
                                     </div>
@@ -718,15 +582,10 @@
 
                                         <button type="button" class="formAsideBtn">
                                             <span>
-                                                신청 취소
+                                                환불 취소
                                             </span>
                                         </button>
-                                        <!-- 
-                                        <button type="button" class="formAsideBtn">
-                                            <span>
-                                                신청 수정
-                                            </span>
-                                        </button> -->
+
                                     </div>
                                     <!-- //formAsideBtnBox -->
 
@@ -735,7 +594,7 @@
 
                                 <ul class="formAsideLinkList">
                                     <li>
-                                        <a href="#" class="formAsideLink arrowButton arrowButtonRight">신청 방법</a>
+                                        <a href="#" class="formAsideLink arrowButton arrowButtonRight">환불 문의</a>
                                     </li>
                                     <li>
                                         <a href="#" class="formAsideLink arrowButton arrowButtonRight">폐기물 수거 문의</a>

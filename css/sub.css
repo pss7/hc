@@ -60,6 +60,7 @@
      var(--guide-100) 0%, var(--primary-200) 50%, var(--guide-100) 100%); z-index: -1;}
 .processAsideWrap .processStepList li{position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: var(--spacing-2xl); width: 56px; height: 56px; border-radius: 50%; background-color: var(--guide-300); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white);}
 .processAsideWrap .processStepList li.active{background-color: var(--primary-500);}
+.processAsideWrap .processStepList li.complete{background-color: var(--guide-900);}
 .processAsideWrap .processStepList li:last-child{margin-bottom: 0;}
 .processAsideWrap .processAsideBox{padding: var(--spacing-lm) var(--spacing-m);background: linear-gradient(180deg,rgba(195, 209, 219, 0) 0%,rgba(168, 208, 253, 0.2) 38%,
     rgba(168, 208, 253, 0.6) 50%,rgba(168, 208, 253, 0.2) 62%,rgba(195, 209, 219, 0) 100%);  overflow-x: auto;}
@@ -118,6 +119,16 @@
 .formSection .itemSelectList li:last-child{border-bottom: 0;}
 .formSection .itemSelectList li .itemSelectImgBox{width: 80px; height: 80px;}
 .formSection .itemSelectList li .itemSelectDelBtn{right: 0;}
+.formSection .itemSelectList li .refundBtnBox{width: 100%; }
+.formSection .itemSelectList li .refundBtn{justify-content: center; height: 38px; line-height: 38px; border: 1px solid var(--gray-200); border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--medium); transition: all .3s; text-align: center; cursor: pointer;}
+.formSection .itemSelectList li .refundBtnBox .refundBtn::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/chk_icon02.svg)no-repeat center; border: 0;}
+.formSection .itemSelectList li .refundBtn:hover{color: var(--primary-500);}
+.formSection .itemSelectList li .refundBtnBox input:checked + .refundBtn::before{content: '';background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
+.formSection .itemSelectList li .refundBtnBox input:checked + .refundBtn{background-color: var(--primary-500); color: var(--white);} 
+
+
+
+
 .formBtn{width: 100%; gap: 0 var(--spacing-xs); background-color: var(--primary-900); border-radius: var(--radius-s); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
 .formBtn.formBtn:hover{background-color: var(--primary-800);}
 .formSection .formBtn .plusBtnIcon{width: 28px; height: 28px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
@@ -335,6 +346,7 @@
 .itemSelectStatusBadge.unpaid{background-color: var(--secondary-50); border: 1px solid var(--secondary-100); color: var(--secondary-700);}
 .itemSelectStatusBadge.cancel{background-color: var(--danger-50); border: 1px solid var(--danger-100); color: var(--danger-700);}
 .itemSelectStatusBadge.approved{background-color: var(--primary-50); border: 1px solid var(--primary-100); color: var(--primary-700);}
+.itemSelectStatusBadge.complete{background-color: var(--guide-50); border: 1px solid var(--guide-100); color: var(--guide-900);}
 
 @media (max-width: 768px){
 
