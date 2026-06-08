@@ -249,7 +249,6 @@ background: linear-gradient(
 
 @media (max-width: 480px){
 
-  #itemListWrap .itemListTabBtnBox{margin-bottom: var(--spacing-ms);}
   #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn,
   #itemListWrap .itemSelectBox .itemSelectTopText{font-size: var(--font-size-s);}
 
