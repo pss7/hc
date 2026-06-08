@@ -125,10 +125,6 @@
 .formSection .itemSelectList li .refundBtn:hover{color: var(--primary-500);}
 .formSection .itemSelectList li .refundBtnBox input:checked + .refundBtn::before{content: '';background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
 .formSection .itemSelectList li .refundBtnBox input:checked + .refundBtn{background-color: var(--primary-500); color: var(--white);} 
-
-
-
-
 .formBtn{width: 100%; gap: 0 var(--spacing-xs); background-color: var(--primary-900); border-radius: var(--radius-s); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
 .formBtn.formBtn:hover{background-color: var(--primary-800);}
 .formSection .formBtn .plusBtnIcon{width: 28px; height: 28px; background: url(../images/sub/plus_icon.svg)no-repeat center;}
@@ -336,12 +332,10 @@
 .formSection .formApplicationItemBox .itemRefundBox .btn{flex-shrink: 0;}
 .formSection .formApplicationItemBox .itemRefundBox .itemRefundText{color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1);}
 .formSection .formApplicationItemBox .itemRefundBox .itemRefundText span{margin-left: var(--spacing-xs);}
-
 .itemSelectStatusBox{display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-xs) 0;}
 .itemSelectReceiptInfo{min-width: 138px; min-height: 29px; padding: var(--radius-2xs) var(--spacing-xs); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-xs); border: 1px solid var(--guide-500); border-radius: var(--radius-xs); line-height: 1.1;}
 .itemSelectReceiptLabel{flex-shrink: 0; font-weight: var(--bold); font-size: var(--body-2); color: var(--guide-300);}
 .itemSelectReceiptValue{color: var(--guide-900); font-size: var(--Subtitle-1); font-weight: var(--medium); text-align: center;} 
-
 .itemSelectStatusBadge{padding: var(--spacing-2xs) var(--spacing-xs); font-size: var(--body-2); font-weight: var(--semi-bold); border-radius: 0 0 0 var(--radius-xs); line-height: 1.1;}
 .itemSelectStatusBadge.unpaid{background-color: var(--secondary-50); border: 1px solid var(--secondary-100); color: var(--secondary-700);}
 .itemSelectStatusBadge.cancel{background-color: var(--danger-50); border: 1px solid var(--danger-100); color: var(--danger-700);}

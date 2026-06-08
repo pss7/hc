@@ -39,7 +39,7 @@ transition: all .8s; background-color: var(--white); border: 1px solid var(--gui
 .toggleBtnBox.active .dropdown{opacity: 1; visibility: visible; max-height: 500px; pointer-events: auto;transition: all .8s;}
 .toggleBtnBox.active .toggleBtn{border-color: var(--primary-500);}
 .toggleBtnBox.active .toggleBtn span{color: var(--gray-900);}
-.toggleBtnBox.active .toggleBtn::after{transform: rotate(-90deg); background-color: var(--guide-100);}
+.toggleBtnBox.active .toggleBtn::after{transform: rotate(-180deg); background-color: var(--guide-100);}
 
 @media (max-width: 480px){
 

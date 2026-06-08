@@ -402,132 +402,96 @@
                                 </div>
                                 <!-- //formSection -->
 
-
-
-
-
-
-
-
-
-
-                                <!-- 신청 정보 -->
+                                <!-- 환불 정보 -->
                                 <div class="formSection">
 
-                                    <div class="formApplicationItemBox">
+                                    <div class="formRefundBox">
 
                                         <h3 class="formSectionTitle">
-                                            신청 정보
+                                            환불 정보
                                         </h3>
 
-                                        <div class="formDetailInfoBox">
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">신청인</dt>
-                                                <dd class="formDetailInfoValue">
-                                                    <span class="formDetailInfoName">
-                                                        홍길동
+                                        <div class="formBox">
+                                            <span class="formLabel">
+                                                환불 받을 은행
+                                                <span class="required" aria-hidden="true">*</span>
+                                                <span class="blind">필수 입력</span>
+                                            </span>
+
+                                            <div class="selectBox toggleBtnBox">
+
+                                                <button type="button" class="selectBtn toggleBtn" aria-expanded="false"
+                                                    aria-controls="bankSelectList">
+                                                    <span>
+                                                        은행 선택
                                                     </span>
-                                                    010-1234-5678
-                                                </dd>
-                                            </dl>
+                                                </button>
 
-                                            <dl class="formDetailInfoItem">
-                                                <dt class="formDetailInfoLabel">배출장소</dt>
-                                                <dd class="formDetailInfoValue">강원특별자치도 춘천시 중앙로194번길 48 (근화동, 영광연립주택)
-                                                    110동 쓰레기 집하장</dd>
-                                            </dl>
-                                        </div>
-                                        <!-- //formDetailInfoBox -->
+                                                <div id="bankSelectList" class="selectListBox dropdown">
+                                                    <ul class="selectList">
+                                                        <li>
+                                                            <button type="button" class="selectListBtn"
+                                                                aria-pressed="false">
+                                                                선택
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="selectListBtn"
+                                                                aria-pressed="false">
+                                                                선택
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="selectListBtn"
+                                                                aria-pressed="false">
+                                                                선택
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- //selectList -->
 
-                                        <h4 class="formPickupScheduleLabel">
-                                            수거예정일
-                                        </h4>
+                                                </div>
+                                                <!-- //selectListBox -->
 
-                                        <div class="formPickupScheduleBox">
-
-                                            <div class="formPickupScheduleInfo">
-                                                <strong class="formPickupScheduleText formPickupScheduleDate">
-                                                    2026년 06월 03일
-                                                </strong>
-                                                <span class="formPickupScheduleText formPickupScheduleTime">
-                                                    오전 9시
-                                                </span>
                                             </div>
 
+                                            <p class="infoText">
+                                                은행을 선택해주세요
+                                            </p>
                                         </div>
-                                        <!-- //formPickupScheduleBox -->
+
+                                        <div class="formBox">
+                                            <span class="formLabel">
+                                                예금주
+                                                <span class="required" aria-hidden="true">*</span>
+                                                <span class="blind">필수 입력</span>
+                                            </span>
+                                            <div class="inputTextBox">
+                                                <label for="name" class="blind">이름</label>
+                                                <input type="text" id="name" class="error" placeholder="홍길동">
+                                            </div>
+                                            <p class="infoText">
+                                                신청인과 예금주가 일치 하지 않습니다
+                                            </p>
+                                        </div>
+
+                                        <div class="formBox">
+                                            <span class="formLabel">
+                                                계좌번호
+                                                <span class="required" aria-hidden="true">*</span>
+                                                <span class="blind">필수 입력</span>
+                                            </span>
+                                            <div class="inputTextBox">
+                                                <label for="number" class="blind">이름</label>
+                                                <input type="text" id="number" placeholder="79004858353010">
+                                            </div>
+                                            <p class="infoText">
+                                                계좌번호를 적어주세요
+                                            </p>
+                                        </div>
 
                                     </div>
                                     <!-- //formApplicationItemBox -->
-
-                                </div>
-                                <!-- //formSection -->
-
-                                <!-- 안내 -->
-                                <div class="formSection">
-
-                                    <div class="formDischargeInfoBox">
-
-                                        <h4 class="formSectionTitle02">
-                                            배출 안내
-                                        </h4>
-                                        <ul class="dotList">
-                                            <li>
-                                                폐기물은 건물 밖 지정 장소에 직접 배출해 주세요.
-                                            </li>
-                                            <li>
-                                                방문 수거는 불가능합니다.
-                                            </li>
-                                            <li>
-                                                공휴일에는 수거하지 않습니다.
-                                            </li>
-                                            <li>
-                                                수거 상황에 따라 일정이 지연될 수 있습니다.
-                                            </li>
-                                        </ul>
-
-                                        <h4 class="formSectionTitle02">
-                                            환불 안내
-                                        </h4>
-
-                                        <ul class="dotList">
-                                            <li>
-                                                신청 후 7일 이내 환불 가능합니다.
-                                            </li>
-                                            <li>
-                                                7일째 되는 날이 주말이나 공휴일이면 다음 평일까지 환불할 수 있습니다.
-                                            </li>
-                                            <li>
-                                                환불 금액은 카드결제 취소 또는 계좌이체로 처리되며 1~2일 정도 걸릴 수 있습니다.
-                                            </li>
-                                            <li>
-                                                수거가 완료된 폐기물은 환불이 어렵습니다.
-                                            </li>
-                                        </ul>
-
-                                        <h4 class="formSectionTitle02">
-                                            신청 조회 안내
-                                        </h4>
-                                        <ul class="dotList">
-                                            <li>
-                                                [신청 확인 및 필증 출력] 메뉴에서 신청 내역을 조회할 수 있습니다.
-                                            </li>
-                                            <li>
-                                                신청 정보 조회 후 환불 신청이 가능합니다.
-                                            </li>
-                                        </ul>
-
-                                        <h4 class="formSectionTitle02">
-                                            문의
-                                        </h4>
-                                        <ul class="dotList">
-                                            <li>
-                                                홍천군청 환경과(☎033-430-2631)
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                    <!-- //formDischargeInfoBox -->
 
                                 </div>
                                 <!-- //formSection -->
