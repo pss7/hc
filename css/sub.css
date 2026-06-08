@@ -791,3 +791,103 @@
   #requestModalWrap .requestBtnBox .requestBtn{height: 43px; line-height: 43px; font-size: var(--font-size-s);}
 
 }
+
+/* 신청안내 */
+.applicationInfoBox .applicationInfoTopBox{position: relative; display: flex; align-items: center; justify-content: space-between; padding: var(--spacing-m) var(--spacing-lm); margin-bottom: var(--spacing-3xl); height: 304px; border-radius: var(--radius-l); background: linear-gradient(to bottom, var(--primary-600), var(--primary-400)); z-index: 1;}
+.applicationInfoBox .applicationInfoTopBox .applicationInfoTextBox{display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.applicationInfoBox .applicationInfoTopBox::after{content: ''; margin: 9px -51px 0 0; width: 376px; height: 324px;background: url(../images/sub/waste.png)no-repeat center / contain; z-index: -1;}
+.applicationInfoBox .applicationInfoTopTitle{margin-bottom: var(--font-size-xxxl); font-size: var(--H4); font-weight: var(--bold); color: var(--white); font-family: 'KIMM';}
+.applicationInfoBox .applicationInfoTopDesc{color: var(--white); font-weight: var(--medium); font-size: var(--Subtitle-1); line-height: 1.8;}
+.applicationInfoBox .applicationInfoTopDesc strong{padding: var(--spacing-2xs); font-weight: var(--medium); background-color: var(--primary-700); border-radius: var(--radius-2xs);}
+.applicationInfoBox .applicationInfoProcessBox{margin-bottom: var(--spacing-2xl);}
+.applicationInfoBox .applicationInfoTitle{margin-bottom: var(--spacing-m); font-size: var(--H5); font-weight: var(--semi-bold); color: var(--guide-800);}
+.applicationInfoBox .applicationInfoProcessList{position: relative; display: flex; gap: 0 var(--spacing-lm); z-index: 1;}
+.applicationInfoBox .applicationInfoProcessList::before{content: ''; position: absolute; top:74px; left:0; right:0; height: 9px; background: linear-gradient(to right, var(--guide-50), var(--primary-100), var(--guide-50)); z-index: -1;}
+.applicationInfoBox .applicationInfoProcessList li{flex: 1;}
+.applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessNumber{display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-s); width: 32px; height: 25px; border: 1px solid var(--primary-500); border-radius: var(--radius-xs); background-color: var(--primary-50); color: var(--primary-500); font-weight: var(--bold); font-size: var(--body-2);}
+.applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessIconBox{margin-bottom: var(--spacing-m
+  );}
+.applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessIconBox img{width: auto; margin: 0 auto;}
+.applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02{margin-bottom: var(--spacing-s); color: var(--gray-900); font-weight: var(--bold); font-size: var(--H5); font-family: 'KIMM'; text-align: center;}
+.applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessText{color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); text-align: center;}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox{margin-bottom: var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-xs); }
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox h4{color: var(--gray-900); font-weight: var(--bold); font-size: var(--H5); font-family: 'KIMM';}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox span{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-1); border: 1px solid var(--gray-200); border-radius: var(--radius-xs); line-height: 1.1;}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList{margin-bottom: var(--spacing-lm); display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList li{width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-s); background-color: var(--guide-900); font-size: var(--H6); font-weight: var(--bold); color: var(--white);}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList li.active{background-color: var(--primary-500);}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoList{margin-bottom: var(--spacing-s); display: flex; align-items: center; gap: var(--spacing-xs );}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoList:last-child{margin-bottom: 0;}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoList dt{flex-shrink: 0; padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--guide-500); color: var(--white); font-weight: var(--medium); border-radius: var(--radius-xs); line-height: 1.2;}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoList dd{color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--Subtitle-1);}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoLayoutBox{display: flex; gap: 0 var(--spacing-lm);}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfo{flex: 1;}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box{margin-bottom: var(--spacing-s);}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box:last-child{margin-bottom: 0;}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoList{margin: 0;}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoText{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-top: var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-2);}
+.applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoText::before{content: ''; margin-top: -1px; width: 32px; height: 32px; flex-shrink: 0; background: url(../images/sub/map_icon.svg)no-repeat center;}
+
+@media (max-width: 1024px){
+
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox h4,
+  .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02,
+  .applicationInfoBox .applicationInfoTitle{font-size: var(--H6);}
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList li{font-size: var(--font-size-l);}
+
+}
+
+@media (max-width:768px){
+
+  .applicationInfoBox .applicationInfoTopBox{gap:var(--spacing-ms) 0; flex-direction: column; justify-content: flex-start; padding: var(--spacing-xl) var(--spacing-lm) 0; height: auto;}
+  .applicationInfoBox .applicationInfoTopTitle{margin-bottom: var(--spacing-ms); font-size: var(--H5);}
+  .applicationInfoBox .applicationInfoTopBox .applicationInfoTextBox{width: 100%;}
+  .applicationInfoBox .applicationInfoTopBox::after{flex-shrink: 0; align-self: center; margin:0 0 0 30px;}
+  .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02{margin-bottom: var(--spacing-xs);}
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox h4,
+  .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02{font-size: var(--font-size-l);}
+  .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessText{font-size: var(--font-size-m);}
+  .applicationInfoBox .applicationInfoProcessList::before{top: 62px; height: 5px;}   
+  .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessNumber{margin: 0 auto var(--spacing-xs);}
+  .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessIconBox{margin-bottom: var(--spacing-xs);}
+  .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessIconBox img{width: 60px;}
+  
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoLayoutBox{gap: 0;}
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList{margin-bottom: var(--spacing-m);}
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList li{width: 35px; height: 35px; font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 640px){
+
+  .applicationInfoBox .applicationInfoTitle{text-align: center;}
+  .applicationInfoBox .applicationInfoTopTitle{font-size: var(--H6);}
+  .applicationInfoBox .applicationInfoTopDesc{font-size: var(--Subtitle-2);}
+  .applicationInfoBox .applicationInfoTopBox{padding: var(--spacing-lm) var(--spacing-ms) 0; border-radius: var(--radius-m);}
+  .applicationInfoBox .applicationInfoTopBox::after{width: 245px; height: 212px;}
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoLayoutBox,
+  .applicationInfoBox .applicationInfoProcessList{flex-direction: column; gap: var(--spacing-l) 0;}
+  .applicationInfoBox .applicationInfoProcessList li{flex: 100%;}
+  .applicationInfoBox .applicationInfoProcessList::before{display: none;}
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoListBox .box .applicationWasteInfoText,
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoList,
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList,
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox{justify-content: center;}
+  .applicationInfoBox .applicationInfoProcessBox{padding-bottom: var(--spacing-2xl); border-bottom: 1px solid var(--guide-100);}
+
+}
+
+@media (max-width: 480px){
+
+  .applicationInfoBox .applicationInfoTopBox{margin-bottom: var(--spacing-xl);}
+  .applicationInfoBox .applicationInfoTopDesc br{display: none;}
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoList dd{font-size: var(--font-size-m);}
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox{flex-direction: column; gap: var(--spacing-xs) 0;}
+
+}
+
+@media (max-width: 320px){
+
+  .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList li{width: 30px; height: 30px;}
+
+}
