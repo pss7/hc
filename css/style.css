@@ -192,6 +192,7 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 #headerWrap .headerLanguageSelectBox .languageSelect:hover{color: var(--primary-500);}
 #headerWrap nav .headerDepth{display: flex;}
 #headerWrap nav .headerDepth li h2 a{display: block; padding: var(--spacing-xs) var(--spacing-ml); color: var(--guide-800); font-size: var(--font-size-xxxl); font-weight: var(--semi-bold);}
+#headerWrap nav .headerDepth li h2 a:hover{background: 0;}
 #headerWrap .headerAlarmBtn{flex-shrink: 0; display: flex; align-items: center; gap: 0 var(--spacing-xs); padding: 0 var(--spacing-s); height: 36px; background-color: var(--gray-600); border-radius: var(--radius-xs); color: var(--white); font-weight: var(--medium); line-height: 1; transition: all .3s;}
 #headerWrap .headerAlarmBtn:hover{background-color: var(--primary-500);}
 #headerWrap .headerAlarmBtn::before{content: ''; width: 14px; height: 14px; background: url(../images/common/alarm_icon.svg)no-repeat center;}
