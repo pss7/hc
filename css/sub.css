@@ -937,3 +937,40 @@
   .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList li{width: 30px; height: 30px;}
 
 }
+
+/* 영수증 */
+#receiptWrap{position: fixed; top:0; left:0; right:0; bottom: 0; background-color: rgba(0,0,0,.3);}
+.receiptBox{padding: var(--spacing-m); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 390px; width: calc(100% - 20px); max-height: calc(100vh - 80px); background-color: var(--white);}
+.receiptBox::after{content: ''; height: 11px; position: absolute; left:0; right:0; bottom: -10px; background: url(../images/sub/receipt.svg)no-repeat center;}
+.receiptBox .receiptTItle{margin-bottom: var(--spacing-ml); text-align: center; font-weight: var(--bold); font-size: var(--H5); color: var(--gray-900);}
+.receiptBox .receiptLogoBox{margin-bottom: var(--spacing-m);}
+.receiptBox .receiptLogoBox img{width: auto;}
+.receiptBox .receiptTopInfoBox{padding-bottom: var(--spacing-m);}
+.receiptBox .receiptTopInfoBox .receiptTopInfo{display: flex; margin-bottom: var(--spacing-xs);}
+.receiptBox .receiptTopInfoBox .receiptTopInfo:last-child{margin-bottom: 0;}
+.receiptBox .receiptTopInfoBox .receiptTopInfo dt{flex-shrink: 0; width: 80px; color: var(--gray-900); font-weight: var(--semi-bold);}
+.receiptBox .receiptTopInfoBox .receiptTopInfo dd {width: 100%; font-size: var(--font-size-s); color: var(--gray-900);}
+.receiptBox .receiptTopInfoBox .receiptTopInfo dd span{color: var(--gray-600);}
+.receiptBox .receiptInfoBox{padding: var(--spacing-ms) 0; border: 2px dashed var(--guide-200); border-width: 1px 0 1px 0;} 
+.receiptBox .receiptInfoBox .receiptInfo{margin-bottom: var(--spacing-xs); display: flex; align-items: center; justify-content: space-between; font-size: var(--font-size-s);}
+.receiptBox .receiptInfoBox .receiptInfo:last-child{margin-bottom: 0;}
+.receiptBox .receiptInfoBox .receiptInfo dt{color: var(--gray-600);}
+.receiptBox .receiptInfoBox .receiptInfo dd{color: var(--gray-900); font-weight: var(--semi-bold); text-align: right;}
+.receiptBox .receiptPriceBox{display: flex; align-items: flex-end; justify-content: space-between; padding: var(--spacing-m) 0; border-bottom: 2px solid var(--guide-200);}
+.receiptBox .receiptPriceBox .priceLabel{flex-shrink: 0; color: var(--guide-800);font-weight: var(--semi-bold); font-size: var(--H5);}
+.receiptBox .receiptPriceBox .priceSummary{display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-xs) 0;}
+.receiptBox .receiptPriceBox .priceSummary .priceCount{color: #2F3D4A; font-weight: var(--semi-bold);}
+.receiptBox .receiptPriceBox .priceSummary .priceCount strong{margin-left: var(--spacing-2xs); font-weight: var(--semi-bold); color: var( --primary-500);}
+.receiptBox .receiptPriceBox .priceSummary .priceAmount{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--H5);} 
+.receiptBox .receiptPriceBox .priceSummary .priceAmount::before{content: ''; flex-shrink: 0; width: 18px; height: 18px; background: url(../images/sub/price_icon.svg)no-repeat center;}
+.receiptBox .receiptInfoText{display: flex; gap: 0 var(--spacing-xs); padding: var(--spacing-m) 0 0; color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
+.receiptBox .receiptInfoText::before{content: ''; flex-shrink: 0; width: 20px; height: 20px; background: url(../images/sub/exclamation_icon.svg)no-repeat center;}
+
+@media (max-width: 320px){
+
+  .receiptBox .receiptPriceBox .priceSummary .priceAmount,
+  .receiptBox .receiptPriceBox .priceLabel{font-size: var(--H6);}
+  .receiptBox .receiptPriceBox{flex-direction: column; align-items: center; gap: var(--spacing-xs) 0;}
+  .receiptBox .receiptPriceBox .priceSummary{align-items: center;}
+
+}
