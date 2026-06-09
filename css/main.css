@@ -23,7 +23,30 @@
 #applicationWrap .applicationNoticeBox .applicationDate{display: flex; align-items: center; justify-content: center; padding: var(--spacing-2xs) var(--spacing-xs); color: var(--primary-700); font-weight: var(--semi-bold); background-color: var(--primary-50); border-radius: var(--radius-xs);}
 #applicationWrap .applicationNoticeBox .applicationDesc{color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--H6);}
 #applicationWrap .applicationNoticeTopBox .applicationState{ min-width: 116px; min-height: 36px; padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-xs); display:flex; align-items: center; gap: 0 var(--spacing-xs); border-radius: var(--radius-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); background: linear-gradient(90deg, #252536 0%, #263D56 50%, #252536 100%); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
-#applicationWrap .applicationNoticeTopBox .applicationState::before{content: ''; width:20px; height: 20px; background: url(../images/main/clock_icon.svg)no-repeat center;}
+#applicationWrap .applicationNoticeTopBox .applicationState::before{content: ''; width:20px; height: 20px; background: url(../images/main/clock_icon.svg)no-repeat center;   animation: clockSwing 2.6s ease-in-out infinite;}
+
+@keyframes clockSwing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-14deg);
+  }
+
+  40% {
+    transform: rotate(14deg);
+  }
+
+  60% {
+    transform: rotate(-7deg);
+  }
+
+  80% {
+    transform: rotate(7deg);
+  }
+}
+
 #applicationWrap .applicationVideoBox{margin-bottom: var(--spacing-lm); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-ms);}
 #applicationWrap .applicationVideoBox .applicationVideo{position: relative; width: 404px; height: 513px; border-radius: var(--radius-l); overflow: hidden; background-color: var(--guide-50); border: 2px solid transparent; transition: all .3s;}
 #applicationWrap .applicationVideoBox .applicationVideo:nth-child(1) .applicationVideoNumber .applicationVideoNum em{transform: translate(-62%, -45%);}
@@ -75,12 +98,6 @@ background: linear-gradient(
 
 
 #applicationWrap .applicationVideoBox .applicationVideo:hover{border-color: var(--primary-500);}
-
-
-
-
-
-
 #applicationWrap .applicationVideoBox .applicationVideoNumber{display: flex; align-items: center; flex-direction: column; gap: var(--spacing-xs) 0;}
 #applicationWrap .applicationVideoBox .applicationVideoNumber .applicationVideoMethod{font-weight: var(--bold); color: var(--white);} 
 #applicationWrap .applicationVideoBox .applicationVideoNumber .applicationVideoNum{position: relative; width: 48px; height: 48px; border-radius: var(--radius-l); background-color: var(--primary-500); color: var(--white); font-style: normal; font-size: var(--H4);}
