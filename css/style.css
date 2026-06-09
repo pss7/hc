@@ -2,7 +2,7 @@
 
 /* 공통 */
 html, body{height: 100%;}
-#wrap{min-height: 100vh; position: relative; display: flex; flex-direction: column;}
+#wrap{min-height: 100vh; position: relative; display: flex; flex-direction: column; overflow-x: hidden;}
 #wrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: linear-gradient(180deg, #ECF0F3 0%, #ECF5FF 50%, #ECF0F3 100%); z-index: -2;}
 main{flex: 1; overflow-x: hidden;}
 .blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}

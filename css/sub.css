@@ -21,6 +21,8 @@
 
 @media (max-width: 1280px){
 
+  #sub{padding: 0 0 var(--spacing-lm);}
+
   .title{font-size: var(--H3);}
 
 }
@@ -38,6 +40,12 @@
 
   .title{font-size: var(--H5);}
   .contentSubTitle{font-size: var(--H6);}
+
+}
+
+@media (max-width: 576px){
+
+  #sub{padding: 0 0 var(--spacing-m);}
 
 }
 
