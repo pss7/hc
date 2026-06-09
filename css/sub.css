@@ -1001,7 +1001,7 @@
 #ui-datepicker-div .ui-datepicker-next::before {display: flex; align-items: center; justify-content: center; height: 100%;
   font-size: 24px; color: var(--gray-900);}
 #ui-datepicker-div .ui-datepicker-calendar {width: 100%; border-collapse: collapse;}
-#ui-datepicker-div .ui-datepicker-calendar th {padding: var(--spacing-xs) 0; font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
+#ui-datepicker-div .ui-datepicker-calendar th {padding: var(--spacing-xs) 0; font-weight: var(--bold); font-size: var(--font-size-xs); color: var(--gray-600);}
 #ui-datepicker-div .ui-datepicker-calendar td {padding: var(--spacing-3xs); text-align: center;}
 #ui-datepicker-div .ui-datepicker-calendar td a {display: flex; align-items: center; justify-content: center;
   width: 32px; height: 32px; color: var(--gray-600); border-radius: 50%; font-weight: var(--medium);
