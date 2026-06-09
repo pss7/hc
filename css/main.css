@@ -69,7 +69,21 @@
 #applicationWrap .applicationVideoBox .applicationVideoInfo .infoText{display: none; opacity: 0; transform: translateY(8px); transition: all .7s;}
 #applicationWrap .applicationVideoBox .applicationVideo:hover {border-color: var(--primary-500);}
 #applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfoBox {align-items: center; padding-bottom: 0;}
-#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfo{text-align: center;}
+#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfo {
+  text-align: center; animation: videoInfoUp 1.3s cubic-bezier(.22, 1, .36, 1);}
+
+@keyframes videoInfoUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfoTitleBox {flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-s) 0;}
 #applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfo .infoText {display: inline-flex; opacity: 1; transform: translateY(0);
 @starting-style {
@@ -106,7 +120,7 @@
 #applicationWrap .applicationVideoBox .applicationVideoNumber .applicationVideoMethod{font-weight: var(--bold); color: var(--white);} 
 #applicationWrap .applicationVideoBox .applicationVideoNumber .applicationVideoNum{position: relative; width: 48px; height: 48px; border-radius: var(--radius-l); background-color: var(--primary-500); color: var(--white); font-style: normal; font-size: var(--H4);}
 #applicationWrap .applicationVideoBox .applicationVideoNumber .applicationVideoNum em{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-style: normal;}
-#applicationWrap .applicationVideoBox .applicationVideoInfoBox h3{color: var(--white); font-size: var(--H1); font-weight: var(--bold); transition: all 1s;}
+#applicationWrap .applicationVideoBox .applicationVideoInfoBox h3{color: var(--white); font-size: var(--H1); font-weight: var(--bold); transition: all .7s;}
 #applicationWrap .applicationPhoneBox{display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-2xl);}
 #applicationWrap .applicationPhoneText span{margin-bottom: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);} 
 #applicationWrap .applicationPhoneText span em{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--secondary-500); font-style: normal;}
