@@ -23,8 +23,7 @@
 #applicationWrap .applicationNoticeBox .applicationDate{display: flex; align-items: center; justify-content: center; padding: var(--spacing-2xs) var(--spacing-xs); color: var(--primary-700); font-weight: var(--semi-bold); background-color: var(--primary-50); border-radius: var(--radius-xs);}
 #applicationWrap .applicationNoticeBox .applicationDesc{color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--H6);}
 #applicationWrap .applicationNoticeTopBox .applicationState{ min-width: 116px; min-height: 36px; padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-xs); display:flex; align-items: center; gap: 0 var(--spacing-xs); border-radius: var(--radius-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); background: linear-gradient(90deg, #252536 0%, #263D56 50%, #252536 100%); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
-#applicationWrap .applicationNoticeTopBox .applicationState::before{content: ''; width:20px; height: 20px; background: url(../images/main/clock_icon.svg)no-repeat center;   animation: clockSwing 2.6s ease-in-out infinite;}
-
+#applicationWrap .applicationNoticeTopBox .applicationState::before{content: ''; width:20px; height: 20px; background: url(../images/main/clock_icon.svg)no-repeat center;   animation: clockSwing 2.6s ease-in-out infinite; }
 @keyframes clockSwing {
   0%, 100% {
     transform: rotate(0deg);
@@ -46,63 +45,68 @@
     transform: rotate(7deg);
   }
 }
-
 #applicationWrap .applicationVideoBox{margin-bottom: var(--spacing-lm); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-ms);}
-#applicationWrap .applicationVideoBox .applicationVideo{position: relative; width: 404px; height: 513px; border-radius: var(--radius-l); overflow: hidden; background-color: var(--guide-50); border: 2px solid transparent; transition: all .3s;}
+#applicationWrap .applicationVideoBox .applicationVideo{position: relative; width: 404px; height: 513px; border-radius: var(--radius-l); overflow: hidden; background-color: var(--guide-50); border: 2px solid transparent; transition: all .7s;}
 #applicationWrap .applicationVideoBox .applicationVideo:nth-child(1) .applicationVideoNumber .applicationVideoNum em{transform: translate(-62%, -45%);}
 #applicationWrap .applicationVideoBox .applicationVideo video{display: block; margin: 0 auto; max-width: 100%;}
-#applicationWrap .applicationVideoBox .applicationVideoInfoBox{padding: 0 var(--spacing-ml) var(--spacing-ml); position: absolute; top:0; left:0; right:0; bottom: 0; 
-  
-background: linear-gradient(
-  to bottom,
-  rgba(66, 153, 251, 0) 0%,
-  rgba(66, 153, 251, 0.03) 40%,
-  rgba(66, 153, 251, 0.12) 58%,
-  rgba(45, 111, 184, 0.55) 74%,
-  rgba(18, 55, 96, 0.95) 90%,
-  #091E36 100%
-);
-
-}
-#applicationWrap .applicationVideoBox .applicationVideoInfo {height: 100%; display: flex;
-  align-items: flex-end; gap: var(--spacing-s); font-family: 'KIMM';}
-
-  
-
-/* #applicationWrap .applicationVideoBox .applicationVideoInfoBox::before {
-  content: '';
-  position: absolute;
-  inset: 0;
+#applicationWrap .applicationVideoBox .applicationVideoInfoBox {padding: 0 var(--spacing-ml) var(--spacing-ml); position: absolute;
+  inset: 0; z-index: 1; display: flex; align-items: flex-end; justify-content: center;
   background: linear-gradient(
     to bottom,
-    rgba(236, 240, 243, 0.82) 0%,
-    rgba(210, 226, 240, 0.78) 18%,
-    rgba(132, 177, 215, 0.72) 34%,
-    rgba(42, 83, 122, 0.82) 44%,
-    rgba(9, 30, 54, 1) 50%,
-    rgba(9, 30, 54, 0.96) 58%,
-    rgba(43, 87, 126, 0.78) 70%,
-    rgba(139, 177, 211, 0.76) 86%,
-    rgba(196, 219, 239, 0.84) 100%
+    rgba(66, 153, 251, 0) 0%,
+    rgba(66, 153, 251, 0.03) 40%,
+    rgba(66, 153, 251, 0.12) 58%,
+    rgba(45, 111, 184, 0.55) 74%,
+    rgba(18, 55, 96, 0.95) 90%,
+    #091E36 100%
   );
-  opacity: 0;
-  transition: all .3s;
-  z-index: 0;
-} */
-/* 
-
-#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfoBox::before {
-  opacity: 1;
+  transition: all .7s;
 }
- */
-
-
-#applicationWrap .applicationVideoBox .applicationVideo:hover{border-color: var(--primary-500);}
+#applicationWrap .applicationVideoBox .applicationVideoInfo {width: 100%; font-family: 'KIMM'; text-align: left;
+  transform: translateY(0);  transition: all .7s;}
+#applicationWrap .applicationVideoBox .applicationVideoInfoTitleBox {display: flex; align-items: flex-end; gap: var(--spacing-s);
+   transition: all .7s;}
+#applicationWrap .applicationVideoBox .applicationVideoInfo .infoText{display: none; opacity: 0; transform: translateY(8px); transition: all .7s;}
+#applicationWrap .applicationVideoBox .applicationVideo:hover {border-color: var(--primary-500);}
+#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfoBox {align-items: center; padding-bottom: 0;}
+#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfo{text-align: center;}
+#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfoTitleBox {flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-s) 0;}
+#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfo .infoText {display: inline-flex; opacity: 1; transform: translateY(0);
+@starting-style {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfo h3 {font-size: 58px;}
+#applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfoBox {align-items: center; padding-bottom: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(9, 30, 54, 0) 0%,
+      rgba(9, 30, 54, 0.10) 28%,
+      rgba(9, 30, 54, 0.46) 42%,
+      rgba(9, 30, 54, 0.88) 52%,
+      rgba(9, 30, 54, 0.46) 62%,
+      rgba(9, 30, 54, 0.10) 78%,
+      rgba(9, 30, 54, 0) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(66, 153, 251, 0.18) 0%,
+      rgba(66, 153, 251, 0.28) 22%,
+      rgba(45, 111, 184, 0.42) 42%,
+      rgba(45, 111, 184, 0.42) 62%,
+      rgba(66, 153, 251, 0.28) 82%,
+      rgba(66, 153, 251, 0.18) 100%
+    );
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
 #applicationWrap .applicationVideoBox .applicationVideoNumber{display: flex; align-items: center; flex-direction: column; gap: var(--spacing-xs) 0;}
 #applicationWrap .applicationVideoBox .applicationVideoNumber .applicationVideoMethod{font-weight: var(--bold); color: var(--white);} 
 #applicationWrap .applicationVideoBox .applicationVideoNumber .applicationVideoNum{position: relative; width: 48px; height: 48px; border-radius: var(--radius-l); background-color: var(--primary-500); color: var(--white); font-style: normal; font-size: var(--H4);}
 #applicationWrap .applicationVideoBox .applicationVideoNumber .applicationVideoNum em{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-style: normal;}
-#applicationWrap .applicationVideoBox .applicationVideoInfoBox h3{color: var(--white); font-size: var(--H1); font-weight: var(--bold);}
+#applicationWrap .applicationVideoBox .applicationVideoInfoBox h3{color: var(--white); font-size: var(--H1); font-weight: var(--bold); transition: all 1s;}
 #applicationWrap .applicationPhoneBox{display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-2xl);}
 #applicationWrap .applicationPhoneText span{margin-bottom: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);} 
 #applicationWrap .applicationPhoneText span em{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--secondary-500); font-style: normal;}
@@ -141,6 +145,8 @@ background: linear-gradient(
 
   #applicationWrap::before,
   #applicationWrap::after{display: none;}
+  
+  #applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfo h3{font-size: var(--H2);}
 
 
 }
@@ -158,6 +164,8 @@ background: linear-gradient(
   #applicationWrap .applicationVideoBox .applicationVideo{height: 320px;}
   #applicationWrap .applicationVideoBox .applicationVideoInfo{flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: var(--spacing-s) 0;}
 
+  #applicationWrap .applicationVideoBox .applicationVideo:hover .applicationVideoInfo h3{font-size: var(--H4);}
+
 }
 
 @media (max-width: 576px){
@@ -169,7 +177,7 @@ background: linear-gradient(
   
   #applicationWrap .applicationVideoBox{gap: 0 var(--spacing-xs);}
   #applicationWrap .applicationVideoBox .applicationVideoInfoBox h3{font-size: var(--H4);}
-  
+
 }
 
 @media (max-width: 480px){
