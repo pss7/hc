@@ -1019,3 +1019,54 @@
   padding: 0 var(--spacing-xs); border-radius: var(--radius-xs); background: #fff; font-weight: var(--bold);
   font-size: var(--font-size-s); color: var(--gray-600); cursor: pointer; text-align: center; border: 0;}
 #ui-datepicker-div .ui-datepicker-current {display: none;}
+
+/* 스티커 */
+#stickerWrap{max-width: 740px; margin: 0 auto; overflow: hidden;}
+#stickerWrap .stickerBox {
+  position: relative;
+  padding: var(--spacing-m) var(--spacing-ms);
+  border: 2px solid transparent;
+  border-radius: var(--radius-m);
+  background:
+    linear-gradient(var(--white), var(--white)) padding-box,
+    linear-gradient(
+      113deg,
+      #008C44 10%,
+      #D8098C 25%,
+      #F5821F 70%,
+      #ED1C24 84%,
+      #005BAB 100%
+    ) border-box;
+  box-sizing: border-box;
+}
+#stickerWrap .stickerBox .stickerHeader{margin-bottom: var(--spacing-lm); display: flex; align-items: center; justify-content: space-between;}
+#stickerWrap .stickerBox .stickerHeader .stickerLogoBox img{width: auto;}
+#stickerWrap .stickerBox .stickerHeader .stickerPhoneBox dl{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+#stickerWrap .stickerBox .stickerHeader .stickerPhoneBox dl dt{display: flex; align-items: center; flex-shrink: 0; padding: 0 var(--spacing-xs); width: 96px; height: 32px; border-radius: var(--radius-xs); background-color: var(--guide-900); font-weight: var(--medium); color: var(--white);}
+#stickerWrap .stickerBox .stickerHeader .stickerPhoneBox dl dt::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/phone_icon.svg)no-repeat center;}
+#stickerWrap .stickerBox .stickerHeader .stickerPhoneBox dl dd{font-weight: var(--semi-bold); font-size: var(--Subtitle-1); color: var(--gray-600);}
+#stickerWrap .stickerBox .stickerItemInfoBox{margin-bottom: var(--spacing-ml); display: flex; align-items: center; gap: 0 var(--spacing-lm); padding: var(--spacing-s); background-color: var(--guide-50); border-radius: var(--radius-s);}
+#stickerWrap .stickerBox .stickerItemInfoBox .stickerItemInfoNumberBox{display: flex; flex-direction: column; justify-content: center; gap: var(--spacing-xs) 0; padding: var(--spacing-2xs) var(--spacing-xs) var(--spacing-3xs); width: 314px; height: 64px; border: 1px solid var(--guide-500); border-radius: var(--radius-xs); background-color: var(--white);}
+#stickerWrap .stickerBox .stickerItemInfoBox .stickerItemInfoNumberText{color: var(--guide-300); font-weight: var(--bold); font-size: var(--body-2); }
+#stickerWrap .stickerBox .stickerItemInfoBox .stickerItemInfoNumber{display: block; color: #293643; font-weight: var(--medium); font-size: var(--H5); line-height: 1.2;}
+#stickerWrap .stickerBox .stickerItemInfoBox .stickerItemBox .stickerItemTitle{color: var(--gray-900); font-size: var(--H4); font-weight: var(--medium);}
+#stickerWrap .stickerBox .stickerItemInfoBox .stickerItemBox .stickerItemInfoText{color: var(--gray-600); font-weight: var(--medium);}
+#stickerWrap .stickerBox .stickerItemInfoBox .stickerItemBox .stickerItemInfoText strong{color: var(--primary-500);}
+#stickerWrap .stickerBox .stickerItemInfoListBox{margin-bottom: var(--spacing-3xl);}
+#stickerWrap .stickerBox .stickerItemInfoListBox dl{margin-bottom: var(--radius-xs); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+#stickerWrap .stickerBox .stickerItemInfoListBox dl:last-child{margin-bottom: 0;}
+#stickerWrap .stickerBox .stickerItemInfoListBox dl dt{flex-shrink: 0; padding: var(--radius-2xs) var(--radius-xs); background-color: var(--guide-500); border-radius: var(--radius-xs); color: var(--white); font-weight: var(--medium);}
+#stickerWrap .stickerBox .stickerItemInfoListBox dl dd{font-weight: var(--medium); font-size: var(--Subtitle-1); color: var(--gray-600);}
+#stickerWrap .stickerBox .stickerNoticeBox{padding-left: var(--spacing-s); border-left: 4px solid var(--guide-900);}
+#stickerWrap .stickerBox .stickerNoticeBox .stickerNoticeTitle{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: #343B43; font-weight: var(--bold); font-size: var(--font-size-l);}
+#stickerWrap .stickerBox .stickerNoticeBox .stickerNoticeTitle::before{content: ''; flex-shrink: 0; width: 20px; height: 20px; background: url(../images/sub/exclamation_icon.svg) no-repeat center;} 
+#stickerWrap .stickerBox .stickerNoticeBox .stickerNoticeText{color: var(--gray-600); font-weight: var(--medium);}
+#stickerWrap .stickerBox .stickerNoticeBox .stickerNoticeText strong{font-weight: var(--semi-bold); color: var(--primary-500);}
+#stickerWrap .stickerBox .stickerNoticeBox .stickerStampBox{/*margin-top: 17px;*/ display: flex; align-items: center; gap: 0 var(--spacing-xs); text-align: right;}
+#stickerWrap .stickerBox .stickerNoticeBox .stickerStampText .stickerStampDate{display: block; margin-bottom: var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-2);}
+#stickerWrap .stickerBox .stickerNoticeBox .stickerStampText .stickerStampIssuer{display: block; color: var(--black); font-weight: var(--semi-bold); font-size: var(--H6);}
+#stickerWrap .stickerBox .stickerNoticeBox .stickerStampImage{width: auto;}
+#stickerWrap .stickerBox .stickerNoticeBox .stickerNoticeInfoBox{display: flex; align-items: center; justify-content: space-between;}
+#stickerWrap .stickerCutInfoBox{margin: var(--spacing-s) 0; text-align: center;}
+#stickerWrap .stickerCutInfoText{position: relative; display: inline-block; padding: 0 var(--spacing-xs); color: var(--gray-400); font-weight: var(--semi-bold); font-size: var(--font-size-s); text-align: center; background-color: var(--white);}
+#stickerWrap .stickerCutInfoText::after{content: '';  position: absolute; top:50%; left:-100%; right:-100%; margin-top: -0.5px; border: 1px dashed var(--gray-400); z-index: -1;}
