@@ -18,6 +18,7 @@
 .arrowButton::after{content: ''; flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;}
 .arrowButtonRight::after{background: var(--guide-50) url(../images/sub/arrow_icon02.svg)no-repeat 10px center;}
 .arrowButtonDown::after{background: var(--guide-50) url(../images/sub/arrow_icon06.svg)no-repeat center;}
+.active .arrowButtonDown::after{transform: translateY(-50%) rotate(-180deg)!important;}
 
 @media (max-width: 1280px){
 
@@ -394,7 +395,7 @@
 .tabLayoutBox{display: flex; align-items: flex-start;}
 .tabLayoutBox .tabMenuBox{width: 180px; flex-shrink: 0;}
 .tabLayoutBox .tabMenuList li{margin-bottom: var(--spacing-s);}
-.tabLayoutBox .tabMenuList li .tabMenuBtn{padding: var(--spacing-xs); border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); text-align: center; line-height: 1.1; transition: all .3s;}
+.tabLayoutBox .tabMenuList li .tabMenuBtn{padding: var(--spacing-xs); border-radius: var(--radius-s); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1); text-align: center; line-height: 1.1; border: 1px solid transparent; transition: all .3s;}
 .tabLayoutBox .tabMenuList li .tabMenuBtn:hover{background-color: var(--gray-100);}
 .tabLayoutBox .tabMenuList li .tabMenuBtn.active{background-color: var(--primary-500); border: 1px solid var(--gray-100); color: var(--white); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
 .tabLayoutBox .tabContentBox{width: 100%;}

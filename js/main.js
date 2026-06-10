@@ -18,4 +18,8 @@ $(function () {
     }).trigger('scroll');
   });
 
+  $('.itemSelectBtn').click(function () {
+    $(this).closest('.itemSelectBox').toggleClass('active');
+  });
+
 });

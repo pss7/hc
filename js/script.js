@@ -84,21 +84,4 @@ $(function () {
     $('#itemSpecSelectWrap').removeClass('active');
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });

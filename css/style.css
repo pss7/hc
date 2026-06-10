@@ -14,6 +14,12 @@ main{flex: 1; overflow-x: hidden;}
 .overlay.active{display: block;}
 .noScroll{overflow: hidden;}
 
+.arrowButton{ padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-s); display: inline-flex; align-items: center; gap: 0 var(--spacing-xs);} 
+.arrowButton::after{content: ''; flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;}
+.arrowButtonRight::after{background: var(--guide-50) url(../images/sub/arrow_icon02.svg)no-repeat 10px center;}
+.arrowButtonDown::after{background: var(--guide-50) url(../images/sub/arrow_icon06.svg)no-repeat center;}
+.active .arrowButtonDown::after{transform: translateY(-50%) rotate(-180deg)!important;}
+
 @media (min-width: 1281px){
 
   .mobileMenuBg{display: none!important;}
@@ -383,6 +389,12 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 .infoList li::before{content: ''; width: 4px; height: 4px; position: absolute; top:11px; left:10px; border-radius: 50%; background-color: var(--gray-600);}
 .infoList li:last-child{margin-bottom: 0;}
 
+@media (max-width: 480px){
+
+  .infoText{font-size: var(--font-size-s);}
+
+}
+
 @media (max-width: 1280px){
 
   #chatbot{bottom: 100px;}
@@ -508,7 +520,7 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 .itemSelectList li{position: relative; margin-bottom: var(--spacing-xs); display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--spacing-ms); padding: var(--spacing-s); background-color: var(--white); border-radius: var(--radius-s);}
 .itemSelectList li:last-child{margin-bottom: 0;}
 .itemSelectList li .itemSelectImgBox{flex-shrink: 0; width: 64px; height: 64px; border-radius: var(--radius-m); background-color: var(--guide-50);}
-.itemSelectList li .itemSelectImgBox img{height: 100%; object-fit: cover;}
+.itemSelectList li .itemSelectImgBox img{height: 100%; object-fit: contain;}
 .itemSelectList li .itemSelectTextBox{flex: 1;}
 .itemSelectList li .itemSelectTextBox .itemSelectName{padding-right: var(--spacing-lm); margin-bottom: var(--spacing-2xs); color: var(--gray-900); font-weight: var(--bold); font-size: var(--font-size-m);}
 .itemSelectList li .itemSelectTextBox .itemSelectOption{display: block; margin-bottom: var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium);}
@@ -577,6 +589,18 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
   .itemListTabContentBox .itemListTabContentList li .itemListTextBox h3,
   .itemListTabContentBox .itemListTabContentList li .itemListTextBox .itemPrice{font-size: var(--font-size-s);}
   .itemListTabContentBox .itemListTabContentList li .itemListTextBox .itemPrice::before{margin: 0;}
+
+}
+
+@media (max-width: 414px){
+
+  .itemListTabContentBox .itemListTabContentList{gap: var(--spacing-lm) var(--spacing-s);}
+  .itemListTabContentBox .itemListTabContentList li .itemListImgBox .itemSpecification{left: 10px; bottom: 10px;}
+
+}
+
+@media (max-width: 360px){
+
   .itemListTabContentBox .itemListTabContentList{grid-template-columns: 1fr;}
 
 }
