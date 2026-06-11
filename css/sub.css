@@ -2,6 +2,7 @@
 
 /* 공통 */
 #sub{position: relative;}
+#sub.subApplicationWrap{padding: 0!important;}
 .contentBox{padding: var(--spacing-4xl) 0 var(--spacing-lm);}
 .subContentBox{padding: var(--spacing-lm); border: 1px solid var(--guide-200); border-radius: var(--radius-l); background-color: var(--white);}
 .title{margin: 0 0 var(--spacing-m) ; color: var(--guide-800); font-weight: var(--bold); font-size: var(--H2); font-family: 'KIMM';}
@@ -66,7 +67,7 @@
 .colorPrimary{color: var(--primary-500);}
 
 /* 절차 영역  */
-.processAsideWrap{position: absolute; top:180px; left:0;}
+.processAsideWrap{position: fixed; top:50%; left:0; transform: translateY(-50%);}
 .processAsideWrap .processStepList::after{content: ''; position: absolute; top:40px; bottom: 40px; left: 50%; margin-left: -4px; width: 8px; background: linear-gradient(180deg,
      var(--guide-100) 0%, var(--primary-200) 50%, var(--guide-100) 100%); z-index: -1;}
 .processAsideWrap .processStepList li{position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: var(--spacing-2xl); width: 56px; height: 56px; border-radius: 50%; background-color: var(--guide-300); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white);}
@@ -78,7 +79,7 @@
 
 @media (max-width: 1440px) {
 
-  .processAsideWrap{position: static; margin: var(--spacing-xl) 0 0; width: 100%;}
+  .processAsideWrap{position: static; margin: var(--spacing-xl) 0 0; width: 100%; transform: none;}
   .processAsideWrap .processAsideBox { margin-bottom: -40px; padding: var(--spacing-lm) var(--spacing-ms);background: linear-gradient(
              90deg,
             rgba(195, 209, 219, 0) 0%,
@@ -211,7 +212,7 @@
 .formSection .formSectionTitle02::before{content: ''; width: 20px; height: 20px; background: url(../images/sub/exclamation_icon.svg)no-repeat center;}
 .formSection .dotList li .link{text-decoration: underline; font-weight: var(--bold);}
 .formSection input.wastePlaceInput::placeholder{color: var(--gray-400);}
-.formAsideWrap{flex: 1;}
+.formAsideWrap{flex: 1; position: sticky; top:100px;}
 .formAsideBox{margin-bottom: var(--spacing-lm); padding: var(--spacing-m); border-radius:var(--radius-l); background-color: var(--white);}
 .formAsideWrap .formAsideHead{margin-bottom: var(--spacing-ms); display: flex; align-items: center; justify-content: space-between;}
 .formAsideWrap .formAsideHead .formAsideTitle{color: var(--guide-800); font-weight: var(--semi-bold); font-size: var(--Subtitle-1);}
@@ -260,7 +261,7 @@
   .formSection .itemSelectList li{flex-direction: row; gap: var(--spacing-ms);}
   .formSection .itemSelectList li .itemSelectDelBtn{top: 16px;}
   .formSection .formSectionTitle{font-size: var(--H6);}
-  .formAsideWrap{width: 100%;}
+  .formAsideWrap{width: 100%; position: static;}
   .formAsideWrap .formAsideLinkList{display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-ms)}
 
   .formSection .emptyItemText{font-size: var(--font-size-l);}
