@@ -242,6 +242,8 @@
 #itemListWrap .itemSelectBox .itemSelectPriceWrap .itemSelectPrice{ display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--H5);} 
 #itemListWrap .itemSelectBox .itemSelectPriceWrap .itemSelectPrice::before{content: ''; flex-shrink: 0; width: 18px; height: 18px; background: url(../images/main/price_icon.svg)no-repeat center;}
 #itemListWrap .itemSelectBox .itemSelectPriceWrap .btn.btnPositive{flex: 2;}
+#itemListWrap .itemSelectBox .itemSelectLayoutBox,
+#itemListWrap .itemSelectBox .itemSelectTopBox .infoText,
 #itemListWrap .itemSelectBox .itemSelectBtn,
 #itemListWrap .itemListMobileCategoryBox{display: none;}
 
@@ -270,6 +272,8 @@
 
 @media (max-width: 768px) {
 
+  #itemListWrap .itemListTabContentBox .itemListTabContentList{grid-template-columns: repeat(3, 1fr);  gap: var(--spacing-lm) var(--spacing-s);}
+  #itemListWrap .itemListTabBtnBox{display: none;}
   #itemListWrap {flex-direction: column; border-radius: var(--radius-s);}
   #itemListWrap .itemListSearchTopBox input{height: 56px; border-radius: var(--radius-s);}
   #itemListWrap .itemListBox {flex: 1; min-height: 0; padding: var(--spacing-ms) var(--spacing-s);
@@ -279,7 +283,9 @@
   #itemListWrap .itemSelectBox {width: 100%; flex-shrink: 0; padding:0; border-top: 1px solid var(--gray-200);}
   #itemListWrap .itemSelectBox .itemSelectTopBox {display: flex;
     align-items: center; justify-content: space-between;}
-  #itemListWrap .itemSelectBox .itemSelectBtn{display: block; color: var(--guide-900); font-weight: var(--semi-bold)}
+  #itemListWrap .itemSelectBox .itemSelectBtn{padding: 0; display: flex; color: var(--guide-900); font-weight: var(--semi-bold)}
+  #itemListWrap .itemSelectBox .itemSelectBtn::after{ background-color: var(--white);}
+  #itemListWrap .itemSelectBox.active .itemSelectBtn::after{transform: translateY(0) rotate(-180deg) !important;}
   #itemListWrap .itemSelectBox{width: 100%; flex-shrink: 0; padding: 0;
     border-top: 1px solid var(--gray-200); background-color: var(--white);}
   #itemListWrap .itemSelectBox .itemSelectTopBox {display: flex; align-items: center;
@@ -319,13 +325,7 @@
   #itemListWrap .itemSelectBox .itemSelectPriceWrap .itemSelectPrice{font-size: var(--font-size-m);}
   #itemListWrap .itemSelectList li .itemSelectDelBtn{top: 10px; right: 20px; border: 0;}
   #itemListWrap .itemSelectBox .itemSelectTopBox .infoText{margin-bottom: 0;}
-}
-
-@media (max-width: 480px){
-
-  #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn,
-  #itemListWrap .itemSelectBox .itemSelectTopText{font-size: var(--font-size-s);}
-  #itemListWrap .itemListTabBtnBox{display: none;}
+  #itemListWrap .itemSelectBox .itemSelectLayoutBox{display: block;}
 
   #itemListWrap .itemListMobileCategoryBox{display: block; position: relative; height: 40px; margin-bottom: var(--spacing-m);} 
   #itemListWrap .itemListMobileCategoryBox .itemListMobileCategoryBtn{position: relative; display: block; width: 100%; height: 100%; padding: var(--spacing-xs) var(--spacing-ml) var(--spacing-xs) var(--spacing-xs); justify-content: center; text-align: center; font-size: var(--font-size-s); background-color: var(--primary-500); border: 1px solid var(--gray-100); color: var(--white); font-weight: var(--bold); border-radius: var(--radius-xs);}
@@ -336,6 +336,20 @@
     border: 1px solid transparent; transition: all .3s; text-align: center;}
   #itemListWrap .itemListMobileCategoryBox .itemListMobileCategoryList li .itemListMobileCategoryItem.active{background-color: var(--primary-500);
     border: 1px solid var(--gray-100); color: var(--white); font-weight: var(--bold);}
+  #itemListWrap .itemSelectBox .itemSelectTopBox .infoText{display: flex;}
+
+}
+
+@media (max-width: 576px){
+
+  #itemListWrap .itemListTabContentBox .itemListTabContentList{grid-template-columns: repeat(2, 1fr);}
+
+}
+
+@media (max-width: 480px){
+
+  #itemListWrap .itemListTabBtnBox .itemListTabBtnList li .itemListTabBtn,
+  #itemListWrap .itemSelectBox .itemSelectTopText{font-size: var(--font-size-s);}
   #itemListWrap .itemListSearchTopBox input{height: 50px;}
   #itemListWrap .itemListSearchTopBox input,
   #itemListWrap .itemSelectBox .itemSelectTopText,

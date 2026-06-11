@@ -18,8 +18,20 @@ $(function () {
     }).trigger('scroll');
   });
 
-  $('.itemSelectBtn').click(function () {
+  //품목 모달 목록
+  $('#itemListWrap .itemSelectBox .itemSelectBtn').click(function () {
     $(this).closest('.itemSelectBox').toggleClass('active');
+
+    $(this).text(
+      $(this).closest('.itemSelectBox').hasClass('active')
+        ? '내가 버릴 품목 닫기'
+        : '내가 버릴 품목 열기'
+    );
+
+    $(this).attr(
+      'aria-expanded',
+      $(this).closest('.itemSelectBox').hasClass('active') ? 'true' : 'false'
+    );
   });
 
 });
