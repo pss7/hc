@@ -815,7 +815,7 @@
 #requestModalWrap{max-width: 818px; width: calc(100% - 20px); max-height: calc(100vh - 80px); padding: var(--spacing-xl) var(--spacing-lm) var(--spacing-lm); position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 999999; background-color: var(--white); border-radius: var(--radius-l); overflow-y: auto;}
 #requestModalWrap .requestTitle{margin-bottom: var(--spacing-m); text-align: center; font-family: 'KIMM'; color: var(--guide-800); font-size: var(--H2); font-weight: var(--bold);}
 #requestModalWrap .formDetailInfoBox{margin-bottom: var(--spacing-m); padding: var(--spacing-m); border: 1px solid var(--guide-200); border-radius: var(--radius-m);}
-#requestModalWrap .formDetailInfoValue{font-size: var(--H5); font-weight: var(--semi-bold);}
+#requestModalWrap .formDetailInfoValue{width: 100%; font-size: var(--H5); font-weight: var(--semi-bold);}
 #requestModalWrap .infoText{margin: var(--spacing-xs) 0 0;}
 #requestModalWrap .requestTitle02{margin-bottom: var(--spacing-s); color: var(--gray-900); font-weight: var(--bold); font-size: var(--Subtitle-1);}
 #requestModalWrap .inputRadioBox{margin-bottom: var(--spacing-ms);}
@@ -841,7 +841,7 @@
 
 @media (max-width: 768px){
 
-  #requestModalWrap{padding: var(--spacing-xl) var(--spacing-ml) var(--spacing-lm);     border-radius: var(--radius-m);}
+  #requestModalWrap{padding: var(--spacing-xl) var(--spacing-ms) var(--spacing-lm);     border-radius: var(--radius-m);}
   #requestModalWrap .requestTitle{font-size: var(--H5);}
   #requestModalWrap .formDetailInfoValue{font-size: var(--font-size-l);}
 

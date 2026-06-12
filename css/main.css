@@ -17,14 +17,16 @@
 #applicationWrap{position: relative; max-width: 952px; margin: 0 auto; padding: var(--spacing-lm) var(--spacing-l); background-color: var(--white); border-radius: var(--radius-l); }
 #applicationWrap::before{content: ''; width: 144px; height: 211px; position: absolute; left: -105px; bottom: 52px; background: url(../images/main/illustration01.png) no-repeat center / contain; z-index: -1; transform: rotate(-30deg);}
 #applicationWrap::after{content: ''; width: 125px; height: 182px; position: absolute; right:-83px; bottom: 51px; background: url(../images/main/illustration02.png)no-repeat center / contain; z-index: -1; transform: rotate(30deg);}
-#applicationWrap .applicationNoticeTopBox{display: flex; justify-content: space-between; width: 100%; margin-bottom: var(--spacing-lm);}
-#applicationWrap .applicationNoticeBox{position: relative; padding-left: var(--spacing-lm); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
-#applicationWrap .applicationNoticeBox::before{content: ''; width: 32px; height: 32px; position: absolute; top:1px; left:0; background: url(../images/main/notice_icon.svg)no-repeat center;}
-#applicationWrap .applicationNoticeBox .applicationDate{display: flex; align-items: center; justify-content: center; padding: var(--spacing-2xs) var(--spacing-xs); color: var(--primary-700); font-weight: var(--semi-bold); background-color: var(--primary-50); border-radius: var(--radius-xs);}
-#applicationWrap .applicationNoticeBox .applicationDesc{color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--H6);}
-#applicationWrap .applicationNoticeTopBox .applicationStateBox{position: relative;}
+#applicationWrap .applicationNoticeTopBox{position: relative; display: flex; justify-content: space-between; width: 100%; margin-bottom: var(--spacing-lm);}
+#applicationWrap .applicationNoticeBox{flex:1; min-width:0; position: relative; padding-left: var(--spacing-lm); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+#applicationWrap .applicationNoticeBox::before{content: ''; width: 32px; height: 32px; position: absolute; top:0; left:0; background: url(../images/main/notice_icon.svg)no-repeat center / contain;}
+#applicationWrap .applicationNoticeBox .applicationDate{flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: var(--spacing-2xs) var(--spacing-xs); color: var(--primary-700); font-weight: var(--semi-bold); background-color: var(--primary-50); border-radius: var(--radius-xs);}
+#applicationWrap .applicationNoticeBox .applicationDesc{display: block; width: 100%; padding-right: 45px; color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--H6); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+#applicationWrap .applicationNoticeBox .applicationDesc:hover{text-decoration: underline;}
+#applicationWrap .applicationNoticeSlideBox{flex: 1; min-width: 0; overflow: hidden;}
+#applicationWrap .applicationNoticeTopBox .applicationStateBox{flex-shrink: 0; /*position: absolute; right: 0; top: -4px;*/}
 #applicationWrap .applicationNoticeTopBox .applicationStateBox .infoText{margin: 0; position: absolute; top:-52px; right: 0; width: max-content; max-width: min(520px, calc(100vw - 40px));}
-#applicationWrap .applicationNoticeTopBox .applicationState{min-height: 36px; padding: var(--spacing-xs) var(--spacing-s) var(--spacing-xs) var(--spacing-xs); display:flex; align-items: center; gap: 0 var(--spacing-xs); border-radius: var(--radius-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); background: linear-gradient(90deg, #252536 0%, #263D56 50%, #252536 100%); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
+#applicationWrap .applicationNoticeTopBox .applicationState{height: 36px; padding: var(--spacing-xs) var(--spacing-s) var(--spacing-xs) var(--spacing-xs); display:flex; align-items: center; gap: 0 var(--spacing-xs); border-radius: var(--radius-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); background: linear-gradient(90deg, #252536 0%, #263D56 50%, #252536 100%); box-shadow: 0 10px 40px rgba(57, 142, 241, 0.22);}
 #applicationWrap .applicationNoticeTopBox .applicationState::before{content: ''; width:20px; height: 20px; background: url(../images/main/clock_icon.svg)no-repeat center;  animation: clockSwing 2.6s ease-in-out infinite; }
 #applicationWrap .applicationNoticeTopBox .applicationStateBox.restricted .infoText::before{background: url(../images/main/info_icon02.svg)no-repeat center;}
 #applicationWrap .applicationNoticeTopBox .applicationStateBox.restricted .applicationState{border: 1px solid var(--danger-500);  background:
@@ -186,7 +188,8 @@
 
   #applicationWrap{padding: var(--spacing-lm) var(--spacing-m);}
   #applicationWrap .applicationNoticeBox::before{top: -4px;}
-  #applicationWrap .applicationNoticeTopBox .applicationStateBox{display: flex; flex-direction: column; align-items: flex-start;}
+  #applicationWrap .applicationNoticeBox .applicationDesc{padding: 0;}
+  #applicationWrap .applicationNoticeTopBox .applicationStateBox{display: flex; flex-direction: column; align-items: flex-start; position: static;}
   #applicationWrap .applicationNoticeTopBox .applicationStateBox .infoText{margin-bottom: var(--spacing-s); position: static; min-width: auto;}
   #applicationWrap .applicationNoticeTopBox{flex-direction: column-reverse; align-items: flex-start; gap:var(--spacing-ms) 0; }
   #applicationWrap .applicationNoticeBox .applicationDesc{font-size: var(--Subtitle-1);}
@@ -205,10 +208,11 @@
 @media (max-width: 576px){
 
   #applicationWrap{padding: var(--spacing-ml) var(--spacing-m);}
-  #applicationWrap .applicationNoticeBox{flex-direction: column-reverse; align-items: flex-start; gap: var(--spacing-2xs) 0;}
+  #applicationWrap .applicationNoticeBox{width: 100%; flex-direction: column-reverse; align-items: flex-start; gap: var(--spacing-2xs) 0;}
+  #applicationWrap .applicationNoticeSlideBox{width:100%; max-width:100%;} 
+  #applicationWrap .applicationNoticeBox .applicationDesc{max-width:100%;}
   #applicationWrap .applicationNoticeBox .applicationDate{font-size: var(--font-size-s);}
-  #applicationWrap .applicationNoticeBox::before{top: 7px;}
-  
+  #applicationWrap .applicationNoticeBox::before{top: 9px;}
   #applicationWrap .applicationVideoBox{gap: 0 var(--spacing-xs);}
   #applicationWrap .applicationVideoBox .applicationVideoInfoBox h3{font-size: var(--H4);}
 
@@ -222,6 +226,7 @@
 
   #applicationWrap .applicationVideoBox{flex-direction: column; gap: var(--spacing-xs) 0;}
   #applicationWrap .applicationVideoBox .applicationVideo{height: 288px;}
+  #applicationWrap .applicationNoticeBox::before{width: 28px; height: 28px;}
 
 }
 

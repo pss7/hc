@@ -324,10 +324,10 @@ button:disabled{background-color: #E5E8EB!important; color: var(--gray-400); poi
 #chatbot .chatbotBody .chatbotInfoBox .chatbotInfoList .chatbotInfoLabel::after{content: ':'; margin: -2px var(--spacing-2xs) 0; line-height: 1; color: var(--gray-600); font-weight: var(--bold);}
 #chatbot .chatbotBody .chatbotInfoBox .chatbotInfoList .chatbotInfoValue{color: var(--gray-600);} 
 #chatbot .chatbotFooter{padding: 0 var(--spacing-m) var(--spacing-m); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
-#chatbot .chatbotFooter .chatbotInputBox{position: relative;}
-#chatbot .chatbotFooter .chatbotInputBox .chatbotInput{width: 100%; padding: 0 var(--spacing-lm) 0 var(--spacing-s); height: 48px; border: 1px solid var(--guide-300); border-radius: var(--radius-m); font-weight: var(--medium); color: #597184; font-size: var(--font-size-m);}
-#chatbot .chatbotFooter .chatbotInputBox .chatbotInput::placeholder{color: #597184;}
-#chatbot .chatbotFooter .chatbotInputBox .chatbotSendBtn{width: 24px; height: 24px; position: absolute; top: 50%; right:8px; transform: translateY(-50%); background: url(../images/common/send_icon.svg)no-repeat center;}
+#chatbot .chatbotFooter .chatbotTextareaBox{position: relative;}
+#chatbot .chatbotFooter .chatbotTextareaBox .chatbotTextarea{display: block; width: 100%; padding: 0 var(--spacing-lm) 0 var(--spacing-s); height: 48px; line-height: 48px; border: 1px solid var(--guide-300); border-radius: var(--radius-m); font-weight: var(--medium); color: #597184; font-size: var(--font-size-m); overflow: hidden; font-family: 'Pretendard';}
+#chatbot .chatbotFooter .chatbotTextareaBox .chatbotTextarea::placeholder{color: #597184;}
+#chatbot .chatbotFooter .chatbotTextareaBox .chatbotSendBtn{width: 24px; height: 24px; position: absolute; top: 50%; right:8px; transform: translateY(-50%); background: url(../images/common/send_icon.svg)no-repeat center;}
 #chatbot .chatbotFooter .chatbotFileBox{padding: var(--spacing-xs) 0;}
 #chatbot .chatbotFooter .chatbotFileBox .chatbotFileBtn{display: flex; align-items: center; gap: 0 var(--spacing-2xs); cursor: pointer;}
 #chatbot .chatbotFooter .chatbotFileBox .chatbotFileBtn::before{content: ''; width: 32px; height: 32px; background: url(../images/common/file.svg)no-repeat center;}

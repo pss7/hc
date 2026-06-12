@@ -34,4 +34,24 @@ $(function () {
     );
   });
 
+  //공지사항
+  $('#applicationWrap .applicationNoticeSlideBox .slick').slick({
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    accessibility: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    zIndex: 1000,
+    pauseOnHover: false,
+    autoplaySpeed: 2000,
+    speed: 1000,
+    vertical: true,
+    verticalSwiping: true,
+  });
+
+
+
+
 });
