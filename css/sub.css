@@ -1094,7 +1094,7 @@
 #page{height: 100%; width: 740px; min-width: 740px; margin: 0 auto;}
 #page .stickerBox {
   position: relative;
-  padding: var(--spacing-m) var(--spacing-ms);
+  padding: var(--spacing-ms);
   border: 2px solid transparent;
   border-radius: var(--radius-m);
   background:
@@ -1108,35 +1108,38 @@
       #005BAB 100%
     ) border-box;
   box-sizing: border-box;
+  z-index: 1;
 }
-#page .stickerBox .stickerHeader{margin-bottom: var(--spacing-lm); display: flex; align-items: center; justify-content: space-between;}
+#page .stickerBox .stickerBg{width: 249px; height: 179px; position: absolute; right:45px; bottom: 37px;}
+#page .stickerBox .stickerHeader{margin-bottom: var(--spacing-ml); display: flex; align-items: center; justify-content: space-between;}
 #page .stickerBox .stickerHeader .stickerLogoBox img{width: auto;}
 #page .stickerBox .stickerHeader .stickerPhoneBox dl{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
 #page .stickerBox .stickerHeader .stickerPhoneBox dl dt{display: flex; align-items: center; flex-shrink: 0; padding: 0 var(--spacing-xs); width: 96px; height: 32px; border-radius: var(--radius-xs); background-color: var(--guide-900); font-weight: var(--medium); color: var(--white);}
 #page .stickerBox .stickerHeader .stickerPhoneBox dl dt::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/phone_icon.svg)no-repeat center;}
 #page .stickerBox .stickerHeader .stickerPhoneBox dl dd{font-weight: var(--semi-bold); font-size: var(--Subtitle-1); color: var(--gray-600);}
-#page .stickerBox .stickerItemInfoBox{margin-bottom: var(--spacing-ml); display: flex; align-items: center; gap: 0 var(--spacing-lm); padding: var(--spacing-s); background-color: var(--guide-50); border-radius: var(--radius-s);}
-#page .stickerBox .stickerItemInfoBox .stickerItemInfoNumberBox{display: flex; flex-direction: column; justify-content: center; gap: var(--spacing-xs) 0; padding: var(--spacing-2xs) var(--spacing-xs) var(--spacing-3xs); width: 314px; height: 64px; border: 1px solid var(--guide-500); border-radius: var(--radius-xs); background-color: var(--white);}
+#page .stickerBox .stickerItemInfoBox{margin-bottom: var(--spacing-ml); display: flex; align-items: center; flex-direction: column; align-items: flex-start; gap: 0 var(--spacing-lm); padding: var(--spacing-s); background-color: var(--guide-50); border-radius: var(--radius-s);}
+#page .stickerBox .stickerItemInfoBox .stickerItemInfoNumberBox{margin-bottom: var(--spacing-ms); display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-2xs) var(--spacing-xs) var(--spacing-3xs); width: 100%; height: 45px; border: 1px solid var(--guide-500); border-radius: var(--radius-xs); background-color: var(--white);}
 #page .stickerBox .stickerItemInfoBox .stickerItemInfoNumberText{color: var(--guide-300); font-weight: var(--bold); font-size: var(--body-2); }
 #page .stickerBox .stickerItemInfoBox .stickerItemInfoNumber{display: block; color: #293643; font-weight: var(--medium); font-size: var(--H5); line-height: 1.2;}
-#page .stickerBox .stickerItemInfoBox .stickerItemBox .stickerItemTitle{color: var(--gray-900); font-size: var(--H4); font-weight: var(--medium);}
+#page .stickerBox .stickerItemInfoBox .stickerItemBox .stickerItemTitle{margin-bottom: var(--spacing-2xs); color: var(--gray-900); font-size: var(--H4); font-weight: var(--medium);}
 #page .stickerBox .stickerItemInfoBox .stickerItemBox .stickerItemInfoText{color: var(--gray-600); font-weight: var(--medium);}
 #page .stickerBox .stickerItemInfoBox .stickerItemBox .stickerItemInfoText strong{color: var(--primary-500);}
-#page .stickerBox .stickerItemInfoListBox{margin-bottom: var(--spacing-3xl);}
+#page .stickerBox .stickerItemInfoListBox{margin-bottom: var(--spacing-l);}
 #page .stickerBox .stickerItemInfoListBox dl{margin-bottom: var(--radius-xs); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
 #page .stickerBox .stickerItemInfoListBox dl:last-child{margin-bottom: 0;}
 #page .stickerBox .stickerItemInfoListBox dl dt{flex-shrink: 0; padding: var(--radius-2xs) var(--radius-xs); background-color: var(--guide-500); border-radius: var(--radius-xs); color: var(--white); font-weight: var(--medium);}
 #page .stickerBox .stickerItemInfoListBox dl dd{font-weight: var(--medium); font-size: var(--Subtitle-1); color: var(--gray-600); word-break: keep-all;}
-#page .stickerBox .stickerNoticeBox{padding-left: var(--spacing-s); border-left: 4px solid var(--guide-900);}
-#page .stickerBox .stickerNoticeBox .stickerNoticeTitle{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: #343B43; font-weight: var(--bold); font-size: var(--font-size-l);}
-#page .stickerBox .stickerNoticeBox .stickerNoticeTitle::before{content: ''; flex-shrink: 0; width: 20px; height: 20px; background: url(../images/sub/exclamation_icon.svg) no-repeat center;} 
-#page .stickerBox .stickerNoticeBox .stickerNoticeText{color: var(--gray-600); font-weight: var(--medium);}
-#page .stickerBox .stickerNoticeBox .stickerNoticeText strong{font-weight: var(--semi-bold); color: var(--primary-500);}
-#page .stickerBox .stickerNoticeBox .stickerStampBox{/*margin-top: 17px;*/ display: flex; align-items: center; gap: 0 var(--spacing-xs); text-align: right;}
-#page .stickerBox .stickerNoticeBox .stickerStampText .stickerStampDate{display: block; margin-bottom: var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-2);}
-#page .stickerBox .stickerNoticeBox .stickerStampText .stickerStampIssuer{display: block; color: var(--black); font-weight: var(--semi-bold); font-size: var(--H6);}
-#page .stickerBox .stickerNoticeBox .stickerStampImage{width: auto;}
-#page .stickerBox .stickerNoticeBox .stickerNoticeInfoBox{display: flex; align-items: center; justify-content: space-between;}
+#page .stickerBox .stickerNoticeTitle{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: #343B43; font-weight: var(--bold); font-size: var(--font-size-l);}
+#page .stickerBox .stickerNoticeTitle::before{content: ''; flex-shrink: 0; width: 20px; height: 20px; background: url(../images/sub/exclamation_icon.svg) no-repeat center;} 
+#page .stickerBox .stickerNoticeText{color: var(--gray-600); font-weight: var(--medium);}
+#page .stickerBox .stickerNoticeText strong{font-weight: var(--semi-bold); color: var(--primary-500);}
+#page .stickerBox .stickerStampBox{display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-xs); text-align: right;}
+#page .stickerBox .stickerStampBox img{width: auto;}
+
+#page .stickerBox .stickerStampBox .stickerStampText .stickerStampDate{display: block; margin-bottom: var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1);}
+#page .stickerBox .stickerStampBox .stickerStampText .stickerStampIssuer{display: block; color: var(--black); font-weight: var(--semi-bold); font-size: var(--H5);}
+#page .stickerBox .stickerStampBox .stickerStampImage{width: auto;}
+#page .stickerBox .stickerStampBox .stickerNoticeInfoBox{display: flex; align-items: center; justify-content: space-between;}
 #page .stickerCutInfoBox{margin: var(--spacing-s) 0; text-align: center; overflow: hidden;}
 #page .stickerCutInfoText{position: relative; display: inline-block; padding: 0 var(--spacing-xs); color: var(--gray-400); font-weight: var(--semi-bold); font-size: var(--font-size-s); text-align: center; background-color: var(--white);}
 #page .stickerCutInfoText::after{content: '';  position: absolute; top:50%; left:-100%; right:-100%; margin-top: -0.5px; border: 1px dashed var(--gray-400); z-index: -1;}
