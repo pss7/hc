@@ -36,7 +36,7 @@ $(function () {
 
   //공지사항
   $('#applicationWrap .applicationNoticeSlideBox .slick').slick({
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     dots: false,
     accessibility: false,

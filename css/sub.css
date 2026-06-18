@@ -904,15 +904,27 @@
 .applicationInfoBox .wasteInfoLinkRightBox .wasteInfoLinkDesc{margin-bottom: var(--spacing-lm); color: var(--gray-600); line-height: 1.7;}
 .applicationInfoBox .wasteInfoLinkRightBox .wasteInfoLinkDesc a{font-weight: var(--semi-bold);}
 .applicationInfoBox .wasteInfoLinkRightBox .btnBox .btn{padding: var(--spacing-xs) var(--spacing-xs); flex: 1;}
+.applicationPhoneWrap{margin-bottom: var(--spacing-2xl);}
+.applicationPhoneWrap h4{margin-bottom: 16px; color: var(--gray-900); font-weight: var(--bold); font-size: var(--H5); font-family: 'KIMM';}
+.applicationPhoneWrap .applicationPhoneBox{flex: 1;}
+.applicationPhoneWrap .applicationInquiryBox{display: flex; gap: 0 var(--spacing-lm);}
+.applicationPhoneWrap .applicationPhoneLayoutBox{display: flex; align-items: center; gap: var(--spacing-s);}
+.applicationPhoneWrap .applicationPhoneIconBox{display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; background-color: #ECF0F3;}
+.applicationPhoneWrap .applicationPhoneIconBox img{width: auto;}
+.applicationPhoneWrap .applicationPhoneTextBox{display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-xs);}
+.applicationPhoneWrap .applicationPhoneTextBox .applicationPhone{color: #3A414B; font-size: var(--font-size-xl); font-weight: 700;} 
+.applicationPhoneWrap .applicationPhoneTextBox .applicationText{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--gray-600); font-weight: 500; font-size: 14px; border: 1px solid var(--gray-100); line-height: 1.1; border-radius: var(--spacing-xs);}
 
 @media (max-width: 1024px){
 
    .applicationInfoBox .applicationWasteDisposalNoticeBox{padding: var(--spacing-lm) var(--spacing-ms); border-radius: var(--radius-m);}
   .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox h4,
   .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02,
+  .applicationPhoneWrap h4,
   .applicationInfoBox .applicationInfoTitle{font-size: var(--H6);}
   .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList li{font-size: var(--font-size-l);}
   .applicationInfoBox .wasteInfoLinkLeftBox .wasteInfoLinkTitle{font-size: var(--H4);}
+  .applicationPhoneWrap .applicationPhoneTextBox .applicationPhone{font-size: var(--font-size-l);}
 
 }
 
@@ -923,6 +935,7 @@
   .applicationInfoBox .applicationInfoTopBox .applicationInfoTextBox{width: 100%;}
   .applicationInfoBox .applicationInfoTopBox::after{flex-shrink: 0; align-self: center; margin:0 0 0 30px;}
   .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02{margin-bottom: var(--spacing-xs);}
+  .applicationPhoneWrap h4,
   .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox h4,
   .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessTitle02{font-size: var(--font-size-l);}
   .applicationInfoBox .applicationInfoProcessList li .applicationInfoProcessText{font-size: var(--font-size-m);}
@@ -963,6 +976,12 @@
   .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoDateList,
   .applicationInfoBox .applicationWasteInfoBox .applicationWasteInfoTitleBox{justify-content: center;}
   .applicationInfoBox .applicationInfoProcessBox{padding-bottom: var(--spacing-2xl); border-bottom: 1px solid var(--guide-100);}
+  .applicationInfoBox .applicationWasteInfoBox{padding-bottom: var(--spacing-2xl); border-bottom: 1px solid var(--guide-100);}
+
+
+
+  .applicationPhoneWrap .applicationInquiryBox{flex-direction: column; align-items: center; gap: var(--spacing-l) 0;}
+  .applicationPhoneWrap h4{text-align: center;}
 
 }
 
